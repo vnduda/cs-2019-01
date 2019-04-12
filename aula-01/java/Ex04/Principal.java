@@ -1,6 +1,6 @@
 public class Principal {
     public static void main(String[] args) {
-        System.out.println(RestoDivisao(8, 3));
+        System.out.println(RestoDivisao(3, 8));
     }
 
     public static int RestoDivisao(int x, int y) {
