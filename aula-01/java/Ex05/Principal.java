@@ -1,8 +1,11 @@
-public class Principal{
-    public static void main(String [] args){
-        System.out.println(SomaPrimeirosNaturais());
+public int SomaNaturais(int n){
+    if(n < 1){
+        throw new IllegalArgumentException();
     }
-    public static int SomaPrimeirosNaturais(int n){
-        
+    int s = 1;
+    int i;
+    for(i = 2; n >= i; i++){
+        s = s + i;
     }
+    return s;
 }
