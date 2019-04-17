@@ -1,14 +1,18 @@
-function Produto(a, b){
-    if(a>=0 && b>=0){
+function Produto(a, b) {
+    
+    if (a >= 0 && b >= 0) {
         totalParcelas = a;
         parcela = b;
-        if(b < a){
+        
+        if (b < a) {
             totalParcelas = b;
             parcela = a;
         }
-        i = 1;
-        s = 0;
-        while(i <= totalParcelas){
+
+        let i = 1;
+        let s = 0;
+
+        while (i <= totalParcelas) {
             s = s + parcela;
             i = i + 1;
         }
