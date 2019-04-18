@@ -5,17 +5,17 @@ public class Ex04 {
     }
 
     public static int RestoDivisao(int x, int y) {
-        
+
         int s;
-        
-        if (y < 0){
+
+        if (y < 0) {
             throw new IllegalArgumentException("Valor de y inválido");
         }
 
-        if (x <= 0){
+        if (x <= 0) {
             throw new IllegalArgumentException("Valor de x inválido");
         }
-        
+
         s = x;
 
         while (y <= s) {
@@ -23,7 +23,7 @@ public class Ex04 {
         }
 
         return s;
-        
-        }
-        
+
     }
+
+}

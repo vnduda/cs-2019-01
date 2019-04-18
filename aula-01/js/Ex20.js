@@ -1,5 +1,5 @@
-function CPF(d){
-    if(d.length != 11){
+function CPF(d) {
+    if (d.length != 11) {
         throw new RangeError("O CPF não pode conter mais ou menos que 11 dígitos");
     }
     let j = d[0] + d[1] + d[2] + d[3] + d[4] + d[5] + d[6] + d[7] + d[8];

@@ -1,5 +1,5 @@
 public class Ex20 {
-    
+
     public static boolean CPF(String d) {
 
         if (d.length() > 11 || d.length() < 11) {
