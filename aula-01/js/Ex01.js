@@ -4,6 +4,7 @@ function Propriedade3025(n) {
         throw new RangeError("argumento invalido");
     }
 
+    // FIXME Nao seria melhor Math.trunc???
     const i = parseInt(n / 100);
     const j = parseInt(n % 100);
     return (i + j) * (i + j) == n;
