@@ -8,7 +8,7 @@ function Produto(a, b) {
         throw new RangeError("Intervalo de b inválido");
     }
 
-
+    // TODO uma linha em branco é suficiente para separar seções de código
     totalParcelas = a;
     parcela = b;
 
