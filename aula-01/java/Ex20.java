@@ -25,6 +25,8 @@ public class Ex20 {
                 + 5 * Character.getNumericValue(d.charAt(5)) + 6 * Character.getNumericValue(d.charAt(6))
                 + 7 * Character.getNumericValue(d.charAt(7)) + 8 * Character.getNumericValue(d.charAt(8))
                 + 9 * Character.getNumericValue(d.charAt(9));
+
+        // FIXME remova interacao com o usuário (nao se aplica)
         System.out.println(k);
 
         int dj = (j % 11) % 10;
