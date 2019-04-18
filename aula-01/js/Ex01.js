@@ -4,8 +4,8 @@ function Propriedade3025(n) {
         throw new RangeError("argumento invalido");
     }
 
-    let i = parseInt(n / 100);
-    let j = parseInt(n % 100);
+    const i = parseInt(n / 100);
+    const j = parseInt(n % 100);
     return (i + j) * (i + j) == n;
 
 }
