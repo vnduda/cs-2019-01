@@ -7,6 +7,10 @@ public class Ex19 {
 
         int a = 0;
         int c = 1;
+
+        // TODO não é aconselhado declarar duas variáveis em uma mesma linha.
+        // TODO novamente, int i = 2, uma única linha
+        // TODO t pode ser declarada na linha 23, por que tão antes?
         int i, t;
 
         if (n == 0 || n == 1) {
