@@ -6,7 +6,7 @@ public class Ex03 {
 
     public static int DiaSemana(int d, int m, int a) {
 
-        if (d < 1 || d > 31) {
+        if (diaInvalido(d)) {
             throw new IllegalArgumentException("Dia inválido");
         }
 
@@ -26,5 +26,9 @@ public class Ex03 {
         int s = (d + (2 * m) + (3 * (m + 1) / 5) + a + (a / 4) - (a / 100) + (a / 400));
 
         return s % 7;
+    }
+
+    private static boolean diaInvalido(int d) {
+        return d < 1 || d > 31;
     }
 }
