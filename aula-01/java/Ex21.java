@@ -8,7 +8,11 @@ public class Ex21 {
 
         int c = 7;
         int p = Character.getNumericValue(d.charAt(8));
+
+        // FIXME por que chamar novamente estes métodos???
         int s = Character.getNumericValue(d.charAt(8));
+
+        // TODO Character.getNumericValue espalhado no código. Reúna em método.
 
         while (c >= 0) {
             p = p + Character.getNumericValue(d.charAt(c));
