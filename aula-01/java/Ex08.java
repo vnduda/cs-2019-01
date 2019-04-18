@@ -19,5 +19,5 @@ public class Ex08 {
         }
 
         return potencia;
-
     }
+}
