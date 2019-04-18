@@ -2,11 +2,11 @@ public class Ex10 {
 
     public static float LogaritmoNatural(float n, float k) {
 
-        if(n < 1) {
+        if (n < 1) {
             throw new IllegalArgumentException("Intervalo de n inválido");
         }
 
-        if(k < 2) {
+        if (k < 2) {
             throw new IllegalArgumentException("Intervalo de k inválido");
         }
 
@@ -16,7 +16,7 @@ public class Ex10 {
         float numerador = n;
         float denominador = 1;
 
-        while(k >= 1) {
+        while (k >= 1) {
             numerador = numerador * numerador;
             denominador = denominador * i;
             e = e + numerador / denominador;

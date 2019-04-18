@@ -8,7 +8,7 @@ public class Ex13 {
 
         float r = 1;
 
-        while(i >= 0) {
+        while (i >= 0) {
             r = (r + n / r) / 2;
             i = i - 1;
         }

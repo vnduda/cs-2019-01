@@ -10,7 +10,7 @@ public class Ex21 {
         int p = Character.getNumericValue(d.charAt(8));
         int s = Character.getNumericValue(d.charAt(8));
 
-        while(c >= 0) {
+        while (c >= 0) {
             p = p + Character.getNumericValue(d.charAt(c));
             s = s + p;
             c = c - 1;

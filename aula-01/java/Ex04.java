@@ -8,11 +8,11 @@ public class Ex04 {
         
         int s;
         
-        if (y < 0){
+        if (y < 0) {
             throw new IllegalArgumentException("Valor de y inválido");
         }
 
-        if (x <= 0){
+        if (x <= 0) {
             throw new IllegalArgumentException("Valor de x inválido");
         }
         
@@ -24,6 +24,6 @@ public class Ex04 {
 
         return s;
         
-        }
-        
     }
+        
+}

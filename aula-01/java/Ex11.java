@@ -2,15 +2,15 @@ public class Ex11 {
     
     public static float RazaoAurea(float x, float y, float k) {
         
-        if(x < 0) {
+        if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
         }
 
-        if(y < x) {
+        if (y < x) {
             throw new IllegalArgumentException("Variável y tem que ser maior que x");
         }
 
-        if(k < 0) {
+        if (k < 0) {
             throw new IllegalArgumentException("Intervalo de k inválido");
         }
 
@@ -19,7 +19,7 @@ public class Ex11 {
         float i = 1;
         float t;
 
-        while(k >= i) {
+        while (k >= i) {
             t = c;
             c = c + a;
             a = t;
