@@ -15,6 +15,7 @@ public class Ex02 {
         final int d = du / 10;
         final int u = du % 10;
 
+        // TODO se fosse c elevado a 5, por exemplo, melhor seria Math.pow.
         return (c * c * c) + (d * d * d) + (u * u * u) == n;
 
     }
