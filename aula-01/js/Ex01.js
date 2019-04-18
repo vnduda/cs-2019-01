@@ -7,5 +7,4 @@ function Propriedade3025(n) {
     const i = parseInt(n / 100);
     const j = parseInt(n % 100);
     return (i + j) * (i + j) == n;
-
 }
