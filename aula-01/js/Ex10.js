@@ -21,5 +21,4 @@ function LogaritmoNatural(n, k) {
     }
 
     return e;
-
 }
