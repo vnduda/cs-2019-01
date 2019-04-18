@@ -1,4 +1,4 @@
-public class Ex08 {
+public class Ex09 {
 
     public double pi(int n) {
         
@@ -16,6 +16,6 @@ public class Ex08 {
             s = -1 * s;
             p = p + 4 * s / d;
         }
-        
+
         return p;
 }
