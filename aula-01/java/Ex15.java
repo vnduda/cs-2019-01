@@ -5,7 +5,8 @@ public class Ex15 {
         if (a == null) {
             throw new IllegalArgumentException("array is null");
         }
-        
+
+        // FIXME provavelmente um bug, vetor deve possuir no max 1 elemento???
         if (a.length > 1) {
             throw new IllegalArgumentException("Tamanho do array inválido");
         }
