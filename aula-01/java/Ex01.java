@@ -1,5 +1,6 @@
 public class Ex01 {
 
+    // TODO ok por enquanto, mas saiba que não é assim que se testa!!!!
     public static void main(String[] args) {
         System.out.println(Propriedade3025(3025));
     }
