@@ -18,7 +18,7 @@ public class Ex04 {
         
         s = x;
 
-        while (y <= s) {
+        while (s >= y) {
             s = s - y;
         }
 
