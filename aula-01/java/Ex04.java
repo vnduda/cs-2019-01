@@ -15,13 +15,10 @@ public class Ex04 {
         }
         
         int s = x;
-
         while (s >= y) {
             s = s - y;
         }
 
         return s;
-        
-    }
-        
+    }     
 }
