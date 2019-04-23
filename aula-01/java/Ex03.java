@@ -1,3 +1,8 @@
+import java.text.DateFormat;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.util.zip.DataFormatException;
+
 public class Ex03 {
 
     public static void main(String[] args) {
@@ -18,7 +23,14 @@ public class Ex03 {
 
         if (a < 1753) {
             throw new IllegalArgumentException("Ano inválido");
-        } 
+        }
+
+        try {
+            LocalDate.of(a, m, d);
+        } catch (DateTimeException excecao) {
+            final String data = String.format("%d/%d/%d", d, m, a);
+            throw new IllegalArgumentException("data invalida: " + data);
+        }
         
         if (m == 1 || m == 2) {
             m += 12;
