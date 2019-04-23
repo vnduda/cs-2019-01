@@ -1,10 +1,13 @@
 public class Ex18 {
 
     public static int Horner(int x, int g, int a[]) {
-        
+
         if (g < 1) {
             throw new IllegalArgumentException("Intervalo da variável g inválido");
         }
+        
+        // TODO teste a == null
+        // TODO verifique se a contem exatamente g elementos
 
         int p = a[g];
         int i = g - 1;

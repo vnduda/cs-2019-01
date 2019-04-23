@@ -20,5 +20,5 @@ public class Ex04 {
         }
 
         return s;
-    }     
+    }
 }
