@@ -4,8 +4,8 @@ function Propriedade3025(n) {
         throw new RangeError("forneca msg apropriada aqui");
     }
     
-    let i = parseInt(n / 100);
-    let j = parseInt(n % 100);
+    let i = Math.floor(n / 100);
+    let j = Math.floor(n % 100);
     return (i + j) * (i + j) == n;
 
 }
