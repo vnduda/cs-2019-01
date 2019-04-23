@@ -14,5 +14,5 @@ public class Ex01 {
 		final int j = n % 100;
 
 		return (i + j) * (i + j) == n;
-    }	    
+    }
 }
