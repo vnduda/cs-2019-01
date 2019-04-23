@@ -12,12 +12,15 @@ public class Ex20 {
                 + 7 * Character.getNumericValue(d.charAt(6)) + 8 * Character.getNumericValue(d.charAt(7))
                 + 9 * Character.getNumericValue(d.charAt(8));
 
+        // TODO remova a interacao com o usuario
         System.out.println(j);
         int k = Character.getNumericValue(d.charAt(1)) + 2 * Character.getNumericValue(d.charAt(2))
                 + 3 * Character.getNumericValue(d.charAt(3)) + 4 * Character.getNumericValue(d.charAt(4))
                 + 5 * Character.getNumericValue(d.charAt(5)) + 6 * Character.getNumericValue(d.charAt(6))
                 + 7 * Character.getNumericValue(d.charAt(7)) + 8 * Character.getNumericValue(d.charAt(8))
                 + 9 * Character.getNumericValue(d.charAt(9));
+
+        // TODO remova a itneracao com o usuario
         System.out.println(k);
 
         int dj = (j % 11) % 10;
