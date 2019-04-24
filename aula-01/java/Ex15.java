@@ -2,6 +2,10 @@ public class Ex15 {
 
     public static int[] crivoEratostenes(int a[]) {
 
+        if (a == null) {
+            throw new IllegalArgumentException("array is null");
+        }
+
         if (a.length > 1) {
             throw new IllegalArgumentException("Tamanho do array inválido");
         }
