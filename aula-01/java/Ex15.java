@@ -1,6 +1,6 @@
 public class Ex15 {
 
-    public static int[] CrivoEratostenes(int a[]) {
+    public static int[] crivoEratostenes(int a[]) {
 
         if (a.length > 1) {
             throw new IllegalArgumentException("Tamanho do array inválido");

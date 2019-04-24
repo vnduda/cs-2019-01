@@ -1,6 +1,6 @@
 public class Ex10 {
 
-    public static float LogaritmoNatural(float n, float k) {
+    public static float logaritmoNatural(float n, float k) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo de n inválido");

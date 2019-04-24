@@ -1,6 +1,6 @@
 public class Ex12 {
 
-    public static boolean QuadradoPerfeito(int n) {
+    public static boolean quadradoPerfeito(int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");

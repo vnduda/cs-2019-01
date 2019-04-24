@@ -1,10 +1,10 @@
 public class Ex02 {
 
     public static void main(String[] args) {
-        System.out.println(Propriedade153(153));
+        System.out.println(propriedade153(153));
     }
 
-    public static boolean Propriedade153(int n) {
+    public static boolean propriedade153(int n) {
 
         if (n < 100 || n > 999) {
             throw new IllegalArgumentException("Intervalo de n inválido");

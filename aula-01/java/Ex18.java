@@ -1,6 +1,6 @@
 public class Ex18 {
 
-    public static int Horner(int x, int g, int a[]) {
+    public static int horner(int x, int g, int a[]) {
 
         if (g < 1) {
             throw new IllegalArgumentException("Intervalo da variável g inválido");

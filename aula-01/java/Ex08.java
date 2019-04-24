@@ -1,6 +1,6 @@
 public class Ex08 {
 
-    public int Produto(int x, int y) {
+    public int produto(int x, int y) {
 
         if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
@@ -14,7 +14,7 @@ public class Ex08 {
         int potencia = 1;
 
         while (i <= y) {
-            potencia = Produto(potencia, x);
+            potencia = produto(potencia, x);
             i = i + 1;
         }
 

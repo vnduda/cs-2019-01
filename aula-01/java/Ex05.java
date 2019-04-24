@@ -1,6 +1,6 @@
 public class Ex05 {
 
-    public static int SomaNaturais(int n) {
+    public static int somaNaturais(int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo de n inválido");

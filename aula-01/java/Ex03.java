@@ -6,10 +6,10 @@ import java.util.zip.DataFormatException;
 public class Ex03 {
 
     public static void main(String[] args) {
-        System.out.println(DiaSemana(11, 4, 2019));
+        System.out.println(diaSemana(11, 4, 2019));
     }
 
-    public static int DiaSemana(int d, int m, int a) {
+    public static int diaSemana(int d, int m, int a) {
 
         int s;
 

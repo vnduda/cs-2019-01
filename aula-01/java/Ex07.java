@@ -1,13 +1,13 @@
 public class Ex07 {
 
-    public int Produto(int a, int b) {
+    public int produto(int a, int b) {
 
         if (a < 0) {
             throw new IllegalArgumentException("Intervalo de a inválido");
         }
 
         if (b < 0) {
-            throw new IllegalArgumentException("Intervalo de a inválido");
+            throw new IllegalArgumentException("Intervalo de b inválido");
         }
 
         int totalParcelas = a;

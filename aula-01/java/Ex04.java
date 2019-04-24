@@ -1,10 +1,10 @@
 public class Ex04 {
 
     public static void main(String[] args) {
-        System.out.println(RestoDivisao(3, 8));
+        System.out.println(restoDivisao(3, 8));
     }
 
-    public static int RestoDivisao(int x, int y) {
+    public static int restoDivisao(int x, int y) {
 
         if (y < 0) {
             throw new IllegalArgumentException("Valor de y inválido");
