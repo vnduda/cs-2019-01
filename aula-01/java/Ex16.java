@@ -10,10 +10,8 @@ public class Ex16 {
             throw new IllegalArgumentException("Intervalo da variável b inválido");
         }
 
-        int m;
-
         while (b != 0) {
-            m = a % b;
+            int m = a % b;
             a = b;
             b = m;
         }
