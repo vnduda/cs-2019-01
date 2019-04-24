@@ -1,7 +1,7 @@
 public class Ex09 {
 
     public double pi(int n) {
-        
+
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo inválido de n");
         }
@@ -10,7 +10,7 @@ public class Ex09 {
         double s = -1;
         double d = -1;
         int i = 1;
-        
+
         while (i <= n) {
             d = d + 2;
             s = -1 * s;
@@ -20,3 +20,4 @@ public class Ex09 {
         return p;
     }
 }
+

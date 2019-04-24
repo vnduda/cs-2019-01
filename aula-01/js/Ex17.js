@@ -10,10 +10,9 @@ function MDC2(a, b) {
 
     while (a != b) {
 
-        if(a > b) {
+        if (a > b) {
             a = a - b;
-        }
-        else{
+        } else {
             b = b - a;
         }
     }

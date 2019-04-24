@@ -1,7 +1,7 @@
 public class Ex14 {
-    
+
     public static boolean Primo(int n) {
-        
+
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");
         }

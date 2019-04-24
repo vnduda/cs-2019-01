@@ -1,7 +1,7 @@
 public class Ex07 {
 
     public int Produto(int a, int b) {
-        
+
         if (a < 0) {
             throw new IllegalArgumentException("Intervalo de a inválido");
         }
@@ -13,7 +13,7 @@ public class Ex07 {
         int totalParcelas = a;
         int parcela = b;
 
-        if (a > b){
+        if (a > b) {
             totalParcelas = b;
             parcela = a;
         }
@@ -24,7 +24,7 @@ public class Ex07 {
         while (i <= totalParcelas) {
             s = s + parcela;
         }
-        
+
         return s;
     }
 }

@@ -5,7 +5,7 @@ public class Ex04 {
     }
 
     public static int RestoDivisao(int x, int y) {
-        
+
         if (y < 0) {
             throw new IllegalArgumentException("Valor de y inválido");
         }

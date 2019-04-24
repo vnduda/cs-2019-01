@@ -1,7 +1,7 @@
 public class Ex11 {
-    
+
     public static float RazaoAurea(float x, float y, float k) {
-        
+
         if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
         }

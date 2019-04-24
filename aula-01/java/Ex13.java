@@ -1,7 +1,7 @@
 public class Ex13 {
-    
+
     public static float Raiz(float n, float i) {
-        
+
         if (n < 0) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");
         }

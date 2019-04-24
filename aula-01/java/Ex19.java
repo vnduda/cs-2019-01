@@ -1,5 +1,5 @@
 public class Ex19 {
-    
+
     public static int Fibonacci(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");
