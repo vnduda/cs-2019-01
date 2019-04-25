@@ -4,8 +4,8 @@ function Propriedade3025(n) {
         throw new RangeError("Intervalo de n inválido");
     }
 
-    let i = Math.floor(n / 100);
-    let j = Math.floor(n % 100);
+    const i = Math.floor(n / 100);
+    const j = Math.floor(n % 100);
 
     return (i + j) * (i + j) == n;
 
