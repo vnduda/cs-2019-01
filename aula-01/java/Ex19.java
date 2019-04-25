@@ -7,16 +7,14 @@ public class Ex19 {
 
         int a = 0;
         int c = 1;
-        int i, t;
+        int i = 2
 
         if (n == 0 || n == 1) {
             return n;
         }
 
-        i = 2;
-
         while (n >= i) {
-            t = c;
+            int t = c;
             c = c + a;
             a = t;
             i = i + 1;
