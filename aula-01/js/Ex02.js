@@ -1,7 +1,7 @@
 function Propriedade153(n) {
 
     if (n < 100 || n > 999) {
-        throw new RangeError();
+        throw new RangeError("Intervalo de n inválido");
     }
 
     let c = parseInt(n / 100);
