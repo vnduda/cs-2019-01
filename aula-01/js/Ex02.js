@@ -1,6 +1,6 @@
 function Propriedade153(n) {
 
-    if (100 > n || n > 999) {
+    if (n < 100 || n > 999) {
         throw new RangeError();
     }
 
