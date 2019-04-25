@@ -1,7 +1,7 @@
 function Propriedade3025(n) {
 
     if (n < 0 || n > 9999) {
-        throw new RangeError("forneca msg apropriada aqui");
+        throw new RangeError("Intervalo de n inválido");
     }
 
     let i = Math.floor(n / 100);
