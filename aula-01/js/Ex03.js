@@ -1,16 +1,24 @@
 function diaSemana(d, m, a) {
 
+    class DataInvalidaError extends Error {
+        constructor (DataInvalida){
+            super (DataInvalida);
+            this.name = "DataInvalidaError"
+        }
+    }
+
     if (d < 1 || d > 31) {
-        throw new RangeError("Dia invalido: " + d);
+        throw new DataInvalidaError("Dia invalido: " + d);
     }
 
     if (m < 1 || m > 12) {
-        throw new RangeError("Mês invalido: " + d);
+        throw new DataInvalidaError("Mês invalido: " + d);
     }
 
     if (a < 1753) {
-        throw new RangeError("Ano invalido: " + a);
+        throw new DataInvalidaError("Ano invalido: " + a);
     }
+
     let s;
 
     if (m == 1 || m == 2) {
