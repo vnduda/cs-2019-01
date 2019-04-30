@@ -15,7 +15,7 @@ public class Ex19 {
             return n;
         }
 
-        while (n >= i) {
+        while (i <= n) {
             int t = c;
             c = c + a;
             a = t;
