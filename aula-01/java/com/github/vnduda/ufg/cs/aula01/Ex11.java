@@ -20,7 +20,6 @@ public class Ex11 {
         float a = x;
         float i = 1;
         float t;
-
         while (k >= i) {
             t = c;
             c = c + a;
