@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex11 {
 
     public static float razaoAurea(float x, float y, float k) {
@@ -18,7 +20,6 @@ public class Ex11 {
         float a = x;
         float i = 1;
         float t;
-
         while (k >= i) {
             t = c;
             c = c + a;

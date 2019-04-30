@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex05 {
 
     public static int somaNaturais(int n) {
@@ -7,8 +9,7 @@ public class Ex05 {
         }
 
         int s = 1;
-
-        for (int i = 2; n >= i; i++) {
+        for (int i = 2; i <= n; i++) {
             s = s + i;
         }
 

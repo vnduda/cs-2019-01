@@ -1,4 +1,7 @@
-function Propriedade3025(n) {
+function propriedade3025(n) {
+
+    // TODO verificar se null
+    // TODO verificar se numero
 
     if (n < 0 || n > 9999) {
         throw new RangeError("Intervalo de n inválido");
@@ -8,5 +11,4 @@ function Propriedade3025(n) {
     const j = Math.floor(n % 100);
 
     return (i + j) * (i + j) == n;
-
 }

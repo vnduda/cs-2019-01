@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex20 {
 
     public static boolean CPF(String d) {
@@ -18,11 +20,9 @@ public class Ex20 {
                 + 7 * Character.getNumericValue(d.charAt(7)) + 8 * Character.getNumericValue(d.charAt(8))
                 + 9 * Character.getNumericValue(d.charAt(9));
 
-
         int dj = (j % 11) % 10;
         int dk = (k % 11) % 10;
 
         return dj == Character.getNumericValue(d.charAt(9)) && dk == Character.getNumericValue(d.charAt(10));
-
     }
 }

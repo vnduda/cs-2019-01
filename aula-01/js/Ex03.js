@@ -1,31 +1,30 @@
-function diaSemana(d, m, a) {
+class DataInvalidaError extends Error {
+    constructor (msg){
+        super (msg);
+        this.name = "DataInvalidaError";
+    }
+}
 
-    class DataInvalidaError extends Error {
-        constructor (DataInvalida){
-            super (DataInvalida);
-            this.name = "DataInvalidaError"
-        }
+function diaSemana(dia, mes, ano) {
+    if (dia < 1 || dia > 31) {
+        throw new DataInvalidaError("Dia invalido: " + dia);
     }
 
-    if (d < 1 || d > 31) {
-        throw new DataInvalidaError("Dia invalido: " + d);
+    if (mes < 1 || mes > 12) {
+        throw new DataInvalidaError("Mês invalido: " + dia);
     }
 
-    if (m < 1 || m > 12) {
-        throw new DataInvalidaError("Mês invalido: " + d);
-    }
-
-    if (a < 1753) {
+    if (ano < 1753) {
         throw new DataInvalidaError("Ano invalido: " + a);
     }
 
-    let s;
+    const janeiroOuFevereiro = m == 1 || m == 2;
+    const m = janeiroOuFevereiro ? mes + 12 : mes;
+    const a = janeiroOuFevereiro ? ano - 1 : ano;
 
-    if (m == 1 || m == 2) {
-        m = m + 12;
-        a = a - 1;
-    }
-    s = (d + (2 * m) + (3 * (m + 1) / 5) + a + (a / 4) - (a / 100) + (a / 400));
+    // FIXME provavelmente um bug, / em JS não é div (exigido pelo algoritmo)
+    // TODO drDobbsExp é melhor que "s"
+    const s = (dia + (2 * m) + (3 * (m + 1) / 5) + a + (a / 4) - (a / 100) + (a / 400));
     return (parseInt(s) % 7);
 }
 

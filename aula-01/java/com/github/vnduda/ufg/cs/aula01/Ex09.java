@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex09 {
 
     public double pi(int n) {
@@ -11,9 +13,10 @@ public class Ex09 {
         double d = -1;
         int i = 1;
 
+        // FIXME i nao cresce, n nao diminui?????
         while (i <= n) {
             d = d + 2;
-            s = -1 * s;
+            s = -s;
             p = p + 4 * s / d;
         }
 

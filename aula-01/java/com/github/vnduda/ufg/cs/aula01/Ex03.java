@@ -1,7 +1,7 @@
-import java.text.DateFormat;
+package com.github.vnduda.ufg.cs.aula01;
+
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.zip.DataFormatException;
 
 public class Ex03 {
 
@@ -9,6 +9,7 @@ public class Ex03 {
         System.out.println(diaSemana(11, 4, 2019));
     }
 
+    // FIXME nao use parametros como variaveis locais (devem ser "final")
     public static int diaSemana(int d, int m, int a) {
 
         if (d < 1 || d > 31) {
@@ -25,9 +26,9 @@ public class Ex03 {
 
         try {
             LocalDate.of(a, m, d);
-        } catch (DateTimeException excecao) {
+        } catch (DateTimeException exp) {
             final String data = String.format("%d/%d/%d", d, m, a);
-            throw new IllegalArgumentException("data invalida: " + data);
+            throw new IllegalArgumentException("data invalida: " + data, exp);
         }
         
         if (m == 1 || m == 2) {

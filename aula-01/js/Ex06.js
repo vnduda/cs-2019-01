@@ -4,7 +4,6 @@ function Fatorial(n) {
         throw new RangeError("Intervalo de n inválido");
     }
 
-
     let i = 2;
     let f = 1;
 
@@ -14,5 +13,4 @@ function Fatorial(n) {
     }
 
     return f;
-
 }

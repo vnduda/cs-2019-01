@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex10 {
 
     public static float logaritmoNatural(float n, float k) {
@@ -10,12 +12,10 @@ public class Ex10 {
             throw new IllegalArgumentException("Intervalo de k inválido");
         }
 
-
         float i = 2;
         float e = 1 + n;
         float numerador = n;
         float denominador = 1;
-
         while (k >= 1) {
             numerador = numerador * numerador;
             denominador = denominador * i;

@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex12 {
 
     public static boolean quadradoPerfeito(int n) {
@@ -8,8 +10,7 @@ public class Ex12 {
 
         int i = 1;
         int s = 1;
-
-        while (n > s) {
+        while (s < n) {
             i = i + 2;
             s = s + i;
         }

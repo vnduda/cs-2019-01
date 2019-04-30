@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex19 {
 
     public static int fibonacci(int n) {
@@ -7,13 +9,13 @@ public class Ex19 {
 
         int a = 0;
         int c = 1;
-        int i = 2
+        int i = 2;
 
         if (n == 0 || n == 1) {
             return n;
         }
 
-        while (n >= i) {
+        while (i <= n) {
             int t = c;
             c = c + a;
             a = t;

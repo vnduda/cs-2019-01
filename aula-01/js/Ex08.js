@@ -8,7 +8,6 @@ function Potencia(x, y) {
         throw new RangeError("Intervalo de y inválido");
     }
 
-
     let potencia = 1;
     let i = 1;
 
@@ -18,5 +17,4 @@ function Potencia(x, y) {
     }
 
     return potencia;
-
 }

@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex16 {
 
     public static int MDC(int a, int b) {

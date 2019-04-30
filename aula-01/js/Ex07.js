@@ -8,9 +8,8 @@ function Produto(a, b) {
         throw new RangeError("Intervalo de b inválido");
     }
 
-    totalParcelas = a;
-    parcela = b;
-
+    let totalParcelas = a;
+    let parcela = b;
     if (b < a) {
         totalParcelas = b;
         parcela = a;
@@ -18,11 +17,10 @@ function Produto(a, b) {
 
     let i = 1;
     let s = 0;
-
     while (i <= totalParcelas) {
         s = s + parcela;
         i = i + 1;
     }
-    return s;
 
+    return s;
 }

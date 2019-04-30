@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex06 {
 
     public int fatorial(int n) {
@@ -9,6 +11,7 @@ public class Ex06 {
         int f = 1;
         int i = 2;
 
+        // FIXME provavelmente bug, i nao cresce, n nao diminui?????
         while (i <= n) {
             f = f * i;
         }
