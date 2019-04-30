@@ -8,7 +8,7 @@ function mod(x, y) {
     }
 
     let s = x;
-    while (y <= s) {
+    while (s >= y) {
         s = s - y;
     }
     return s;
