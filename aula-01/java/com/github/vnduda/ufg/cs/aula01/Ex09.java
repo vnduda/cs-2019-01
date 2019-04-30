@@ -13,11 +13,11 @@ public class Ex09 {
         double d = -1;
         int i = 1;
 
-        // FIXME i nao cresce, n nao diminui?????
         while (i <= n) {
             d = d + 2;
             s = -s;
             p = p + 4 * s / d;
+            i = i + 1;
         }
 
         return p;
