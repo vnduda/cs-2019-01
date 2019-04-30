@@ -2,7 +2,7 @@ function propriedade3025(n) {
 
     // TODO verificar se null
     // TODO verificar se numero
-    
+
     if (n < 0 || n > 9999) {
         throw new RangeError("Intervalo de n inválido");
     }

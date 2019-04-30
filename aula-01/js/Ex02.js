@@ -4,10 +4,10 @@ function Propriedade153(n) {
         throw new RangeError("Intervalo de n inválido");
     }
 
-    let c = parseInt(n / 100);
-    let du = parseInt(n % 100);
-    let d = parseInt(du / 10);
-    let u = parseInt(du % 10);
+    const c = parseInt(n / 100);
+    const du = parseInt(n % 100);
+    const d = parseInt(du / 10);
+    const u = parseInt(du % 10);
 
     return (c * c * c) + (d * d * d) + (u * u * u) == n;
 }
