@@ -9,5 +9,5 @@ function Propriedade153(n) {
     const d = parseInt(du / 10);
     const u = parseInt(du % 10);
 
-    return (c * c * c) + (d * d * d) + (u * u * u) == n;
+    return (c**3 + d**3 + u**3) == n;
 }
