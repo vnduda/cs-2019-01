@@ -1,12 +1,11 @@
-function diaSemana(d, m, a) {
-
-    class DataInvalidaError extends Error {
-        constructor (DataInvalida){
-            super (DataInvalida);
-            this.name = "DataInvalidaError"
-        }
+class DataInvalidaError extends Error {
+    constructor (msg){
+        super (msg);
+        this.name = "DataInvalidaError";
     }
+}
 
+function diaSemana(d, m, a) {
     if (d < 1 || d > 31) {
         throw new DataInvalidaError("Dia invalido: " + d);
     }
