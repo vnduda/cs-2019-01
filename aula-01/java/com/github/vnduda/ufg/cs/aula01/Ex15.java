@@ -8,8 +8,7 @@ public class Ex15 {
             throw new IllegalArgumentException("array is null");
         }
 
-        // FIXME provavelmente um bug tamanho maximo é 1????
-        if (a.length > 1) {
+        if (a.length < 1) {
             throw new IllegalArgumentException("Tamanho do array inválido");
         }
 
