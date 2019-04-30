@@ -1,9 +1,7 @@
 package com.github.vnduda.ufg.cs.aula01;
 
-import java.text.DateFormat;
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.zip.DataFormatException;
 
 public class Ex03 {
 
