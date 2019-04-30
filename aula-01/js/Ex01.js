@@ -8,5 +8,4 @@ function propriedade3025(n) {
     const j = Math.floor(n % 100);
 
     return (i + j) * (i + j) == n;
-
 }
