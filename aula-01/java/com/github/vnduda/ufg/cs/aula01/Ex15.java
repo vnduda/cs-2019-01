@@ -12,9 +12,8 @@ public class Ex15 {
             throw new IllegalArgumentException("Tamanho do array inválido");
         }
 
-        for (int i = 0; i < a.length; i++) {
-
-            if (a[i] != 0) {
+        for (int valor : a) {
+            if (valor != 0) {
                 throw new IllegalArgumentException("O array precisa estar zerado");
             }
         }
