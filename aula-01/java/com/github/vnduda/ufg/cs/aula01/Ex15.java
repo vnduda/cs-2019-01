@@ -21,12 +21,11 @@ public class Ex15 {
 
         int i = 2;
         int limite = (int) Math.floor(Math.sqrt(a.length));
-        int multiplo;
 
         while (i <= limite) {
 
             if (a[i] == 0) {
-                multiplo = i + i;
+                int multiplo = i + i;
 
                 while (multiplo <= a.length) {
                     a[multiplo] = 1;
