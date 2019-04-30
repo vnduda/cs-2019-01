@@ -15,7 +15,7 @@ public class Ex09 {
 
         while (i <= n) {
             d = d + 2;
-            s = -1 * s;
+            s = -s;
             p = p + 4 * s / d;
         }
 
