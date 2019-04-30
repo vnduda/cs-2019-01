@@ -2,6 +2,7 @@ package com.github.vnduda.ufg.cs.aula01;
 
 public class Ex13 {
 
+    // TODO verifique se o tipo de i deve ser float (parece inadequado)
     public static float raiz(float n, float i) {
 
         if (n < 0) {

@@ -11,7 +11,7 @@ public class Ex12 {
         int i = 1;
         int s = 1;
 
-        while (n > s) {
+        while (s < n) {
             i = i + 2;
             s = s + i;
         }
