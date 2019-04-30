@@ -11,6 +11,7 @@ public class Ex03 {
         System.out.println(diaSemana(11, 4, 2019));
     }
 
+    // FIXME nao use parametros como variaveis locais (devem ser "final")
     public static int diaSemana(int d, int m, int a) {
 
         if (d < 1 || d > 31) {
