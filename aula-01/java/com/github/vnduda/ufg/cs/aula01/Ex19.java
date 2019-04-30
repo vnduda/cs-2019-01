@@ -9,7 +9,7 @@ public class Ex19 {
 
         int a = 0;
         int c = 1;
-        int i = 2
+        int i = 2;
 
         if (n == 0 || n == 1) {
             return n;
