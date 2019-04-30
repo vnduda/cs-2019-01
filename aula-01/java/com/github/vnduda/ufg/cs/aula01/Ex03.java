@@ -27,9 +27,9 @@ public class Ex03 {
 
         try {
             LocalDate.of(a, m, d);
-        } catch (DateTimeException excecao) {
+        } catch (DateTimeException exp) {
             final String data = String.format("%d/%d/%d", d, m, a);
-            throw new IllegalArgumentException("data invalida: " + data);
+            throw new IllegalArgumentException("data invalida: " + data, exp);
         }
         
         if (m == 1 || m == 2) {
