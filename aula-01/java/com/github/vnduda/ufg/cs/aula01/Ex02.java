@@ -18,7 +18,6 @@ public class Ex02 {
         final int u = du % 10;
 
         return (c * c * c) + (d * d * d) + (u * u * u) == n;
-
     }
 
 }
