@@ -6,6 +6,7 @@ function Pi(n) {
 
     let i = 1;
     let s = -1;
+    // TODO se d é um gerador de impares, por que nao o nome "impar"?
     let d = -1;
     let p = 0;
     while (i <= n) {
@@ -16,5 +17,4 @@ function Pi(n) {
     }
 
     return p;
-
 }
