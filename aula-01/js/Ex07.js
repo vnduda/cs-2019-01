@@ -10,7 +10,6 @@ function Produto(a, b) {
 
     totalParcelas = a;
     parcela = b;
-
     if (b < a) {
         totalParcelas = b;
         parcela = a;
@@ -18,11 +17,10 @@ function Produto(a, b) {
 
     let i = 1;
     let s = 0;
-
     while (i <= totalParcelas) {
         s = s + parcela;
         i = i + 1;
     }
-    return s;
 
+    return s;
 }
