@@ -9,8 +9,7 @@ public class Ex05 {
         }
 
         int s = 1;
-
-        for (int i = 2; n >= i; i++) {
+        for (int i = 2; i <= n; i++) {
             s = s + i;
         }
 
