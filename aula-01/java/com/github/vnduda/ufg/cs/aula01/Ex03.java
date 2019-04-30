@@ -10,7 +10,7 @@ public class Ex03 {
     }
 
     // FIXME nao use parametros como variaveis locais (devem ser "final")
-    public static int diaSemana(int d, int m, int a) {
+    public static int diaSemana(final int d, final int m, final int a) {
 
         if (d < 1 || d > 31) {
             throw new IllegalArgumentException("Dia inválido");
@@ -30,7 +30,11 @@ public class Ex03 {
             final String data = String.format("%d/%d/%d", d, m, a);
             throw new IllegalArgumentException("data invalida: " + data, exp);
         }
-        
+
+        int dia = d;
+        int mes = m;
+        int ano = a;
+
         if (m == 1 || m == 2) {
             m += 12;
             a -= 1;   
