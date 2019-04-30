@@ -1,4 +1,4 @@
-function LogaritmoNatural(n, k) {
+function logaritmoNatural(n, k) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");

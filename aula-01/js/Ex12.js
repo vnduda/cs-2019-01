@@ -1,4 +1,4 @@
-function QuadradoPerfeito(n) {
+function quadradoPerfeito(n) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");

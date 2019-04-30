@@ -1,4 +1,4 @@
-function Produto(a, b) {
+function produto(a, b) {
 
     if (a < 0) {
         throw new RangeError("Intervalo de a inválido");

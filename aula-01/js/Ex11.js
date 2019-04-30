@@ -1,4 +1,4 @@
-function RazaoAurea(x, y, k) {
+function razaoAurea(x, y, k) {
 
     if (x < 0) {
         throw new RangeError("Intervalo de x inválido");

@@ -1,4 +1,4 @@
-function Raiz(n, i) {
+function raiz(n, i) {
 
     if (n < 0) {
         throw new RangeError("Intervalo de n inválido");

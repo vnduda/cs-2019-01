@@ -1,4 +1,4 @@
-function Fibonacci(n) {
+function fibonacci(n) {
 
     if (n < 0) {
         throw new RangeError("Intervalo de n inválido");

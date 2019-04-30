@@ -1,4 +1,4 @@
-function Primo(n) {
+function primo(n) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");
