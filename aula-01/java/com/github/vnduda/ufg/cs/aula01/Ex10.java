@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex10 {
 
     public static float logaritmoNatural(float n, float k) {

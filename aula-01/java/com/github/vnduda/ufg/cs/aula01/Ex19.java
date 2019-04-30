@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex19 {
 
     public static int fibonacci(int n) {

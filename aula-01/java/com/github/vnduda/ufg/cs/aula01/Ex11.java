@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex11 {
 
     public static float razaoAurea(float x, float y, float k) {

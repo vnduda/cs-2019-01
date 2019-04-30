@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex12 {
 
     public static boolean quadradoPerfeito(int n) {

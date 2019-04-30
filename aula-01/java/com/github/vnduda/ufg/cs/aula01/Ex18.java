@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex18 {
 
     public static int horner(int x, int g, int a[]) {

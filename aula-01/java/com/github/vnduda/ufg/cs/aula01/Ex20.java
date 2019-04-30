@@ -1,3 +1,5 @@
+package com.github.vnduda.ufg.cs.aula01;
+
 public class Ex20 {
 
     public static boolean CPF(String d) {
