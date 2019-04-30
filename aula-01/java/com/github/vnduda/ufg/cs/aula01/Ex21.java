@@ -22,7 +22,5 @@ public class Ex21 {
         int k = ((s - p + 9 * Character.getNumericValue(d.charAt(9))) % 11) % 10;
 
         return (j == Character.getNumericValue(d.charAt(9)) && k == Character.getNumericValue(d.charAt(10)));
-
     }
-
 }
