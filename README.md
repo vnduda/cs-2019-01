@@ -1,2 +1,2 @@
 # cs-2019-01
-Aula de Construção de Software - UFG
+Repositório para a matéria de Construção de Software - UFG
