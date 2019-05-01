@@ -1,4 +1,4 @@
-function Propriedade153(n) {
+function propriedade153(n) {
 
     // TODO verificar se null
     // TODO verificar se numero

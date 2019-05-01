@@ -1,4 +1,4 @@
-function Horner(x, g, a) {
+function horner(x, g, a) {
 
     if (g < 1) {
         throw new RangeError("Intervalo de g inválido");

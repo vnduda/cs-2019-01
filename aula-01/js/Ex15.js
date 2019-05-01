@@ -1,4 +1,4 @@
-function CrivoEratostenes(s, n) {
+function crivoEratostenes(s, n) {
 
     if (s.length > 1) {
         throw new Error("Tamanho do array inválido");

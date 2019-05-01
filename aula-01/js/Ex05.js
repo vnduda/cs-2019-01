@@ -1,4 +1,4 @@
-function SomaNaturais(n) {
+function somaNaturais(n) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");

@@ -1,4 +1,4 @@
-function Fatorial(n) {
+function fatorial(n) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");

@@ -1,4 +1,4 @@
-function Potencia(x, y) {
+function potencia(x, y) {
 
     if (x < 0) {
         throw new RangeError("Intervalo de x inválido");
