@@ -24,8 +24,8 @@ function diaSemana(dia, mes, ano) {
 
     // FIXME provavelmente um bug, / em JS não é div (exigido pelo algoritmo)
     // TODO drDobbsExp é melhor que "s"
-    const s = (dia + (2 * m) + (3 * (m + 1) / 5) + a + (a / 4) - (a / 100) + (a / 400));
-    return (parseInt(s) % 7);
+    const drDobbsExp = (dia + (2 * m) + (3 * (m + 1) / 5) + a + (a / 4) - (a / 100) + (a / 400));
+    return (parseInt(drDobbsExp) % 7);
 }
 
     
