@@ -1,9 +1,11 @@
 function propriedade153(n) {
 
-    // TODO verificar se null
-    // TODO verificar se numero
-    // TODO verificar se inteiro
-
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof n !== 'number') {
+        throw new TypeError("n precisa ser um número");
+    }
     if (n < 100 || n > 999) {
         throw new RangeError("Intervalo de n inválido");
     }
