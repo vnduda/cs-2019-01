@@ -1,3 +1,10 @@
+/**
+ * Verifica se n satisfaz a propriedade 3025.
+ * @param {Number} n variavel a ser verificada
+ * @throws {Error} caso entrada seja null ou undefined
+ * @throws {TypeError} caso entrada não seja um número
+ * @throws {RangeError} caso número seja menor que 0 ou maior que 999
+ */
 function propriedade3025(n) {
 
     if (n == null || n == undefined) {
