@@ -22,8 +22,6 @@ function diaSemana(dia, mes, ano) {
     const m = janeiroOuFevereiro ? mes + 12 : mes;
     const a = janeiroOuFevereiro ? ano - 1 : ano;
 
-    // FIXME provavelmente um bug, / em JS não é div (exigido pelo algoritmo)
-    // TODO drDobbsExp é melhor que "s"
     const drDobbsExp = (dia + (2 * m) + (3 * (m + 1) / 5) + a + (a / 4) - (a / 100) + (a / 400));
     return (parseInt(drDobbsExp) % 7);
 }
