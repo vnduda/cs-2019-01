@@ -5,6 +5,14 @@ class DataInvalidaError extends Error {
     }
 }
 
+/**
+ * Determina o dia da semana a partir de uma dada data
+ * @param {Number} dia o dia da data 
+ * @param {Number} mes o mês da data
+ * @param {Number} ano o ano da data
+ * @throws {DataInvalidaError} caso a data não seja válida
+ */
+
 function diaSemana(dia, mes, ano) {
     if (dia < 1 || dia > 31) {
         throw new DataInvalidaError("Dia invalido: " + dia);
