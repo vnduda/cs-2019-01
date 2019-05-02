@@ -1,8 +1,11 @@
 function propriedade3025(n) {
 
-    // TODO verificar se null
-    // TODO verificar se numero
-
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof n !== 'number') {
+        throw new TypeError("n precisa ser um número");
+    }
     if (n < 0 || n > 9999) {
         throw new RangeError("Intervalo de n inválido");
     }
