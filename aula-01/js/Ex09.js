@@ -1,3 +1,10 @@
+/**
+ * Verifica valor de Pi para um total de n termos
+ * @param {Number} n quantidade de termos
+ * @throws {RangeError} caso n seja menor que 1
+ * @returns {Number} retorna o valor calculado de pi
+ */
+
 function pi(n) {
 
     if (n < 1) {

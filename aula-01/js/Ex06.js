@@ -1,3 +1,9 @@
+/**
+ * Algoritmo que faz o fatorial de um número n.
+ * @param {Number} n variável que será calculado o fatorial
+ * @throws {RangeError} caso o número seja menor que 1
+ * @returns {Number} retorna o fatorial de n
+ */
 function fatorial(n) {
 
     if (n < 1) {

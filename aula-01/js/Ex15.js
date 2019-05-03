@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 function crivoEratostenes(s, n) {
 
     if (s.length > 1) {

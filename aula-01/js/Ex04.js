@@ -3,6 +3,7 @@
  * @param {Number} x dividendo
  * @param {Number} y divisor
  * @throws {RangeError} caso x ou y forem menores que 0
+ * @returns {Number} resto da divisão de x por y
  */
 function mod(x, y) {
     if (y < 0) {
