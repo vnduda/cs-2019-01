@@ -1,3 +1,9 @@
+/**
+ * Algoritmo que calcula o n-esimo número de Fibonacci
+ * @param {Number} n variável a ser calculada
+ * @throws {RangeError} caso n seja menor que zero
+ * @returns {Number} retorna o n-esimo número de Fibonacci
+ */
 function fibonacci(n) {
 
     if (n < 0) {
