@@ -4,7 +4,7 @@
  * @throws {RangeError} caso n seja menor que 1
  * @returns {boolean} retorna true caso verdadeiro, caso contrário false
  */
-
+module.exports = primo;
 function primo(n) {
 
     if (n < 1) {

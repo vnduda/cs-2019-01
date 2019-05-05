@@ -4,6 +4,7 @@
  * @throws {RangeError} caso n seja menor que 1
  * @returns {Number} retorna a soma dos primeiros números até n
  */
+module.exports = somaNaturais;
 function somaNaturais(n) {
 
     if (n < 1) {
