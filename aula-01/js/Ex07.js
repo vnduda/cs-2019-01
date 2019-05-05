@@ -1,3 +1,10 @@
+/**
+ * Verifica o produto de dois inteiros a e b utilizando soma
+ * @param {Number} a variável multiplicando
+ * @param {Number} b variável multiplicador
+ * @throws {RangeError} caso a e b sejam menores que 0
+ * @returns {Number} retorna o produto de dois inteiros
+ */
 function produto(a, b) {
 
     if (a < 0) {

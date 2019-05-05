@@ -4,6 +4,7 @@
  * @throws {Error} caso entrada seja null ou undefined
  * @throws {TypeError} caso entrada não seja um número
  * @throws {RangeError} caso número seja menor que 100 ou maior que 999
+ * @returns {boolean} caso verdadeiro, retorna true, caso contrário false
  */
 
 function propriedade153(n) {

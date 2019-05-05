@@ -1,3 +1,10 @@
+/**
+ * Verifica potencia de x elevado a y utilizando somas
+ * @param {Number} x base da potência
+ * @param {Number} y expoente da potência
+ * @throws {RangeError} caso x e y sejam menores que 0
+ * @returns {Number} retorna o valor da potência de x por y
+ */
 function potencia(x, y) {
 
     if (x < 0) {

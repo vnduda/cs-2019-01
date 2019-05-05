@@ -1,3 +1,10 @@
+/**
+ * Aproxima raizes de uma equação polinomial
+ * @param {Number} x variável para obter uma aproximação 
+ * @param {Number} g 
+ * @param {Number} a coeficientes do polinômio
+ * @returns {Number} retorna o valor calculado
+ */
 function horner(x, g, a) {
 
     if (g < 1) {

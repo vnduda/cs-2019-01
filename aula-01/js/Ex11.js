@@ -1,3 +1,12 @@
+/**
+ * Calcula a razão aurea usando dois números inteiros e o número seguinte é
+ * a soma dos dois anteriores. E assim sucessivamente
+ * @param {Number} x número inteiro
+ * @param {Number} y número inteiro
+ * @param {Number} k soma de x + y
+ * @throws {RangeError} caso x seja menor que 0, x maior que y ou k menor que 0
+ * @returns {Number} retorna o valor da razao aurea calculado
+ */
 function razaoAurea(x, y, k) {
 
     if (x < 0) {

@@ -1,3 +1,11 @@
+/**
+ * Algoritmo que encontra números primos
+ * @param {Number} s coleção de números 
+ * @param {Number} n maior número a ser checado
+ * @throws {Error} caso array tenha tamanho inválido
+ * @throws {RangeError} caso array não esteja zerado
+ * @returns {boolean} 
+ */
 function crivoEratostenes(s, n) {
 
     if (s.length > 1) {

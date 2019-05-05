@@ -11,6 +11,7 @@ class DataInvalidaError extends Error {
  * @param {Number} mes o mês da data
  * @param {Number} ano o ano da data
  * @throws {DataInvalidaError} caso a data não seja válida
+ * @returns {Number} retorna o numero equivalente ao dia da semana que foi calculado
  */
 
 function diaSemana(dia, mes, ano) {
