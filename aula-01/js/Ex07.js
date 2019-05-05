@@ -5,6 +5,7 @@
  * @throws {RangeError} caso a e b sejam menores que 0
  * @returns {Number} retorna o produto de dois inteiros
  */
+module.exports = produto;
 function produto(a, b) {
 
     if (a < 0) {

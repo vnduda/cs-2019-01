@@ -7,6 +7,7 @@
  * @throws {RangeError} caso x seja menor que 0, x maior que y ou k menor que 0
  * @returns {Number} retorna o valor da razao aurea calculado
  */
+module.exports = razaoAurea;
 function razaoAurea(x, y, k) {
 
     if (x < 0) {

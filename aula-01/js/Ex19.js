@@ -4,6 +4,7 @@
  * @throws {RangeError} caso n seja menor que zero
  * @returns {Number} retorna o n-esimo número de Fibonacci
  */
+module.exports = fibonacci;
 function fibonacci(n) {
 
     if (n < 0) {
@@ -16,7 +17,7 @@ function fibonacci(n) {
     if (n == 0 || n == 1) {
         return n;
     }
-    i = 2;
+    let i = 2;
 
     while (i <= n) {
         let t = c;

@@ -5,6 +5,7 @@
  * @throws {RangeError} caso n seja menor que 1 e k menor que 2
  * @returns {Number} retorna o logaritmo elevado a n calculado com precisão k
  */
+module.exports = logaritmoNatural;
 function logaritmoNatural(n, k) {
 
     if (n < 1) {

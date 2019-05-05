@@ -5,6 +5,7 @@
  * @param {Number} a coeficientes do polinômio
  * @returns {Number} retorna o valor calculado
  */
+module.exports = horner;
 function horner(x, g, a) {
 
     if (g < 1) {

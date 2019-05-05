@@ -5,6 +5,7 @@
  * @throws {RangeError} caso x e y sejam menores que 0
  * @returns {Number} retorna o valor da potência de x por y
  */
+module.exports = potencia;
 function potencia(x, y) {
 
     if (x < 0) {
@@ -17,7 +18,7 @@ function potencia(x, y) {
 
     let potencia = 1;
     let i = 1;
-
+    let Produto;
     while (i <= y) {
         potencia = Produto(potencia, x);
         i = i + 1;

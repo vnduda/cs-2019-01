@@ -6,12 +6,13 @@
  * @throws {RangeError} caso número seja menor que 0 ou maior que 999
  * @returns {boolean} caso verdadeiro retorna true, caso contrário false
  */
+module.exports = propriedade3025;
 function propriedade3025(n) {
 
     if (n == null || n == undefined) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
-    if (typeof n !== 'number') {
+    if (typeof n !== "number") {
         throw new TypeError("n precisa ser um número");
     }
     if (n < 0 || n > 9999) {

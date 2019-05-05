@@ -6,6 +6,7 @@
  * @throws {RangeError} caso array não esteja zerado
  * @returns {boolean} 
  */
+module.exports = crivoEratostenes;
 function crivoEratostenes(s, n) {
 
     if (s.length > 1) {
@@ -20,7 +21,7 @@ function crivoEratostenes(s, n) {
 
     if (n > 1) {
 
-        a = s;
+        let a = s;
 
         for (i = 2; i <= n; i++) {
             if (a[i] == 0) {
@@ -29,7 +30,7 @@ function crivoEratostenes(s, n) {
         }
 
         let i = 2;
-        limite = Math.floor(Math.sqrt(n));
+        let limite = Math.floor(Math.sqrt(n));
         let multiplo;
 
         while (i <= limite) {

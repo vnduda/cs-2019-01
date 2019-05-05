@@ -4,6 +4,7 @@
  * @throws {RangeError} caso d tenha mais ou menos de 11 dígitos
  * @returns {boolean} true caso seja verdadeiro, false caso contrário
  */
+module.exports = CPF2;
 function CPF2(d) {
     if (d.length != 11) {
         throw new RangeError("O CPF não pode conter mais ou menos que 11 dígitos");
@@ -16,7 +17,7 @@ function CPF2(d) {
         s = s + p;
         c = c - 1;
     }
-    j = (s % 11) % 10;
-    k = ((s - p + d[10]) % 11) % 10;
+    let j = (s % 11) % 10;
+    let k = ((s - p + d[10]) % 11) % 10;
     return (j == d[10] && k == d[11]);
 }

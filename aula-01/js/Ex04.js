@@ -5,6 +5,7 @@
  * @throws {RangeError} caso x ou y forem menores que 0
  * @returns {Number} resto da divisão de x por y
  */
+module.exports = mod;
 function mod(x, y) {
     if (y < 0) {
         throw new RangeError("Intervalo de y inválido");

@@ -4,6 +4,7 @@
  * @throws {RangeError} caso o número seja menor que 1
  * @returns {Number} retorna o fatorial de n
  */
+module.exports = fatorial;
 function fatorial(n) {
 
     if (n < 1) {

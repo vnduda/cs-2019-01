@@ -5,6 +5,7 @@
  * @throws {RangeError} caso b seja menor que 0 ou b seja maior que a
  * @returns {Number} retorna o valor do mdc entre a e b
  */
+module.exports = MDC2;
 function MDC2(a, b) {
 
     if (a < b) {

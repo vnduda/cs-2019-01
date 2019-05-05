@@ -4,7 +4,7 @@
  * @throws {RangeError} caso d tenha mais ou menos de 11 dígitos
  * @returns {boolean} true caso seja verdadeiro, false caso contrário
  */
-
+module.exports = CPF;
 function CPF(d) {
     if (d.length != 11) {
         throw new RangeError("O CPF não pode conter mais ou menos que 11 dígitos");
