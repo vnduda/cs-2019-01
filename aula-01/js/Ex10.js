@@ -16,6 +16,14 @@ function logaritmoNatural(n, k) {
         throw new RangeError("Intervalo de k inválido");
     }
 
+    if (typeof n !== "number" || typeof k !== "number") {
+        throw new TypeError("Precisa ser um número");
+    }
+
+    if (n == null || n == undefined || k == null || k == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+
     let i = 2;
     let e = 1 + n;
     let numerador = n;
