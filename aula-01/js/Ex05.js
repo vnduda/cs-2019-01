@@ -2,6 +2,7 @@
  * Faz a soma dos primeiros naturais, de 1 até n
  * @param {Number} n número máximo a ser calculado
  * @throws {RangeError} caso n seja menor que 1
+ * @throws {Error} caso entrada seja null ou undefined
  * @returns {Number} retorna a soma dos primeiros números até n
  */
 module.exports = somaNaturais;
@@ -9,6 +10,10 @@ function somaNaturais(n) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");
+    }
+
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
     }
 
     let i = 2;

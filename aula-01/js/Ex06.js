@@ -11,6 +11,14 @@ function fatorial(n) {
         throw new RangeError("Intervalo de n inválido");
     }
 
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+
+    if (typeof n !== "number") {
+        throw new TypeError("n precisa ser um número");
+    }
+
     let i = 2;
     let f = 1;
 
