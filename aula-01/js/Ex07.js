@@ -16,6 +16,10 @@ function produto(a, b) {
         throw new RangeError("Intervalo de b inválido");
     }
 
+    if (a == null || a == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+
     let totalParcelas = a;
     let parcela = b;
     if (b < a) {
