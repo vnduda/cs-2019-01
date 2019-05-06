@@ -21,11 +21,11 @@ function diaSemana(dia, mes, ano) {
     }
 
     if (mes < 1 || mes > 12) {
-        throw new DataInvalidaError("Mês invalido: " + dia);
+        throw new DataInvalidaError("Mês invalido: " + mes);
     }
 
     if (ano < 1753) {
-        throw new DataInvalidaError("Ano invalido: " + a);
+        throw new DataInvalidaError("Ano invalido: " + ano);
     }
 
     const janeiroOuFevereiro = m == 1 || m == 2;
