@@ -11,9 +11,14 @@ function MDC(a, b) {
     if (b < 0) {
         throw new RangeError("Intervalo de b inválido");
     }
-
     if (a < b) {
         throw new RangeError("Variável b não pode ser maior que a");
+    }
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof n !== "number") {
+        throw new TypeError("n precisa ser um número");
     }
 
 
