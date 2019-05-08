@@ -3,6 +3,8 @@
  * @param {Number} a variável multiplicando
  * @param {Number} b variável multiplicador
  * @throws {RangeError} caso a e b sejam menores que 0
+ * @throws {Error} caso entrada seja null ou undefined 
+ * @throws {TypeError} caso entrada não seja um número
  * @returns {Number} retorna o produto de dois inteiros
  */
 module.exports = produto;
@@ -18,6 +20,10 @@ function produto(a, b) {
 
     if (a == null || a == undefined) {
         throw new Error("Entrada não pode ser null ou undefined");
+    }
+
+    if (typeof n !== "number") {
+        throw new TypeError("n precisa ser um número");
     }
 
     let totalParcelas = a;

@@ -2,6 +2,8 @@
  * Algoritmo que faz o fatorial de um número n.
  * @param {Number} n variável que será calculado o fatorial
  * @throws {RangeError} caso o número seja menor que 1
+ * @throws {Error} caso entrada seja null ou undefined
+ * @throws {TypeError} caso entrada não seja um número
  * @returns {Number} retorna o fatorial de n
  */
 module.exports = fatorial;

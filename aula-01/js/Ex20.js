@@ -1,3 +1,10 @@
+function cpfStringToArray(d) {
+    let cpf = [];
+    for (let i = 0; i < d.length; i++) {
+        cpf[i] = parseInt(d[i]);
+    }
+    return cpf;
+}
 /**
  * Algoritmo que certifica se o CPF é válido
  * @param {Number} d CPF a ser verificado
@@ -6,12 +13,19 @@
  */
 module.exports = CPF;
 function CPF(d) {
-    if (d.length != 11) {
+    if (typeof d != "string") {
+        throw new TypeError("Uma string é esperada");
+    }
+    if (d.length != 11 || d == null) {
         throw new RangeError("O CPF não pode conter mais ou menos que 11 dígitos");
     }
-    let j = d[0] + d[1] + d[2] + d[3] + d[4] + d[5] + d[6] + d[7] + d[8];
-    let k = d[1] + d[2] + d[3] + d[4] + d[5] + d[6] + d[7] + d[8] + d[9];
+    const cpf = cpfStringToArray(d);
+
+    let j = cpf[0] + 2 * cpf[1] + 3 * cpf[2] + 4 * cpf[3] + 5 * cpf[4] + 6 * cpf[5] + 7 * cpf[6] + 8 * cpf[7] + 9 * cpf[8];
+    let k = cpf[1] + 2 * cpf[2] + 3 * cpf[3] + 4 * cpf[4] + 5 * cpf[5] + 6 * cpf[6] + 7 * cpf[7] + 8 * cpf[8] + 9 * cpf[9];
+
     let dj = (j % 11) % 10;
     let dk = (k % 11) % 10;
-    return (dj == d[9] && dk == d[10]);
+
+    return (dj == cpf[9] && dk == cpf[10]);
 }
