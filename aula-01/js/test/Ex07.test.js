@@ -19,3 +19,7 @@ test("valor negativo fora da faixa", () => {
 test("valor negativo fora da faixa", () => {
     expect(() => { produto(2, -1); }).toThrow(RangeError);
 });
+
+test("argumento nao numerico", () => {
+  expect(() => { produto("abcd"); }).toThrow(TypeError);
+});

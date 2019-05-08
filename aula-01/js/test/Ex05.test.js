@@ -11,3 +11,7 @@ test("Valor de n fora da faixa", () => {
 test("argumento null/undefined", () => {
     expect(() => { somaNaturais(); }).toThrow();
 });
+
+test("argumento nao numerico", () => {
+  expect(() => { somaNaturais("abcd"); }).toThrow(TypeError);
+});

@@ -12,3 +12,10 @@ test("Mod nao satisfaz, x inválido", () => {
     expect(() => { mod(-1, 3); }).toThrow(RangeError);
 });
 
+test("argumento null/undefined", () => {
+  expect(() => { mod(); }).toThrow();
+});
+
+test("argumento nao numerico", () => {
+  expect(() => { mod("abcd"); }).toThrow(TypeError);
+});
