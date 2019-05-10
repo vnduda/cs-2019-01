@@ -8,7 +8,7 @@
  * @throws {TypeError} caso entrada não seja um numero
  * @returns {Number} retorna o valor calculado
  */
-module.exports = horner;
+
 function horner(x, g, a) {
 
     if (g < 1) {
@@ -31,3 +31,5 @@ function horner(x, g, a) {
     }
 
 }
+
+module.exports = horner;

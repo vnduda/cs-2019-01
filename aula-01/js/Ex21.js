@@ -11,7 +11,7 @@ function cpfStringToArray(d) {
  * @throws {RangeError} caso d tenha mais ou menos de 11 dígitos
  * @returns {boolean} true caso seja verdadeiro, false caso contrário
  */
-module.exports = CPF2;
+
 function CPF2(d) {
     if (typeof d != "string") {
         throw new TypeError("string é esperada");
@@ -32,3 +32,5 @@ function CPF2(d) {
     let k = ((s - p + 9 * cpf[9]) % 11) % 10;
     return (j == cpf[9] && k == cpf[10]);
 }
+
+module.exports = CPF2;
