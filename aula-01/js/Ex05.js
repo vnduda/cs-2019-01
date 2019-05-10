@@ -6,7 +6,7 @@
  * @throws {TypeError} caso entrada não seja um numero
  * @returns {Number} retorna a soma dos primeiros números até n
  */
-module.exports = somaNaturais;
+
 function somaNaturais(n) {
 
     if (n < 1) {
