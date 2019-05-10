@@ -6,7 +6,6 @@
  * @throws {RangeError} caso número seja menor que 0 ou maior que 999
  * @returns {boolean} caso verdadeiro retorna true, caso contrário false
  */
-
 function propriedade3025(n) {
 
     if (n == null || n == undefined) {

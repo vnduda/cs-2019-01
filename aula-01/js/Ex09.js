@@ -4,7 +4,6 @@
  * @throws {RangeError} caso n seja menor que 1
  * @returns {Number} retorna o valor calculado de pi
  */
-module.exports = pi;
 function pi(n) {
 
     if (n < 1) {
@@ -30,3 +29,5 @@ function pi(n) {
 
     return p;
 }
+
+module.exports = pi;

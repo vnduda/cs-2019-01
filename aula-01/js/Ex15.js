@@ -6,7 +6,6 @@
  * @throws {RangeError} caso array não esteja zerado
  * @returns {boolean} 
  */
-module.exports = crivoEratostenes;
 function crivoEratostenes(s, n) {
 
     if (s.length > 1) {
@@ -51,3 +50,5 @@ function crivoEratostenes(s, n) {
         return a;
     }
 }
+
+module.exports = crivoEratostenes;

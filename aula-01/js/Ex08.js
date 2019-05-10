@@ -5,7 +5,6 @@
  * @throws {RangeError} caso x e y sejam menores que 0
  * @returns {Number} retorna o valor da potência de x por y
  */
-module.exports = potencia;
 function potencia(x, y) {
 
     if (x < 0) {
@@ -30,3 +29,5 @@ function potencia(x, y) {
 
     return potencia;
 }
+
+module.exports = potencia;

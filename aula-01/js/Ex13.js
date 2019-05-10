@@ -5,7 +5,6 @@
  * @throws {RangeError} caso n seja menor que n
  * @returns {Number} retorna a raiz quadrada calculada
  */
-module.exports = raiz;
 function raiz(n, i) {
 
     if (n < 0) {
@@ -27,3 +26,5 @@ function raiz(n, i) {
     return r;
 
 }
+
+module.exports = raiz;

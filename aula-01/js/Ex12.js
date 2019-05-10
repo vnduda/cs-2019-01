@@ -4,7 +4,6 @@
  * @throws {RangeError} caso n seja menor que 1
  * @returns {Number} retorna o quadrado perfeito
  */
-module.exports = quadradoPerfeito;
 function quadradoPerfeito(n) {
 
     if (n < 1) {
@@ -28,3 +27,5 @@ function quadradoPerfeito(n) {
     return s == n;
 
 }
+
+module.exports = quadradoPerfeito;
