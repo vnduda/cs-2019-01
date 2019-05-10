@@ -6,7 +6,7 @@
  * @throws {TypeError} caso entrada não seja um número
  * @returns {Number} retorna o fatorial de n
  */
-module.exports = fatorial;
+
 function fatorial(n) {
 
     if (n < 1) {
@@ -31,3 +31,5 @@ function fatorial(n) {
 
     return f;
 }
+
+module.exports = fatorial;

@@ -7,7 +7,7 @@
  * @throws {TypeError} caso entrada não seja um numero
  * @returns {Number} resto da divisão de x por y
  */
-module.exports = mod;
+
 function mod(x, y) {
     if (y < 0) {
         throw new RangeError("Intervalo de y inválido");
@@ -29,4 +29,5 @@ function mod(x, y) {
 
     return s;
 }
-    
+
+module.exports = mod;

@@ -29,3 +29,5 @@ function somaNaturais(n) {
 
     return s;
 }
+
+module.exports = somaNaturais;

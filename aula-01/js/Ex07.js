@@ -7,7 +7,7 @@
  * @throws {TypeError} caso entrada não seja um número
  * @returns {Number} retorna o produto de dois inteiros
  */
-module.exports = produto;
+
 function produto(a, b) {
 
     if (a < 0) {
@@ -42,3 +42,5 @@ function produto(a, b) {
 
     return s;
 }
+
+module.exports = produto;

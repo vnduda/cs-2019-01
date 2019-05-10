@@ -14,7 +14,6 @@ class DataInvalidaError extends Error {
  * @returns {Number} retorna o numero equivalente ao dia da semana que foi calculado
  */
 
-module.exports = diaSemana;
 function diaSemana(dia, mes, ano) {
     if (dia < 1 || dia > 31) {
         throw new DataInvalidaError("Dia invalido: " + dia);
@@ -36,4 +35,5 @@ function diaSemana(dia, mes, ano) {
     return (parseInt(drDobbsExp) % 7);
 }
 
+module.exports = diaSemana;
     

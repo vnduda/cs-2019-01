@@ -1,4 +1,3 @@
-module.exports = propriedade3025;
 /**
  * Verifica se n satisfaz a propriedade 3025.
  * @param {Number} n variavel a ser verificada
@@ -28,3 +27,5 @@ function propriedade3025(n) {
 
     return (i + j) * (i + j) == n;
 }
+
+module.exports = propriedade3025;
