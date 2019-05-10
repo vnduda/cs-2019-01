@@ -9,11 +9,11 @@ test("argumento null/undefined", () => {
 });
 
 test("argumento nao numerico", () => {
-  expect(() => { MDC("abcd"); }).toThrow(TypeError);
+  expect(() => { MDC("abcd", 2); }).toThrow(TypeError);
 });
 
 test("valor fora da faixa", () => {
-  expect(() => { MDC(2, 0); }).toThrow(RangeError);
+  expect(() => { MDC(2, -1); }).toThrow(RangeError);
 });
 
 test("valor fora da faixa", () => {

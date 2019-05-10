@@ -13,11 +13,11 @@ function MDC(a, b) {
     if (a < b) {
         throw new RangeError("Variável b não pode ser maior que a");
     }
-    if (n == null || n == undefined) {
+    if (a == null || a == undefined || b == null || b == undefined) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
-    if (typeof n !== "number") {
-        throw new TypeError("n precisa ser um número");
+    if (typeof a !== "number" || typeof b !== "number") {
+        throw new TypeError("Entrada precisa ser um número");
     }
 
 

@@ -14,11 +14,11 @@ function MDC2(a, b) {
     if (b < 0) {
         throw new RangeError("Intervalo de b inválido");
     }
-    if (n == null || n == undefined) {
+    if (a == null || a == undefined || b == null || b == undefined) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
-    if (typeof n !== "number") {
-        throw new TypeError("n precisa ser um número");
+    if (typeof a !== "number" || typeof b !== "number") {
+        throw new TypeError("Entrada precisa ser um número");
     }
     
     while (a != b) {

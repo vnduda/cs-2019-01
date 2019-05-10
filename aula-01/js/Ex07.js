@@ -22,7 +22,7 @@ function produto(a, b) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
 
-    if (typeof n !== "number") {
+    if (typeof a !== "number" || typeof b !== "number") {
         throw new TypeError("n precisa ser um número");
     }
 

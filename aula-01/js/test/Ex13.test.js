@@ -1,7 +1,7 @@
 const raiz = require("../Ex13.js");
 
 test("Caso classico", () => {
-  expect(raiz(2, 2)).toBe(2);
+  expect(raiz(4, 25)).toBe(2);
 });
 
 test("argumento null/undefined", () => {
@@ -9,9 +9,9 @@ test("argumento null/undefined", () => {
 });
 
 test("argumento nao numerico", () => {
-  expect(() => { raiz("abcd"); }).toThrow(TypeError);
+  expect(() => { raiz("abcd", 25); }).toThrow(TypeError);
 });
 
 test("valor fora da faixa", () => {
-  expect(() => { raiz(0); }).toThrow(RangeError);
+  expect(() => { raiz(-1, 2); }).toThrow(RangeError);
 });

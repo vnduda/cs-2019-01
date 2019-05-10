@@ -13,6 +13,6 @@ test("valor fora da faixa", () => {
   });
 
 test("valor fora da faixa", () => {
-    expect(() => { razaoAurea(2, 2, 0); }).toThrow(RangeError);
+    expect(() => { razaoAurea(3, 2, -1); }).toThrow(RangeError);
 });
   

@@ -4,10 +4,6 @@ test("Caso clássico", () => {
   expect(potencia(2, 2)).toBe(4);
 });
 
-test("Potencia nao satisfaz", () => {
-  expect(potencia(2, 2)).toBe(5);
-});
-
 test("argumento null/undefined", () => {
   expect(() => { potencia(); }).toThrow();
 });

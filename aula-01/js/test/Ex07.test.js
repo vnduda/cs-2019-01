@@ -4,10 +4,6 @@ test("Caso clássico", () => {
   expect(produto(2, 2)).toBe(4);
 });
 
-test("Produto nao satisfaz", () => {
-  expect(produto(2, 2)).toBe(5);
-});
-
 test("argumento null/undefined", () => {
   expect(() => { produto(); }).toThrow();
 });
@@ -21,5 +17,5 @@ test("valor negativo fora da faixa", () => {
 });
 
 test("argumento nao numerico", () => {
-  expect(() => { produto("abcd"); }).toThrow(TypeError);
+  expect(() => { produto("abcd", 3); }).toThrow(TypeError);
 });

@@ -4,8 +4,8 @@ test("Caso classico", () => {
   expect(fatorial(3)).toBe(6);
 });
 
-test("Valor de n fora da faixa", () => {
-  expect(fatorial(0)).toThrow(RangeError);
+test("valor fora da faixa", () => {
+  expect(() => fatorial(0)).toThrow(RangeError);
 });
 
 test("argumento null/undefined", () => {
@@ -14,4 +14,4 @@ test("argumento null/undefined", () => {
 
 test("argumento nao numerico", () => {
     expect(() => { fatorial("abcd"); }).toThrow(TypeError);
-  });
+});

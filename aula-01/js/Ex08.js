@@ -15,15 +15,14 @@ function potencia(x, y) {
         throw new RangeError("Intervalo de y inválido");
     }
 
-    if (x == null || x == undefined) {
+    if (x == null || x == undefined || y == null || y == undefined) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
 
     let potencia = 1;
     let i = 1;
-    let Produto;
     while (i <= y) {
-        potencia = Produto(potencia, x);
+        potencia = potencia * x;
         i = i + 1;
     }
 
