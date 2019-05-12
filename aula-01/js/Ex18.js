@@ -6,7 +6,7 @@
  * @throws {RangeError} caso g seja menor que 1
  * @throws {Error} caso g seja null ou undefined
  * @throws {TypeError} caso entrada não seja um numero
- * @returns {Number} retorna o valor calculado
+ * @returns {Number} retorna o valor calculado pelo método de horner
  */
 
 function horner(x, g, a) {

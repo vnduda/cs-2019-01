@@ -2,7 +2,7 @@
  * Verifica o produto de dois inteiros a e b utilizando soma
  * @param {Number} a variável multiplicando
  * @param {Number} b variável multiplicador
- * @throws {RangeError} caso a e b sejam menores que 0
+ * @throws {RangeError} caso entrada seja menor que 0
  * @throws {Error} caso entrada seja null ou undefined 
  * @throws {TypeError} caso entrada não seja um número
  * @returns {Number} retorna o produto de dois inteiros

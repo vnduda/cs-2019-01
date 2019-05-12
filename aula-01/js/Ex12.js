@@ -1,7 +1,9 @@
 /**
  * Calcula um quadrado perfeito dado um n
  * @param {Number} n número a ser calculado o quadrado perfeito
- * @throws {RangeError} caso n seja menor que 1
+ * @throws {RangeError} caso entrada seja menor que 1
+ * @throws {Error} caso entrada seja null ou undefined
+ * @throws {TypeError} caso entrada não seja um número
  * @returns {Number} retorna o quadrado perfeito
  */
 function quadradoPerfeito(n) {
