@@ -4,11 +4,16 @@
  * @throws {RangeError} caso n seja menor que 1
  * @returns {Number} retorna o valor calculado de pi
  */
-module.exports = pi;
 function pi(n) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");
+    }
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof n !== 'number') {
+        throw new TypeError("n precisa ser um número");
     }
 
     let i = 1;
@@ -24,3 +29,5 @@ function pi(n) {
 
     return p;
 }
+
+module.exports = pi;

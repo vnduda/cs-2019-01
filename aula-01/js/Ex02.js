@@ -25,3 +25,5 @@ function propriedade153(n) {
 
     return (c**3 + d**3 + u**3) == n;
 }
+
+module.exports = propriedade153;

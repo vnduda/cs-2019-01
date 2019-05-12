@@ -5,15 +5,19 @@
  * @throws {RangeError} caso b seja menor que 0 ou b seja maior que a
  * @returns {Number} retorna o valor do mdc entre a e b
  */
-module.exports = MDC;
 function MDC(a, b) {
 
     if (b < 0) {
         throw new RangeError("Intervalo de b inválido");
     }
-
     if (a < b) {
         throw new RangeError("Variável b não pode ser maior que a");
+    }
+    if (a == null || a == undefined || b == null || b == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof a !== "number" || typeof b !== "number") {
+        throw new TypeError("Entrada precisa ser um número");
     }
 
 
@@ -26,3 +30,5 @@ function MDC(a, b) {
     return a;
 
 }
+
+module.exports = MDC;

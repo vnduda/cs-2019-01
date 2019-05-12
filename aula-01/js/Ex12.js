@@ -4,11 +4,16 @@
  * @throws {RangeError} caso n seja menor que 1
  * @returns {Number} retorna o quadrado perfeito
  */
-module.exports = quadradoPerfeito;
 function quadradoPerfeito(n) {
 
     if (n < 1) {
         throw new RangeError("Intervalo de n inválido");
+    }
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof n !== "number") {
+        throw new TypeError("n precisa ser um número");
     }
 
     let i = 1;
@@ -22,3 +27,5 @@ function quadradoPerfeito(n) {
     return s == n;
 
 }
+
+module.exports = quadradoPerfeito;

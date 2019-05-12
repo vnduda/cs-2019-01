@@ -4,13 +4,22 @@
  * @throws {RangeError} caso n seja menor que zero
  * @returns {Number} retorna o n-esimo número de Fibonacci
  */
-module.exports = fibonacci;
+
 function fibonacci(n) {
 
     if (n < 0) {
         throw new RangeError("Intervalo de n inválido");
     }
-
+    if (n == null || n == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof n !== "number") {
+        throw new TypeError("n precisa ser um número");
+    }
+    if(Math.trunc(n) != n){
+        throw new RangeError("N precisa ser um inteiro");
+    }
+    
     let a = 0;
     let c = 1;
 
@@ -29,3 +38,5 @@ function fibonacci(n) {
     return c;
 
 }
+
+module.exports = fibonacci;

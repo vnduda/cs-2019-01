@@ -5,13 +5,17 @@
  * @throws {RangeError} caso n seja menor que n
  * @returns {Number} retorna a raiz quadrada calculada
  */
-module.exports = raiz;
 function raiz(n, i) {
 
     if (n < 0) {
         throw new RangeError("Intervalo de n inválido");
     }
-
+    if (n == null || n == undefined || i == null || i == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+    if (typeof n !== "number" || typeof i !== "number") {
+        throw new TypeError("n precisa ser um número");
+    }
     let r = 1;
 
     while (0 <= i) {
@@ -22,3 +26,5 @@ function raiz(n, i) {
     return r;
 
 }
+
+module.exports = raiz;

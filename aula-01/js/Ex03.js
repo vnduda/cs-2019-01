@@ -14,18 +14,17 @@ class DataInvalidaError extends Error {
  * @returns {Number} retorna o numero equivalente ao dia da semana que foi calculado
  */
 
-module.exports = diaSemana;
 function diaSemana(dia, mes, ano) {
     if (dia < 1 || dia > 31) {
         throw new DataInvalidaError("Dia invalido: " + dia);
     }
 
     if (mes < 1 || mes > 12) {
-        throw new DataInvalidaError("Mês invalido: " + dia);
+        throw new DataInvalidaError("Mês invalido: " + mes);
     }
 
     if (ano < 1753) {
-        throw new DataInvalidaError("Ano invalido: " + a);
+        throw new DataInvalidaError("Ano invalido: " + ano);
     }
 
     const janeiroOuFevereiro = m == 1 || m == 2;
@@ -36,4 +35,5 @@ function diaSemana(dia, mes, ano) {
     return (parseInt(drDobbsExp) % 7);
 }
 
+module.exports = diaSemana;
     

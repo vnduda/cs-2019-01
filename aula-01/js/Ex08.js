@@ -5,7 +5,6 @@
  * @throws {RangeError} caso x e y sejam menores que 0
  * @returns {Number} retorna o valor da potência de x por y
  */
-module.exports = potencia;
 function potencia(x, y) {
 
     if (x < 0) {
@@ -16,13 +15,18 @@ function potencia(x, y) {
         throw new RangeError("Intervalo de y inválido");
     }
 
+    if (x == null || x == undefined || y == null || y == undefined) {
+        throw new Error("Entrada não pode ser null ou undefined");
+    }
+
     let potencia = 1;
     let i = 1;
-    let Produto;
     while (i <= y) {
-        potencia = Produto(potencia, x);
+        potencia = potencia * x;
         i = i + 1;
     }
 
     return potencia;
 }
+
+module.exports = potencia;
