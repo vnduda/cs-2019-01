@@ -25,10 +25,10 @@ function logaritmoNatural(n, k) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
 
-    let i = 2;
-    let e = 1 + n;
-    let numerador = n;
-    let denominador = 1;
+    const i = 2;
+    const e = 1 + n;
+    const numerador = n;
+    const denominador = 1;
 
     while (k >= i) {
         numerador = numerador * numerador;

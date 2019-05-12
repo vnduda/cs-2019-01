@@ -23,13 +23,13 @@ function fibonacci(n) {
         throw new RangeError("N precisa ser um inteiro");
     }
     
-    let a = 0;
-    let c = 1;
+    const a = 0;
+    const c = 1;
 
     if (n == 0 || n == 1) {
         return n;
     }
-    let i = 2;
+    const i = 2;
 
     while (i <= n) {
         let t = c;

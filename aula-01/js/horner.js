@@ -22,8 +22,8 @@ function horner(x, g, a) {
     }
     
 
-    let p = a[g];
-    let i = g - 1;
+    const p = a[g];
+    const i = g - 1;
 
     while (0 <= i) {
         p = p * x + a[i];

@@ -20,8 +20,8 @@ function potencia(x, y) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
 
-    let potencia = 1;
-    let i = 1;
+    const potencia = 1;
+    const i = 1;
     while (i <= y) {
         potencia = potencia * x;
         i = i + 1;

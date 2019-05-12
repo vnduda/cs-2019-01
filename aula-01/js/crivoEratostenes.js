@@ -55,9 +55,9 @@ function crivoEratostenes(s, n) {
             }
         }
 
-        let i = 2;
-        let limite = Math.floor(Math.sqrt(n));
-        let multiplo;
+        const i = 2;
+        const limite = Math.floor(Math.sqrt(n));
+        const multiplo;
 
         while (i <= limite) {
 

@@ -21,8 +21,8 @@ function fatorial(n) {
         throw new TypeError("n precisa ser um número");
     }
 
-    let i = 2;
-    let f = 1;
+    const i = 2;
+    const f = 1;
 
     while (i <= n) {
         f = f * i;
