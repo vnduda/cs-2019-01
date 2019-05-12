@@ -1,4 +1,4 @@
-const raiz = require("../Ex13.js");
+const raiz = require("../raiz.js");
 
 test("Caso classico", () => {
   expect(raiz(4, 25)).toBe(2);

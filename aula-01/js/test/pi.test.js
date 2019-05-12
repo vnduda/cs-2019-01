@@ -1,4 +1,4 @@
-const pi = require("../Ex09.js");
+const pi = require("../pi.js");
 
 test("Caso classico", () => {
   expect(pi(5)).toBe(3.3396825396825403);

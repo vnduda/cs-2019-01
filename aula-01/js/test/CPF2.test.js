@@ -1,4 +1,4 @@
-const CPF2 = require("../Ex21.js");
+const CPF2 = require("../CPF2.js");
 
 test("Caso classico", () => {
   expect(CPF2('70039371158')).toBe(true);

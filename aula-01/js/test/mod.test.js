@@ -1,4 +1,4 @@
-const mod = require("../Ex04.js");
+const mod = require("../mod.js");
 
 test("Mod satisfaz (caso classico)", () => {
   expect(mod(9, 3)).toBe(0);

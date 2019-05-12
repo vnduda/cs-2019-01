@@ -1,4 +1,4 @@
-const crivoEratostenes = require("../Ex15.js");
+const crivoEratostenes = require("../crivoEratostenes.js");
 
 test("Caso classico", () => {
     expect(crivoEratostenes([0, 0, 0, 0, 0, 0], 6)).toEqual([0, 0, 0, 0, 1, 0, 1]);

@@ -1,4 +1,4 @@
-const quadradoPerfeito = require("../Ex12.js");
+const quadradoPerfeito = require("../quadradoPerfeito.js");
 
 test("Caso classico", () => {
   expect(quadradoPerfeito(4)).toBe(true);

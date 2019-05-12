@@ -1,4 +1,4 @@
-const CPF = require("../Ex20.js");
+const CPF = require("../CPF.js");
 
 test("Caso classico", () => {
   expect(CPF('70039371158')).toBe(true);

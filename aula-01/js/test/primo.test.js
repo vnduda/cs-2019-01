@@ -1,4 +1,4 @@
-const primo = require("../Ex14.js");
+const primo = require("../primo.js");
 
 test("Caso classico", () => {
   expect(primo(3)).toBe(true);

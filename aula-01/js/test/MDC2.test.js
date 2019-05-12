@@ -1,4 +1,4 @@
-const MDC2 = require("../Ex17.js");
+const MDC2 = require("../MDC2.js");
 
 test("Caso classico", () => {
   expect(MDC2(4, 2)).toBe(2);

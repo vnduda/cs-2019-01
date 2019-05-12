@@ -1,4 +1,4 @@
-const produto = require("../Ex07.js");
+const produto = require("../produto.js");
 
 test("Caso clássico", () => {
   expect(produto(2, 2)).toBe(4);

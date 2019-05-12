@@ -1,4 +1,4 @@
-const diaSemana = require("../Ex03.js");
+const diaSemana = require("../diaSemana.js");
 
 test("Data satisfaz (caso classico)", () => {
   expect(diaSemana(5, 5 , 2019)).toBe(0);

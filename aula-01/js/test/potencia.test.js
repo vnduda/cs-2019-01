@@ -1,4 +1,4 @@
-const potencia = require("../Ex08.js");
+const potencia = require("../potencia.js");
 
 test("Caso clássico", () => {
   expect(potencia(2, 2)).toBe(4);

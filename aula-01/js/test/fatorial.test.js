@@ -1,4 +1,4 @@
-const fatorial = require("../Ex06.js");
+const fatorial = require("../fatorial.js");
 
 test("Caso classico", () => {
   expect(fatorial(3)).toBe(6);

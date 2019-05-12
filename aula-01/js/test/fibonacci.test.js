@@ -1,4 +1,4 @@
-const fibonacci = require("../Ex19.js");
+const fibonacci = require("../fibonacci.js");
 
 test("Caso classico", () => {
   expect(fibonacci(10)).toBe(55);

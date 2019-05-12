@@ -1,4 +1,4 @@
-const somaNaturais = require("../Ex05.js");
+const somaNaturais = require("../somaNaturais.js");
 
 test("Caso classico", () => {
   expect(somaNaturais(3)).toBe(6);

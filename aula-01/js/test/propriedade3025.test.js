@@ -1,4 +1,4 @@
-const propriedade3025 = require("../Ex01.js");
+const propriedade3025 = require("../propriedade3025.js");
 
 test("3025 satisfaz (caso classico)", () => {
   expect(propriedade3025(3025)).toBe(true);
