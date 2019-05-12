@@ -3,8 +3,8 @@
  * @param {Number} n variavel a ser verificada
  * @throws {Error} caso entrada seja null ou undefined
  * @throws {TypeError} caso entrada não seja um número
- * @throws {RangeError} caso número seja menor que 100 ou maior que 999
- * @returns {boolean} caso verdadeiro, retorna true, caso contrário false
+ * @throws {RangeError} caso entrada seja menor que 100 ou maior que 999
+ * @returns {boolean} o valor verdadeiro se o argumento fornecido satisfaz a propriedade 153 e, o valor falso, caso contrário 
  */
 function propriedade153(n) {
 

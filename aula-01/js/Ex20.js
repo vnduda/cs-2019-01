@@ -9,7 +9,8 @@ function cpfStringToArray(d) {
  * Algoritmo que certifica se o CPF é válido
  * @param {Number} d CPF a ser verificado
  * @throws {RangeError} caso d tenha mais ou menos de 11 dígitos
- * @returns {boolean} true caso seja verdadeiro, false caso contrário
+ * @throws {TypeError} caso entrada não seja uma string
+ * @returns {boolean} caso CPF seja verdadeiro retorna true, caso contrário false
  */
 
 function CPF(d) {

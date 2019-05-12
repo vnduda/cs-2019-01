@@ -3,6 +3,7 @@
  * @param {Number} x base da potência
  * @param {Number} y expoente da potência
  * @throws {RangeError} caso x e y sejam menores que 0
+ * @throws {Error} caso x ou y seja null ou undefined
  * @returns {Number} retorna o valor da potência de x por y
  */
 function potencia(x, y) {

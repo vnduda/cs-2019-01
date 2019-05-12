@@ -1,7 +1,10 @@
 /**
  * Algoritmo que calcula o n-esimo número de Fibonacci
  * @param {Number} n variável a ser calculada
- * @throws {RangeError} caso n seja menor que zero
+ * @throws {RangeError} caso entrada seja menor que zero
+ * @throws {Error} caso entrada seja null ou undefined
+ * @throws {TypeError} caso entrada não seja um número
+ * @throws {RangeError} caso entrada não seja um número inteiro
  * @returns {Number} retorna o n-esimo número de Fibonacci
  */
 

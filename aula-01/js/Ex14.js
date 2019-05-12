@@ -1,8 +1,10 @@
 /**
  * Calcula se um dado n é primo
  * @param {Number} n número a ser calculado
- * @throws {RangeError} caso n seja menor que 1
- * @returns {boolean} retorna true caso verdadeiro, caso contrário false
+ * @throws {RangeError} caso entrada seja menor que 1
+ * @throws {Error} caso entrada seja null ou undefined
+ * @throws {TypeError} caso entrada não seja um número
+ * @returns {boolean} retorna true caso número seja primo, caso contrário false
  */
 function primo(n) {
 

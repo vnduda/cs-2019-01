@@ -3,6 +3,8 @@
  * @param {Number} a número inteiro que será utilizado para o mdc
  * @param {Number} b número inteiro que será utilizado para o mdc
  * @throws {RangeError} caso b seja menor que 0 ou b seja maior que a
+ * @throws {Error} caso entrada seja null ou undefined
+ * @throws {TypeError} caso entrada não seja um número
  * @returns {Number} retorna o valor do mdc entre a e b
  */
 

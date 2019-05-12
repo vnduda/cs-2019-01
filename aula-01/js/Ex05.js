@@ -1,7 +1,7 @@
 /** 
  * Faz a soma dos primeiros naturais, de 1 até n
  * @param {Number} n número máximo a ser calculado
- * @throws {RangeError} caso n seja menor que 1
+ * @throws {RangeError} caso entrada seja menor que 1
  * @throws {Error} caso entrada seja null ou undefined
  * @throws {TypeError} caso entrada não seja um numero
  * @returns {Number} retorna a soma dos primeiros números até n

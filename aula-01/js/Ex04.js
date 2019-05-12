@@ -3,9 +3,9 @@
  * @param {Number} x dividendo
  * @param {Number} y divisor
  * @throws {RangeError} caso x ou y forem menores que 0
- * @throws {Error} caso x ou y sejam null ou undefined
+ * @throws {Error} caso entrada seja null ou undefined
  * @throws {TypeError} caso entrada não seja um numero
- * @returns {Number} resto da divisão de x por y
+ * @returns {Number} o resto da divisão de x por y
  */
 
 function mod(x, y) {

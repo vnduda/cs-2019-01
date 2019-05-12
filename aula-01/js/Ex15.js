@@ -4,7 +4,7 @@
  * @param {Number} n maior número a ser checado
  * @throws {Error} caso array tenha tamanho inválido
  * @throws {RangeError} caso array não esteja zerado
- * @returns {boolean} 
+ * @returns {boolean} retorna o resultado calculado
  */
 function crivoEratostenes(s, n) {
 
