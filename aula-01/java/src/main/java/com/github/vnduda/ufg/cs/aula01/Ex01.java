@@ -1,3 +1,9 @@
+/**
+ * Verifica se n satisfaz propriedade 3025.
+ * @param n n variavel a ser verificada
+ * @throws IllegalArgumentException caso entrada seja menor que 0 ou maior que 999
+ * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 3025 e, o valor falso, caso contrário
+ */
 package com.github.vnduda.ufg.cs.aula01;
 
 public class Ex01 {

@@ -1,3 +1,10 @@
+/**
+ * Verifica se n satisfaz a propriedade 153.
+ * @param n n variavel a ser verificada
+ * @throws IllegalArgumentException caso entrada seja menor que 100 ou maior que 999
+ * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 153 e, o valor falso, caso contrário 
+ */
+
 package com.github.vnduda.ufg.cs.aula01;
 
 public class Ex02 {

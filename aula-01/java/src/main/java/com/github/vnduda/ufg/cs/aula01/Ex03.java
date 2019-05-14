@@ -1,3 +1,11 @@
+/**
+ * Determina o dia da semana a partir de uma dada data
+ * @param d o dia
+ * @param m o mês
+ * @param a o ano
+ * @throws IllegalArgumentException caso a data não seja válida
+ * @return retorna o numero equivalente ao dia da semana que foi calculado
+ */
 package com.github.vnduda.ufg.cs.aula01;
 
 import java.time.DateTimeException;
