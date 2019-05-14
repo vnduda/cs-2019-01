@@ -34,12 +34,12 @@ public class Ex03 {
         int mes = m;
         int ano = a;
 
-        if (m == 1 || m == 2) {
-            m += 12;
-            a -= 1;   
+        if (mes == 1 || mes == 2) {
+            mes += 12;
+            ano -= 1;   
         }
 
-        int s = (d + (2 * m) + (3 * (m + 1) / 5) + a + (a / 4) - (a / 100) + (a / 400));
+        int s = (dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400));
 
         return s % 7;
     }

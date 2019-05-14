@@ -1,1 +1,9 @@
 node_modules
+*.class
+*.lst
+aula-01/java/.classpath
+aula-01/java/.project
+aula-01/java/.settings/org.eclipse.jdt.apt.core.prefs
+aula-01/java/.settings/org.eclipse.core.resources.prefs
+aula-01/java/.settings/org.eclipse.jdt.core.prefs
+aula-01/java/.settings/org.eclipse.m2e.core.prefs
