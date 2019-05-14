@@ -5,7 +5,13 @@ public class Ex02 {
     public static void main(String[] args) {
         System.out.println(propriedade153(153));
     }
-
+    
+    /**
+     * Verifica se n satisfaz a propriedade 153.
+     * @param n n variavel a ser verificada
+     * @throws IllegalArgumentException caso entrada seja menor que 100 ou maior que 999
+     * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 153 e, o valor falso, caso contrário 
+    */
     public static boolean propriedade153(int n) {
 
         if (n < 100 || n > 999) {

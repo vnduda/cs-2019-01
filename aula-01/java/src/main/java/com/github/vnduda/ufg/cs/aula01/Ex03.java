@@ -8,7 +8,15 @@ public class Ex03 {
     public static void main(String[] args) {
         System.out.println(diaSemana(11, 4, 2019));
     }
-
+    
+    /**
+     * Determina o dia da semana a partir de uma dada data
+     * @param d o dia
+     * @param m o mês
+     * @param a o ano
+     * @throws IllegalArgumentException caso a data não seja válida
+     * @return retorna o numero equivalente ao dia da semana que foi calculado
+    */
     public static int diaSemana(final int d, final int m, final int a) {
 
         if (d < 1 || d > 31) {
