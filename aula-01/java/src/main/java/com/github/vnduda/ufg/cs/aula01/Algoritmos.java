@@ -572,29 +572,30 @@ public class Algoritmos {
 
     /**
      * Algoritmo que certifica se o CPF é válido
-     * @param d CPF a ser verificado
+     * @param cpf CPF a ser verificado
      * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF2(String d) {
+    public static boolean CPF2(String cpf) {
 
-        if (d.length() < 11 || d.length() > 11) {
+        if (cpf.length() < 11 || cpf.length() > 11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
+        int[] d = cpfStringToArray(cpf);
         int c = 7;
-        int p = Character.getNumericValue(d.charAt(8));
-        int s = Character.getNumericValue(d.charAt(8));
+        int p = d[8];
+        int s = d[8];
 
         while (c >= 0) {
-            p = p + Character.getNumericValue(d.charAt(c));
+            p = p + d[c];
             s = s + p;
             c = c - 1;
         }
 
         int j = (s % 11) % 10;
-        int k = ((s - p + 9 * Character.getNumericValue(d.charAt(9))) % 11) % 10;
+        int k = ((s - p + 9 * d[9]) % 11) % 10;
 
-        return (j == Character.getNumericValue(d.charAt(9)) && k == Character.getNumericValue(d.charAt(10)));
+        return (j == d[9] && k == d[10]);
     }
 }
