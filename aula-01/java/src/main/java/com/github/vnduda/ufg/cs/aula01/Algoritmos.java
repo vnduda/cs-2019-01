@@ -1,4 +1,6 @@
 package com.github.vnduda.ufg.cs.aula01;
+import java.time.DateTimeException;
+import java.time.LocalDate;
 
 public class Algoritmos {
 
@@ -48,6 +50,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso a data não seja válida
      * @return retorna o numero equivalente ao dia da semana que foi calculado
     */
+
     public static int diaSemana(final int d, final int m, final int a) {
 
         if (d < 1 || d > 31) {
@@ -87,7 +90,7 @@ public class Algoritmos {
      * Gera o resto da divisão inteira de x por y
      * @param x dividendo
      * @param y divisor
-     * @throw IllegalArgumentException caso entrada esteja fora da faixa
+     * @throws IllegalArgumentException caso entrada esteja fora da faixa
      * @return o resultado da divisão inteira de x por y
     */
     public static int restoDivisao(int x, int y) {
@@ -108,6 +111,12 @@ public class Algoritmos {
         return s;
     }
 
+    /**
+     * Faz a soma dos primeiros naturais, de 1 até n
+     * @param n número máximo a ser calculado
+     * @throws IllegalArgumentException caso entrada seja menor que 1
+     * @return retorna a soma dos primeiros números até n
+     */
      public static int somaNaturais(int n) {
 
         if (n < 1) {
@@ -122,6 +131,12 @@ public class Algoritmos {
         return s;
     }
 
+    /**
+     * Algoritmo que faz o fatorial de um número n
+     * @param n variável que será calculado o fatorial
+     * @throws IllegalArgumentException caso entrada seja menor que 1
+     * @return retorna o fatorial de n calculado
+     */
     public int fatorial(int n) {
 
         if (n < 1) {
@@ -139,6 +154,13 @@ public class Algoritmos {
         return f;
     }
 
+    /**
+     * Verifica o produto de dois inteiros a e b utilizando soma
+     * @param a variável multiplicando
+     * @param b variável multiplicador
+     * @throws IllegalArgumentException caso entradas sejam menores que zero
+     * @return o produto de dois inteiros
+     */
     public int produto(int a, int b) {
 
         if (a < 0) {
@@ -167,7 +189,14 @@ public class Algoritmos {
         return s;
     }
 
-    public int produto(int x, int y) {
+    /**
+     * Verifica potencia de x elevado a y utilizando somas
+     * @param x base da potência
+     * @param y expoente da potência
+     * @throws IllegalArgumentException caso entradas sejam menores que 0
+     * @return retorna o valor da potência de x por y
+     */
+    public int potencia(int x, int y) {
 
         if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
@@ -189,6 +218,12 @@ public class Algoritmos {
 
     }
 
+    /**
+     * Verifica valor de Pi para um total de n termos
+     * @param n quantidade de termos
+     * @throws IllegalArgumentException caso entrada seja menor que 1
+     * @return retorna o valor calculado de pi
+     */
     public double pi(int n) {
 
         if (n < 1) {
@@ -210,6 +245,13 @@ public class Algoritmos {
         return p;
     }
 
+    /**
+     * Calcula logaritmo elevado a n com precisão k
+     * @param n variável de potência
+     * @param k variável de precisão
+     * @throws IllegalArgumentException caso n seja menor que 1 e k menor que 2
+     * @return o logaritmo elevado a n calculado com precisão k
+     */
     public static float logaritmoNatural(float n, float k) {
 
         if (n < 1) {
@@ -234,6 +276,14 @@ public class Algoritmos {
         return e;
     }
 
+    /**
+     * Calcula a razão áurea usando uma sequência
+     * @param x o primeiro termo da sequência
+     * @param y o segundo termo
+     * @param k a precisão
+     * @throws IllegalArgumentException caso x seja menor que 0, ou y menor que x, ou k menor que 0
+     * @return o valor da razao aurea calculado
+     */
     public static float razaoAurea(float x, float y, float k) {
 
         if (x < 0) {
@@ -262,6 +312,12 @@ public class Algoritmos {
         return c / a;
     }
 
+    /**
+     * Calcula um quadrado perfeito dado um n
+     * @param n número a ser calculado o quadrado perfeito
+     * @throws IllegalArgumentException caso entrada seja menor que 1
+     * @return o quadrado perfeito
+     */
     public static boolean quadradoPerfeito(int n) {
 
         if (n < 1) {
@@ -278,6 +334,13 @@ public class Algoritmos {
         return s == n;
     }
 
+    /**
+     * Calcula raiz quadrada dada a base e o indice
+     * @param n base da raiz quadrada
+     * @param i indice da raiz quadrada
+     * @throws IllegalArgumentException caso entrada seja menor que 0
+     * @return a raiz quadrada calculada
+     */
     public static float raiz(float n, int i) {
 
         if (n < 0) {
@@ -294,6 +357,12 @@ public class Algoritmos {
         return r;
     }
 
+    /**
+     * Calcula se um dado n é primo
+     * @param n número a ser calculado
+     * @throws IllegalArgumentException caso entrada seja menor que 1
+     * @return true caso entrada seja um número primo
+     */
     public static boolean primo(int n) {
 
         if (n < 1) {
@@ -312,6 +381,12 @@ public class Algoritmos {
         return true;
     }
 
+    /**
+     * Algoritmo que encontra números primos
+     * @param a vetor de zeros com o tamanho do número a ser checado
+     * @throws IllegalArgumentException caso o tamanho do vetor for menor ou igual a 1 ou vetor não estiver zerado
+     * @return vetor com resultado calculado
+     */
     public static int[] crivoEratostenes(int a[]) {
 
         if (a == null) {
@@ -347,6 +422,13 @@ public class Algoritmos {
         return a;
     }
 
+    /**
+     * Calcula o maior divisor comum entre a e b
+     * @param a número inteiro que será utilizado para o mdc
+     * @param b número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException caso b seja maior que a, ou b menor que 0
+     * @return o valor do mdc entre a e b
+     */
     public static int MDC(int a, int b) {
 
         if (a < b) {
@@ -366,6 +448,13 @@ public class Algoritmos {
         return a;
     }
 
+    /**
+     * Calcula outra forma de achar o maior divisor comum entre a e b
+     * @param a número inteiro que será utilizado para o mdc
+     * @param b número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException caso b seja maior que a, ou b menor que 0
+     * @return o valor do mdc entre a e b
+     */
     public static int MDC2(int a, int b) {
 
         if (a < b) {
@@ -387,6 +476,14 @@ public class Algoritmos {
         return a;
     }
 
+    /**
+     * Regra de Horner para avaliação polinomial
+     * @param x variável para obter uma aproximação 
+     * @param g tamanho do polinômio
+     * @param a coeficientes do polinômio
+     * @throws IllegalArgumentException caso g seja menor que 1
+     * @return o valor calculado pelo método de horner
+     */
     public static int horner(int x, int g, int a[]) {
 
         if (g < 1) {
@@ -407,6 +504,12 @@ public class Algoritmos {
         return p;
     }
 
+    /**
+     * Algoritmo que calcula o n-esimo número de Fibonacci
+     * @param n variável a ser calculada
+     * @throws IllegalArgumentException caso entrada seja menor que 0
+     * @return o n-esimo número de Fibonacci
+     */
     public static int fibonacci(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");
@@ -430,6 +533,12 @@ public class Algoritmos {
         return c;
     }
 
+    /**
+     * Algoritmo que certifica se o CPF é válido
+     * @param d CPF a ser verificado
+     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
+     * @return caso CPF seja verdadeiro retorna true
+     */
     public static boolean CPF(String d) {
 
         if (d.length() > 11 || d.length() < 11) {
@@ -454,6 +563,12 @@ public class Algoritmos {
         return dj == Character.getNumericValue(d.charAt(9)) && dk == Character.getNumericValue(d.charAt(10));
     }
 
+    /**
+     * Algoritmo que certifica se o CPF é válido
+     * @param d CPF a ser verificado
+     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
+     * @return caso CPF seja verdadeiro retorna true
+     */
     public static boolean CPF2(String d) {
 
         if (d.length() < 11 || d.length() > 11) {
