@@ -489,8 +489,9 @@ public class Algoritmos {
         if (g < 1) {
             throw new IllegalArgumentException("Intervalo da variável g inválido");
         }
-        
-        // TODO teste a == null
+        if (a == null) {
+            throw new IllegalArgumentException("array is null");
+        }
         // TODO verifique se a contem exatamente g elementos
 
         int p = a[g];
@@ -534,60 +535,67 @@ public class Algoritmos {
     }
 
     /**
-     * Algoritmo que certifica se o CPF é válido
-     * @param d CPF a ser verificado
-     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
-     * @return caso CPF seja verdadeiro retorna true
+     * Função que transforma cpf de String para Vetor
+     * @param d cpf como string
+     * @return cpf como vetor
      */
-    public static boolean CPF(String d) {
-
-        if (d.length() > 11 || d.length() < 11) {
-            throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
+    public static int[] cpfStringToArray(final String d) {
+        int[] cpf = new int[11];
+        for (int i = 0; i < d.length(); i++) {
+            cpf[i] = Character.getNumericValue(d.charAt(i));
         }
-
-        int j = Character.getNumericValue(d.charAt(0)) + 2 * Character.getNumericValue(d.charAt(1))
-                + 3 * Character.getNumericValue(d.charAt(2)) + 4 * Character.getNumericValue(d.charAt(3))
-                + 5 * Character.getNumericValue(d.charAt(4)) + 6 * Character.getNumericValue(d.charAt(5))
-                + 7 * Character.getNumericValue(d.charAt(6)) + 8 * Character.getNumericValue(d.charAt(7))
-                + 9 * Character.getNumericValue(d.charAt(8));
-
-        int k = Character.getNumericValue(d.charAt(1)) + 2 * Character.getNumericValue(d.charAt(2))
-                + 3 * Character.getNumericValue(d.charAt(3)) + 4 * Character.getNumericValue(d.charAt(4))
-                + 5 * Character.getNumericValue(d.charAt(5)) + 6 * Character.getNumericValue(d.charAt(6))
-                + 7 * Character.getNumericValue(d.charAt(7)) + 8 * Character.getNumericValue(d.charAt(8))
-                + 9 * Character.getNumericValue(d.charAt(9));
-
-        int dj = (j % 11) % 10;
-        int dk = (k % 11) % 10;
-
-        return dj == Character.getNumericValue(d.charAt(9)) && dk == Character.getNumericValue(d.charAt(10));
+        return cpf;
     }
 
     /**
      * Algoritmo que certifica se o CPF é válido
-     * @param d CPF a ser verificado
+     * @param cpf CPF a ser verificado
      * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF2(String d) {
+    public static boolean CPF(String cpf) {
 
-        if (d.length() < 11 || d.length() > 11) {
+        if (cpf.length() > 11 || cpf.length() < 11) {
+            throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
+        }
+    
+        int[] d = cpfStringToArray(cpf);
+        int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3] + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
+
+        int k = d[1] + 2 * d[2] + 3 * d[3] + 4 * d[4] + 5 * d[5] + 6 * d[6] + 7 * d[7] + 8 * d[8] + 9 * d[9];
+
+        int dj = (j % 11) % 10;
+        int dk = (k % 11) % 10;
+
+        return (dj == d[9] && dk == d[10]);
+    }
+
+    /**
+     * Algoritmo que certifica se o CPF é válido
+     * @param cpf CPF a ser verificado
+     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
+     * @return caso CPF seja verdadeiro retorna true
+     */
+    public static boolean CPF2(String cpf) {
+
+        if (cpf.length() < 11 || cpf.length() > 11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
+        int[] d = cpfStringToArray(cpf);
         int c = 7;
-        int p = Character.getNumericValue(d.charAt(8));
-        int s = Character.getNumericValue(d.charAt(8));
+        int p = d[8];
+        int s = d[8];
 
         while (c >= 0) {
-            p = p + Character.getNumericValue(d.charAt(c));
+            p = p + d[c];
             s = s + p;
             c = c - 1;
         }
 
         int j = (s % 11) % 10;
-        int k = ((s - p + 9 * Character.getNumericValue(d.charAt(9))) % 11) % 10;
+        int k = ((s - p + 9 * d[9]) % 11) % 10;
 
-        return (j == Character.getNumericValue(d.charAt(9)) && k == Character.getNumericValue(d.charAt(10)));
+        return (j == d[9] && k == d[10]);
     }
 }
