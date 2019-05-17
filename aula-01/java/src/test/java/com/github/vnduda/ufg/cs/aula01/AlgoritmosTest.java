@@ -63,6 +63,16 @@ public class AlgoritmosTest {
       }
 
       @Test
+      public void diaSemanaCasoClassicoJaneiro() {
+          assertEquals(3, Algoritmos.diaSemana(16, 1, 2019));
+      }
+
+      @Test
+      public void diaSemanaCasoClassicoFevereiro() {
+          assertEquals(3, Algoritmos.diaSemana(16, 2, 2019));
+      }
+
+      @Test
       public void diaSemanaDiaPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(0, 5, 2019));
       }
@@ -148,6 +158,14 @@ public class AlgoritmosTest {
           assertEquals(4, Algoritmos.produto(2, 2));
       }
 
+      public void produtoCasoClassicoMaior() {
+          assertEquals(6, Algoritmos.produto(3, 2));
+      }
+
+      public void produtoCasoClassicoMenor() {
+          assertEquals(2, Algoritmos.produto(1, 2));
+      }
+
       @Test
       public void produtoMultiplicandoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.produto(-1, 2));
@@ -218,7 +236,7 @@ public class AlgoritmosTest {
       public void razaoAureaCasoClassico() {
           assertEquals(1.5, Algoritmos.razaoAurea(2, 2, 2));
       }
-
+      
       @Test
       public void razaoAureaPrimeiroTermoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(-1, 2, 2));
