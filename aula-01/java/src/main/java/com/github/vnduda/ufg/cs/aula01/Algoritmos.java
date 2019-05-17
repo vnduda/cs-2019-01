@@ -184,6 +184,7 @@ public class Algoritmos {
 
         while (i <= totalParcelas) {
             s = s + parcela;
+            i = i + 1;
         }
 
         return s;
@@ -266,7 +267,7 @@ public class Algoritmos {
         float e = 1 + n;
         float numerador = n;
         float denominador = 1;
-        while (k >= 1) {
+        while (k >= i) {
             numerador = numerador * numerador;
             denominador = denominador * i;
             e = e + numerador / denominador;
