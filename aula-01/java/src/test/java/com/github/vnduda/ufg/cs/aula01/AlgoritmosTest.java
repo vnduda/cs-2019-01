@@ -320,4 +320,23 @@ public class AlgoritmosTest {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC(3, 6));
       }
 
+      /**
+      * Teste para MDC2
+      */
+
+      @Test
+      public void mdc2CasoClassico() {
+          assertEquals(2, Algoritmos.MDC2(4, 2));
+      }
+
+      @Test
+      public void mdc2Pequeno() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(2, -1));
+      }
+
+      @Test
+      public void mdc2NumeroMenorQueOutro() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(3, 6));
+      }
+
 }
