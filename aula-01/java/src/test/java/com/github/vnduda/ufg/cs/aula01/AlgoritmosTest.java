@@ -298,4 +298,26 @@ public class AlgoritmosTest {
       public void primoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.primo(0));
       }
+
+      //TODO fazer teste para crivo
+
+      /**
+      * Teste para MDC
+      */
+
+      @Test
+      public void mdcCasoClassico() {
+          assertEquals(2, Algoritmos.MDC(4, 2));
+      }
+
+      @Test
+      public void mdcPequeno() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC(2, -1));
+      }
+
+      @Test
+      public void mdcNumeroMenorQueOutro() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC(3, 6));
+      }
+
 }
