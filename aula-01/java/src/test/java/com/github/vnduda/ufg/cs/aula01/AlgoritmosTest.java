@@ -56,9 +56,10 @@ public class AlgoritmosTest {
      /**
       * Teste para dia da semana
       */
+
       @Test
       public void diaSemanaCasoClassico() {
-          assertEquals(4, Algoritmos.diaSemana(16, 5, 2019));
+          assertEquals(3, Algoritmos.diaSemana(16, 5, 2019));
       }
 
       @Test
@@ -196,7 +197,7 @@ public class AlgoritmosTest {
 
       @Test
       public void logaritmoNaturalCasoClassico() {
-          assertEquals(243, Algoritmos.logaritmoNatural(3, 3));
+          assertEquals(8.5, Algoritmos.logaritmoNatural(3, 2));
       }
 
       @Test
@@ -265,4 +266,5 @@ public class AlgoritmosTest {
       public void raizBasePequena() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.raiz(-1, 2));
       }
+      
 }
