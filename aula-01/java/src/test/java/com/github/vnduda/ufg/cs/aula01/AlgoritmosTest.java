@@ -64,12 +64,12 @@ public class AlgoritmosTest {
 
       @Test
       public void diaSemanaCasoClassicoJaneiro() {
-          assertEquals(3, Algoritmos.diaSemana(16, 1, 2019));
+          assertEquals(2, Algoritmos.diaSemana(16, 1, 2019));
       }
 
       @Test
       public void diaSemanaCasoClassicoFevereiro() {
-          assertEquals(3, Algoritmos.diaSemana(16, 2, 2019));
+          assertEquals(5, Algoritmos.diaSemana(16, 2, 2019));
       }
 
       @Test
@@ -285,4 +285,17 @@ public class AlgoritmosTest {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.raiz(-1, 2));
       }
       
+      /**
+      * Teste para Número Primo
+      */
+
+      @Test
+      public void primoCasoClassico() {
+          assertEquals(true, Algoritmos.primo(3));
+      }
+
+      @Test 
+      public void primoPequeno() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.primo(0));
+      }
 }
