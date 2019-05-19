@@ -361,7 +361,7 @@ public class AlgoritmosTest {
 
       @Test
       public void cpfCasoClassico() {
-          assertEquals(true, Algoritmos.CPF("12345678910"));
+          assertEquals(true, Algoritmos.CPF("70039371158"));
       }
 
       @Test
