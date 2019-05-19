@@ -365,7 +365,12 @@ public class AlgoritmosTest {
       }
 
       @Test
-      public void cpfForaDaFaixa() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF('123456789101'));
+      public void cpfGrande() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("123456789101"));
+      }
+
+      @Test
+      public void cpfPequeno() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("1234567891"));
       }
 }
