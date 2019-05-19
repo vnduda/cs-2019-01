@@ -373,4 +373,23 @@ public class AlgoritmosTest {
       public void cpfPequeno() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("1234567891"));
       }
+
+      /**
+      * Teste para CPF2
+      */
+
+      @Test
+      public void cpf2CasoClassico() {
+          assertEquals(true, Algoritmos.CPF2("70039371158"));
+      }
+
+      @Test
+      public void cpf2Grande() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF2("123456789101"));
+      }
+
+      @Test
+      public void cpf2Pequeno() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF2("1234567891"));
+      }
 }
