@@ -339,4 +339,19 @@ public class AlgoritmosTest {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(3, 6));
       }
 
+      //TODO teste para algoritmo de horner
+
+      /**
+      * Teste para Fibonacci
+      */
+
+      @Test
+      public void fibonacciCasoClassico() {
+          assertEquals(55, Algoritmos.fibonacci(10));
+      }
+
+      @Test
+      public void fibonacciGrande() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.fibonacci(-1));
+      }
 }
