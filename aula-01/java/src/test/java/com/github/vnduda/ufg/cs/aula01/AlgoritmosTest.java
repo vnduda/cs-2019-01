@@ -354,4 +354,18 @@ public class AlgoritmosTest {
       public void fibonacciGrande() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.fibonacci(-1));
       }
+
+      /**
+      * Teste para CPF
+      */
+
+      @Test
+      public void cpfCasoClassico() {
+          assertEquals(true, Algoritmos.CPF("12345678910"));
+      }
+
+      @Test
+      public void cpfForaDaFaixa() {
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF('123456789101'));
+      }
 }
