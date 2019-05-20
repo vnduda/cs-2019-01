@@ -361,8 +361,6 @@ public class AlgoritmosTest {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
       }
 
-
-      
       /**
       * Teste para Fibonacci
       */
