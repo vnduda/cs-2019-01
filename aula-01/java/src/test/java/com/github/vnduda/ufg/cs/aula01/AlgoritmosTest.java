@@ -339,8 +339,30 @@ public class AlgoritmosTest {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(3, 6));
       }
 
-      //TODO teste para algoritmo de horner
+      /**
+      * Teste para Algoritmo de Horner
+      */
 
+      @Test
+      public void hornerCasoClassico() {
+          int vetor[] = {0, 1, 2};
+          assertEquals(3, Algoritmos.horner(1, 2, vetor));
+      }
+
+      @Test
+      public void hornerMenos() {
+          int vetor[] = {0, 1, 2};
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
+      }
+
+      @Test
+      public void hornerArrayisNull() {
+          int vetor[] = {};
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
+      }
+
+
+      
       /**
       * Teste para Fibonacci
       */
