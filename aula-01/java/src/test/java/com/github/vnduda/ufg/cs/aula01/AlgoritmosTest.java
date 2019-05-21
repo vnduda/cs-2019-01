@@ -10,6 +10,7 @@ public class AlgoritmosTest {
     /**
      * Teste para propriedade3025
      */
+
     @Test
     public void testpropriedade3025() {
         assertEquals(true, Algoritmos.propriedade3025(3025));
@@ -21,23 +22,12 @@ public class AlgoritmosTest {
     /**
      * Teste para propriedade153
      */
+
      @Test 
      public void propriedade153isTrue() {
          assertEquals(true, Algoritmos.propriedade153(153));
-     }
-
-     @Test 
-     public void propriedade153isfalse() {
          assertEquals(false, Algoritmos.propriedade153(152));
-     }
-
-     @Test
-     public void propriedade153Pequeno() {
          assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade153(-1));
-     }
-
-     @Test
-     public void propriedade153Grande() {
          assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade153(1000));
      }
 
@@ -48,45 +38,13 @@ public class AlgoritmosTest {
       @Test
       public void diaSemanaCasoClassico() {
           assertEquals(3, Algoritmos.diaSemana(16, 5, 2019));
-      }
-
-      @Test
-      public void diaSemanaCasoClassicoJaneiro() {
           assertEquals(2, Algoritmos.diaSemana(16, 1, 2019));
-      }
-
-      @Test
-      public void diaSemanaCasoClassicoFevereiro() {
-          assertEquals(5, Algoritmos.diaSemana(16, 2, 2019));
-      }
-
-      @Test
-      public void diaSemanaDiaPequeno() {
+          assertEquals(2, Algoritmos.diaSemana(16, 2, 2019));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(0, 5, 2019));
-      }
-
-      @Test
-      public void diaSemanaDiaGrande() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 5, 2019));
-      }
-
-      @Test
-      public void diaSemanaMesPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 0, 2019));
-      }
-
-      @Test
-      public void diaSemanaMesGrande() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 13, 2019));
-      }
-
-      @Test
-      public void diaSemanaAnoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 5, 1752));
-      }
-
-      @Test
-      public void diaSemanaForadaFaixa() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 2, 2019));
       }
 
