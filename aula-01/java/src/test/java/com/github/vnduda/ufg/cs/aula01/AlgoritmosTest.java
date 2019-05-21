@@ -24,7 +24,7 @@ public class AlgoritmosTest {
      */
 
      @Test 
-     public void propriedade153isTrue() {
+     public void testpropriedade153() {
          assertEquals(true, Algoritmos.propriedade153(153));
          assertEquals(false, Algoritmos.propriedade153(152));
          assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade153(-1));
@@ -36,10 +36,10 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void diaSemanaCasoClassico() {
+      public void testdiaSemana() {
           assertEquals(3, Algoritmos.diaSemana(16, 5, 2019));
           assertEquals(2, Algoritmos.diaSemana(16, 1, 2019));
-          assertEquals(2, Algoritmos.diaSemana(16, 2, 2019));
+          assertEquals(5, Algoritmos.diaSemana(16, 2, 2019));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(0, 5, 2019));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 5, 2019));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 0, 2019));
