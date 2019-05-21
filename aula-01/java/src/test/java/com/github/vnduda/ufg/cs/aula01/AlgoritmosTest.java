@@ -12,7 +12,7 @@ public class AlgoritmosTest {
      */
 
     @Test
-    public void testpropriedade3025() {
+    public void testPropriedade3025() {
         assertEquals(true, Algoritmos.propriedade3025(3025));
         assertEquals(false, Algoritmos.propriedade3025(3024));
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade3025(-1));
@@ -24,7 +24,7 @@ public class AlgoritmosTest {
      */
 
      @Test 
-     public void testpropriedade153() {
+     public void testPropriedade153() {
          assertEquals(true, Algoritmos.propriedade153(153));
          assertEquals(false, Algoritmos.propriedade153(152));
          assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade153(-1));
@@ -36,7 +36,7 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void testdiaSemana() {
+      public void testDiaSemana() {
           assertEquals(3, Algoritmos.diaSemana(16, 5, 2019));
           assertEquals(2, Algoritmos.diaSemana(16, 1, 2019));
           assertEquals(5, Algoritmos.diaSemana(16, 2, 2019));
@@ -53,17 +53,9 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void restoDivisaoCasoClassico() {
+      public void testRestoDivisao() {
           assertEquals(0, Algoritmos.restoDivisao(6, 3));
-      }
-
-      @Test
-      public void restoDivisaoDivisorPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(6, -1));
-      }
-
-      @Test
-      public void restoDivisaoDividendoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(0, 3));
       }
 
@@ -72,12 +64,8 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void somaNaturaisCasoClassico() {
+      public void testSomaNaturais() {
           assertEquals(6, Algoritmos.somaNaturais(3));
-      }
-
-      @Test
-      public void somaNaturaisPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.somaNaturais(0));
       }
 
@@ -86,12 +74,8 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void fatorialCasoClassico() {
+      public void testFatorial() {
           assertEquals(6, Algoritmos.fatorial(3));
-      }
-
-      @Test
-      public void fatorialPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.fatorial(0));
       }
 
@@ -100,25 +84,11 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void produtoCasoClassico() {
+      public void testProduto() {
           assertEquals(4, Algoritmos.produto(2, 2));
-      }
-
-      public void produtoCasoClassicoMaior() {
           assertEquals(6, Algoritmos.produto(3, 2));
-      }
-
-      public void produtoCasoClassicoMenor() {
           assertEquals(2, Algoritmos.produto(1, 2));
-      }
-
-      @Test
-      public void produtoMultiplicandoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.produto(-1, 2));
-      }
-
-      @Test
-      public void produtoMultiplicadorPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.produto(2, -1));
       }
 
@@ -127,17 +97,9 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void potenciaCasoClassico() {
+      public void testPotencia() {
           assertEquals(4, Algoritmos.potencia(2, 2));
-      }
-
-      @Test
-      public void potenciaBasePequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.potencia(-1, 2));
-      }
-
-      @Test
-      public void potenciaExpoentePequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.potencia(2, -1));
       }
 
@@ -146,12 +108,8 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void piCasoClassico() {
+      public void testPi() {
           assertEquals(3.3396825396825403, Algoritmos.pi(5));
-      }
-
-      @Test
-      public void piForadaFaixa() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.pi(0));
       }
 
@@ -160,17 +118,9 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void logaritmoNaturalCasoClassico() {
+      public void testLogaritmoNatural() {
           assertEquals(8.5, Algoritmos.logaritmoNatural(3, 2));
-      }
-
-      @Test
-      public void logaritmoNaturalPotenciaPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.logaritmoNatural(0, 3));
-      }
-
-      @Test
-      public void logaritmoNaturalPrecisaoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.logaritmoNatural(2, 1));
       }
 
@@ -179,22 +129,10 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void razaoAureaCasoClassico() {
+      public void testRazaoAurea() {
           assertEquals(1.5, Algoritmos.razaoAurea(2, 2, 2));
-      }
-      
-      @Test
-      public void razaoAureaPrimeiroTermoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(-1, 2, 2));
-      }
-
-      @Test
-      public void razaoAureaSegundoTermoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 0, 2));
-      }
-
-      @Test
-      public void razaoAureaKPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(3, 2, -1));
       }
 
@@ -203,17 +141,9 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void quadradoPerfeitoCasoClassico() {
+      public void testQuadradoPerfeito() {
           assertEquals(true, Algoritmos.quadradoPerfeito(4));
-      }
-
-      @Test
-      public void quadradoPerfeitoisFalse() {
           assertEquals(false, Algoritmos.quadradoPerfeito(5));
-      }
-
-      @Test
-      public void quadradoPerfeitoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.quadradoPerfeito(0));
       }
 
@@ -222,12 +152,8 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void raizCasoClassico() {
+      public void testRaiz() {
           assertEquals(2, Algoritmos.raiz(4, 25));
-      }
-
-      @Test
-      public void raizBasePequena() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.raiz(-1, 2));
       }
       
@@ -236,12 +162,8 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void primoCasoClassico() {
+      public void testPrimo() {
           assertEquals(true, Algoritmos.primo(3));
-      }
-
-      @Test 
-      public void primoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.primo(0));
       }
 
@@ -252,17 +174,9 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void mdcCasoClassico() {
+      public void testMdc() {
           assertEquals(2, Algoritmos.MDC(4, 2));
-      }
-
-      @Test
-      public void mdcPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC(2, -1));
-      }
-
-      @Test
-      public void mdcNumeroMenorQueOutro() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC(3, 6));
       }
 
@@ -271,17 +185,9 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void mdc2CasoClassico() {
+      public void testMdc2() {
           assertEquals(2, Algoritmos.MDC2(4, 2));
-      }
-
-      @Test
-      public void mdc2Pequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(2, -1));
-      }
-
-      @Test
-      public void mdc2NumeroMenorQueOutro() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(3, 6));
       }
 
@@ -290,20 +196,11 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void hornerCasoClassico() {
+      public void testHorner() {
           int vetor[] = {0, 1, 2};
           assertEquals(3, Algoritmos.horner(1, 2, vetor));
-      }
-
-      @Test
-      public void hornerMenos() {
-          int vetor[] = {0, 1, 2};
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
-      }
-
-      @Test
-      public void hornerArrayisNull() {
-          int vetor[] = {};
+          int vetor2[] = {};
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
       }
 
@@ -312,12 +209,8 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void fibonacciCasoClassico() {
+      public void testFibonacci() {
           assertEquals(55, Algoritmos.fibonacci(10));
-      }
-
-      @Test
-      public void fibonacciGrande() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.fibonacci(-1));
       }
 
@@ -326,18 +219,10 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void cpfCasoClassico() {
+      public void testCpf() {
           assertEquals(true, Algoritmos.CPF("70039371158"));
-      }
-
-      @Test
-      public void cpfGrande() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("123456789101"));
-      }
-
-      @Test
-      public void cpfPequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("1234567891"));
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("1234567891"));
       }
 
       /**
@@ -345,17 +230,10 @@ public class AlgoritmosTest {
       */
 
       @Test
-      public void cpf2CasoClassico() {
+      public void testCpf2() {
           assertEquals(true, Algoritmos.CPF2("70039371158"));
-      }
-
-      @Test
-      public void cpf2Grande() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF2("123456789101"));
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF2("1234567891"));
       }
 
-      @Test
-      public void cpf2Pequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF2("1234567891"));
-      }
 }
