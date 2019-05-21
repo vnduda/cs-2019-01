@@ -11,22 +11,10 @@ public class AlgoritmosTest {
      * Teste para propriedade3025
      */
     @Test
-    public void propriedade3025isTrue() {
+    public void testpropriedade3025() {
         assertEquals(true, Algoritmos.propriedade3025(3025));
-    }
-
-    @Test
-    public void propriedade3025isfalse() {
         assertEquals(false, Algoritmos.propriedade3025(3024));
-    }
-
-    @Test
-    public void propriedade3025Pequeno() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade3025(-1));
-    }
-
-    @Test
-    public void propriedade3025Grande() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade3025(10000));
     }
 
@@ -248,7 +236,7 @@ public class AlgoritmosTest {
       }
 
       @Test
-      public void razaoAureaPrecisaoPequena() {
+      public void razaoAureaKPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(3, 2, -1));
       }
 
