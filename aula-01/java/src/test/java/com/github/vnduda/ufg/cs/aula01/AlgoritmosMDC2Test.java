@@ -12,6 +12,11 @@ public class AlgoritmosMDC2Test {
       }
 
       @Test
+      public void mdc2LacoIfCobertura() {
+          assertEquals(2, Algoritmos.MDC2(54, 10));
+      }
+
+      @Test
       public void mdc2Pequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(2, -1));
       }

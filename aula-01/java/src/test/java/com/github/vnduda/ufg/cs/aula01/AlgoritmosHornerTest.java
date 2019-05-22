@@ -13,14 +13,14 @@ public class AlgoritmosHornerTest {
       }
 
       @Test
-      public void hornerMenos() {
-          int vetor[] = {0, 1, 2};
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
+      public void hornerArrayisNull() {
+          int vetor[] = null;
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 2, vetor));
       }
 
       @Test
-      public void hornerArrayisNull() {
-          int vetor[] = null;
+      public void hornerMenos() {
+          int vetor[] = {0, 1, 2};
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
       }
     }

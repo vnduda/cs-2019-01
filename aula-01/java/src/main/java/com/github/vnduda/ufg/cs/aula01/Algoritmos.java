@@ -409,14 +409,13 @@ public class Algoritmos {
 
         while (i <= limite) {
 
-            if (a[i] == 0) {
-                int multiplo = i + i;
+            int multiplo = i + i;
 
                 while (multiplo <= a.length) {
                     a[multiplo] = 1;
                     multiplo = multiplo + i;
                 }
-            }
+            
             i = i + 1;
         }
 
