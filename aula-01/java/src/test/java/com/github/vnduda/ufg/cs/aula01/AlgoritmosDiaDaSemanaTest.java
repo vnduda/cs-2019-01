@@ -47,4 +47,9 @@ public class AlgoritmosDiaDaSemanaTest {
     public void diaSemanaFevereiroFalso() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 2, 2019));
     }
+
+    @Test
+    public void diaSemanaAbrilFalso() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(31, 4, 2019));
+    }
 }
