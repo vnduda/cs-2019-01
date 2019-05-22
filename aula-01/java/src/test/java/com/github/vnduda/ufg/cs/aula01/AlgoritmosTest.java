@@ -46,7 +46,9 @@ public class AlgoritmosTest {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 13, 2019));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 5, 1752));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 2, 2019));
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(31, 4, 2019));
       }
+
 
       /**
       * Teste para Resto da divisão
@@ -133,7 +135,7 @@ public class AlgoritmosTest {
           assertEquals(1.5, Algoritmos.razaoAurea(2, 2, 2));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(-1, 2, 2));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 0, 2));
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(3, 2, -1));
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 2, -1));
       }
 
       /**
@@ -164,6 +166,7 @@ public class AlgoritmosTest {
       @Test
       public void testPrimo() {
           assertEquals(true, Algoritmos.primo(3));
+          assertEquals(false, Algoritmos.primo(4));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.primo(0));
       }
 
@@ -187,6 +190,7 @@ public class AlgoritmosTest {
       @Test
       public void testMdc2() {
           assertEquals(2, Algoritmos.MDC2(4, 2));
+          assertEquals(2, Algoritmos.MDC2(54, 10));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(2, -1));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC2(3, 6));
       }
@@ -200,8 +204,8 @@ public class AlgoritmosTest {
           int vetor[] = {0, 1, 2};
           assertEquals(3, Algoritmos.horner(1, 2, vetor));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
-          int vetor2[] = {};
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 0, vetor));
+          int vetor2[] = null;
+          assertThrows(IllegalArgumentException.class, () -> Algoritmos.horner(1, 3, vetor2));
       }
 
       /**
@@ -211,6 +215,8 @@ public class AlgoritmosTest {
       @Test
       public void testFibonacci() {
           assertEquals(55, Algoritmos.fibonacci(10));
+          assertEquals(0, Algoritmos.fibonacci(0));
+          assertEquals(1, Algoritmos.fibonacci(1));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.fibonacci(-1));
       }
 
@@ -221,6 +227,7 @@ public class AlgoritmosTest {
       @Test
       public void testCpf() {
           assertEquals(true, Algoritmos.CPF("70039371158"));
+          assertEquals(false, Algoritmos.CPF("85813526010"));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("123456789101"));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF("1234567891"));
       }
@@ -232,6 +239,8 @@ public class AlgoritmosTest {
       @Test
       public void testCpf2() {
           assertEquals(true, Algoritmos.CPF2("70039371158"));
+          assertEquals(false, Algoritmos.CPF2("85813526006"));
+          assertEquals(false, Algoritmos.CPF2("85813526010"));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF2("123456789101"));
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.CPF2("1234567891"));
       }
