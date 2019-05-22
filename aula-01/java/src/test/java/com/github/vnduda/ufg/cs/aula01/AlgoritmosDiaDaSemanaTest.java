@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class AlgoritmosDiaDaSemanaTest {
     @Test
     public void diaSemanaCasoClassico() {
-        assertEquals(4, Algoritmos.diaSemana(16, 5, 2019));
+        assertEquals(3, Algoritmos.diaSemana(16, 5, 2019));
         assertEquals(2, Algoritmos.diaSemana(16, 1, 2019));
         assertEquals(5, Algoritmos.diaSemana(16, 2, 2019));
     }
