@@ -28,7 +28,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 100 ou maior que 999
      * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 153 e, o valor falso, caso contrário 
     */
-    public static boolean propriedade153(int n) {
+    public static boolean propriedade153(final int n) {
 
         if (n < 100 || n > 999) {
             throw new IllegalArgumentException("Intervalo de n inválido");
@@ -81,7 +81,7 @@ public class Algoritmos {
             ano -= 1;   
         }
 
-        int s = (dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400));
+        final int s = (dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400));
 
         return s % 7;
     }
@@ -93,7 +93,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada esteja fora da faixa
      * @return o resultado da divisão inteira de x por y
     */
-    public static int restoDivisao(int x, int y) {
+    public static int restoDivisao(final int x, final int y) {
 
         if (y < 0) {
             throw new IllegalArgumentException("Valor de y inválido");
@@ -117,7 +117,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna a soma dos primeiros números até n
      */
-     public static int somaNaturais(int n) {
+     public static int somaNaturais(final int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo de n inválido");
@@ -137,7 +137,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna o fatorial de n calculado
      */
-    public static int fatorial(int n) {
+    public static int fatorial(final int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo de n inválido");
@@ -161,7 +161,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entradas sejam menores que zero
      * @return o produto de dois inteiros
      */
-    public static int produto(int a, int b) {
+    public static int produto(final int a, final int b) {
 
         if (a < 0) {
             throw new IllegalArgumentException("Intervalo de a inválido");
@@ -197,7 +197,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entradas sejam menores que 0
      * @return retorna o valor da potência de x por y
      */
-    public static int potencia(int x, int y) {
+    public static int potencia(final int x, final int y) {
 
         if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
@@ -225,7 +225,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna o valor calculado de pi
      */
-    public static double pi(int n) {
+    public static double pi(final int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo inválido de n");
@@ -285,7 +285,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso x seja menor que 0, ou y menor que x, ou k menor que 0
      * @return o valor da razao aurea calculado
      */
-    public static float razaoAurea(float x, float y, float k) {
+    public static float razaoAurea(final float x, final float y, final float k) {
 
         if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
@@ -319,7 +319,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return o quadrado perfeito
      */
-    public static boolean quadradoPerfeito(int n) {
+    public static boolean quadradoPerfeito(final int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");
@@ -364,7 +364,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return true caso entrada seja um número primo
      */
-    public static boolean primo(int n) {
+    public static boolean primo(final int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");
@@ -492,7 +492,6 @@ public class Algoritmos {
         if (a == null) {
             throw new IllegalArgumentException("array is null");
         }
-        // TODO verifique se a contem exatamente g elementos
 
         int p = a[g];
         int i = g - 1;
@@ -511,7 +510,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 0
      * @return o n-esimo número de Fibonacci
      */
-    public static int fibonacci(int n) {
+    public static int fibonacci(final int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Intervalo da variável n inválido");
         }
@@ -525,7 +524,7 @@ public class Algoritmos {
         }
 
         while (i <= n) {
-            int t = c;
+            final int t = c;
             c = c + a;
             a = t;
             i = i + 1;
@@ -559,13 +558,13 @@ public class Algoritmos {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
     
-        int[] d = cpfStringToArray(cpf);
-        int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3] + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
+        final int[] d = cpfStringToArray(cpf);
+        final int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3] + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
 
-        int k = d[1] + 2 * d[2] + 3 * d[3] + 4 * d[4] + 5 * d[5] + 6 * d[6] + 7 * d[7] + 8 * d[8] + 9 * d[9];
+        final int k = d[1] + 2 * d[2] + 3 * d[3] + 4 * d[4] + 5 * d[5] + 6 * d[6] + 7 * d[7] + 8 * d[8] + 9 * d[9];
 
-        int dj = (j % 11) % 10;
-        int dk = (k % 11) % 10;
+        final int dj = (j % 11) % 10;
+        final int dk = (k % 11) % 10;
 
         return (dj == d[9] && dk == d[10]);
     }
@@ -582,7 +581,7 @@ public class Algoritmos {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
-        int[] d = cpfStringToArray(cpf);
+        final int[] d = cpfStringToArray(cpf);
         int c = 7;
         int p = d[8];
         int s = d[8];
@@ -593,8 +592,8 @@ public class Algoritmos {
             c = c - 1;
         }
 
-        int j = (s % 11) % 10;
-        int k = ((s - p + 9 * d[9]) % 11) % 10;
+        final int j = (s % 11) % 10;
+        final int k = ((s - p + 9 * d[9]) % 11) % 10;
 
         return (j == d[9] && k == d[10]);
     }
