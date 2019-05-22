@@ -137,7 +137,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna o fatorial de n calculado
      */
-    public int fatorial(int n) {
+    public static int fatorial(int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo de n inválido");
@@ -161,7 +161,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entradas sejam menores que zero
      * @return o produto de dois inteiros
      */
-    public int produto(int a, int b) {
+    public static int produto(int a, int b) {
 
         if (a < 0) {
             throw new IllegalArgumentException("Intervalo de a inválido");
@@ -184,6 +184,7 @@ public class Algoritmos {
 
         while (i <= totalParcelas) {
             s = s + parcela;
+            i = i + 1;
         }
 
         return s;
@@ -196,7 +197,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entradas sejam menores que 0
      * @return retorna o valor da potência de x por y
      */
-    public int potencia(int x, int y) {
+    public static int potencia(int x, int y) {
 
         if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
@@ -224,7 +225,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna o valor calculado de pi
      */
-    public double pi(int n) {
+    public static double pi(int n) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo inválido de n");
@@ -266,7 +267,7 @@ public class Algoritmos {
         float e = 1 + n;
         float numerador = n;
         float denominador = 1;
-        while (k >= 1) {
+        while (k >= i) {
             numerador = numerador * numerador;
             denominador = denominador * i;
             e = e + numerador / denominador;
