@@ -409,7 +409,7 @@ public class Algoritmos {
      * menor ou igual a 1 ou vetor não estiver zerado
      * @return vetor com resultado calculado
      */
-    public static int[] crivoEratostenes(final int a[]) {
+    public static int[] crivoEratostenes(final int[] a) {
 
         if (a == null) {
             throw new IllegalArgumentException("array is null");
@@ -517,7 +517,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso g seja menor que 1
      * @return o valor calculado pelo método de horner
      */
-    public static int horner(final int x, final int g, final int a[]) {
+    public static int horner(final int x, final int g, final int[] a) {
 
         if (g < 1) {
             throw new IllegalArgumentException(
