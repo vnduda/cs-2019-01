@@ -2,6 +2,9 @@ package com.github.vnduda.ufg.cs.aula01;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 
+/**
+ * Implementação de funções matemáticas.
+ */
 public class Algoritmos {
 
     /**
