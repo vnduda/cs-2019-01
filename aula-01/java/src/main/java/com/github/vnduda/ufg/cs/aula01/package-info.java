@@ -3,5 +3,4 @@
  * em (a){@link com.github.vnduda.ufg.cs.aula01} em que há implementações de
  * vários algoritmos matemáticos.
  */
-
 package com.github.vnduda.ufg.cs.aula01;

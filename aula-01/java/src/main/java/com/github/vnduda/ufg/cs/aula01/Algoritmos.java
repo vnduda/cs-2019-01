@@ -10,26 +10,30 @@ public class Algoritmos {
     /**
      * Verifica se n satisfaz propriedade 3025.
      * @param n n variavel a ser verificada
-     * @throws IllegalArgumentException caso entrada seja menor que 0 ou maior que 999
-     * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 3025 e, o valor falso, caso contrário
+     * @throws IllegalArgumentException caso entrada seja menor que 0
+     * ou maior que 999
+     * @return o valor verdadeiro se o argumento fornecido
+     * satisfaz a propriedade 3025 e, o valor falso, caso contrário
     */
-	public static boolean propriedade3025(final int n) {
+    public static boolean propriedade3025(final int n) {
 
         if (n < 0 || n > 9999) {
             throw new IllegalArgumentException("Intervalo de n inválido");
         }
 
-		final int i = n / 100;
-		final int j = n % 100;
+        final int i = n / 100;
+        final int j = n % 100;
 
-		return (i + j) * (i + j) == n;
+        return (i + j) * (i + j) == n;
     }
 
     /**
      * Verifica se n satisfaz a propriedade 153.
      * @param n n variavel a ser verificada
-     * @throws IllegalArgumentException caso entrada seja menor que 100 ou maior que 999
-     * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 153 e, o valor falso, caso contrário 
+     * @throws IllegalArgumentException caso entrada seja menor que 100
+     * ou maior que 999
+     * @return o valor verdadeiro se o argumento fornecido satisfaz
+     * a propriedade 153 e, o valor falso, caso contrário
     */
     public static boolean propriedade153(final int n) {
 
@@ -81,10 +85,11 @@ public class Algoritmos {
 
         if (mes == 1 || mes == 2) {
             mes += 12;
-            ano -= 1;   
+            ano -= 1;
         }
 
-        final int s = (dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400));
+        final int s = (dia + (2 * mes) + (3 * (mes + 1) / 5) 
+                       + ano + (ano / 4) - (ano / 100) + (ano / 400));
 
         return s % 7;
     }
@@ -105,7 +110,7 @@ public class Algoritmos {
         if (x <= 0) {
             throw new IllegalArgumentException("Valor de x inválido");
         }
-        
+
         int s = x;
         while (s >= y) {
             s = s - y;
@@ -285,17 +290,20 @@ public class Algoritmos {
      * @param x o primeiro termo da sequência
      * @param y o segundo termo
      * @param k a precisão
-     * @throws IllegalArgumentException caso x seja menor que 0, ou y menor que x, ou k menor que 0
+     * @throws IllegalArgumentException caso x seja menor que 0,
+     * ou y menor que x, ou k menor que 0
      * @return o valor da razao aurea calculado
      */
-    public static float razaoAurea(final float x, final float y, final float k) {
+    public static float razaoAurea(final float x,
+                                   final float y, final float k) {
 
         if (x < 0) {
             throw new IllegalArgumentException("Intervalo de x inválido");
         }
 
         if (y < x) {
-            throw new IllegalArgumentException("Variável y tem que ser maior que x");
+            throw new IllegalArgumentException(
+                "Variável y tem que ser maior que x");
         }
 
         if (k < 0) {
@@ -325,7 +333,8 @@ public class Algoritmos {
     public static boolean quadradoPerfeito(final int n) {
 
         if (n < 1) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+            throw new IllegalArgumentException(
+                "Intervalo da variável n inválido");
         }
 
         int i = 1;
@@ -348,7 +357,8 @@ public class Algoritmos {
     public static float raiz(float n, int i) {
 
         if (n < 0) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+            throw new IllegalArgumentException(
+                "Intervalo da variável n inválido");
         }
 
         float r = 1;
@@ -370,7 +380,8 @@ public class Algoritmos {
     public static boolean primo(final int n) {
 
         if (n < 1) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+            throw new IllegalArgumentException(
+                "Intervalo da variável n inválido");
         }
 
         int i = 2;
@@ -388,7 +399,8 @@ public class Algoritmos {
     /**
      * Algoritmo que encontra números primos
      * @param a vetor de zeros com o tamanho do número a ser checado
-     * @throws IllegalArgumentException caso o tamanho do vetor for menor ou igual a 1 ou vetor não estiver zerado
+     * @throws IllegalArgumentException caso o tamanho do vetor for
+     * menor ou igual a 1 ou vetor não estiver zerado
      * @return vetor com resultado calculado
      */
     public static int[] crivoEratostenes(int a[]) {
@@ -403,7 +415,8 @@ public class Algoritmos {
 
         for (int valor : a) {
             if (valor != 0) {
-                throw new IllegalArgumentException("O array precisa estar zerado");
+                throw new IllegalArgumentException(
+                    "O array precisa estar zerado");
             }
         }
 
@@ -418,7 +431,7 @@ public class Algoritmos {
                     a[multiplo] = 1;
                     multiplo = multiplo + i;
                 }
-            
+
             i = i + 1;
         }
 
@@ -435,11 +448,13 @@ public class Algoritmos {
     public static int MDC(int a, int b) {
 
         if (a < b) {
-            throw new IllegalArgumentException("Variável a deve ser maior que b");
+            throw new IllegalArgumentException(
+                "Variável a deve ser maior que b");
         }
 
         if (b < 0) {
-            throw new IllegalArgumentException("Intervalo da variável b inválido");
+            throw new IllegalArgumentException(
+                "Intervalo da variável b inválido");
         }
 
         while (b != 0) {
@@ -455,17 +470,20 @@ public class Algoritmos {
      * Calcula outra forma de achar o maior divisor comum entre a e b
      * @param a número inteiro que será utilizado para o mdc
      * @param b número inteiro que será utilizado para o mdc
-     * @throws IllegalArgumentException caso b seja maior que a, ou b menor que 0
+     * @throws IllegalArgumentException caso b seja maior que a,
+     * ou b menor que 0
      * @return o valor do mdc entre a e b
      */
     public static int MDC2(int a, int b) {
 
         if (a < b) {
-            throw new IllegalArgumentException("Variável a deve ser maior que b");
+            throw new IllegalArgumentException(
+                "Variável a deve ser maior que b");
         }
 
         if (b < 0) {
-            throw new IllegalArgumentException("Intervalo da variável b inválido");
+            throw new IllegalArgumentException(
+                "Intervalo da variável b inválido");
         }
 
         while (a != b) {
@@ -481,7 +499,7 @@ public class Algoritmos {
 
     /**
      * Regra de Horner para avaliação polinomial
-     * @param x variável para obter uma aproximação 
+     * @param x variável para obter uma aproximação
      * @param g tamanho do polinômio
      * @param a coeficientes do polinômio
      * @throws IllegalArgumentException caso g seja menor que 1
@@ -490,7 +508,8 @@ public class Algoritmos {
     public static int horner(int x, int g, int a[]) {
 
         if (g < 1) {
-            throw new IllegalArgumentException("Intervalo da variável g inválido");
+            throw new IllegalArgumentException(
+                "Intervalo da variável g inválido");
         }
         if (a == null) {
             throw new IllegalArgumentException("array is null");
@@ -515,7 +534,8 @@ public class Algoritmos {
      */
     public static int fibonacci(final int n) {
         if (n < 0) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+            throw new IllegalArgumentException(
+                "Intervalo da variável n inválido");
         }
 
         int a = 0;
@@ -552,7 +572,8 @@ public class Algoritmos {
     /**
      * Algoritmo que certifica se o CPF é válido
      * @param cpf CPF a ser verificado
-     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
+     * @throws IllegalArgumentException caso entrada tenha
+     * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
     public static boolean CPF(String cpf) {
@@ -562,9 +583,11 @@ public class Algoritmos {
         }
     
         final int[] d = cpfStringToArray(cpf);
-        final int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3] + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
+        final int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3]
+                    + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
 
-        final int k = d[1] + 2 * d[2] + 3 * d[3] + 4 * d[4] + 5 * d[5] + 6 * d[6] + 7 * d[7] + 8 * d[8] + 9 * d[9];
+        final int k = d[1] + 2 * d[2] + 3 * d[3] + 4 * d[4]
+                    + 5 * d[5] + 6 * d[6] + 7 * d[7] + 8 * d[8] + 9 * d[9];
 
         final int dj = (j % 11) % 10;
         final int dk = (k % 11) % 10;
@@ -575,7 +598,8 @@ public class Algoritmos {
     /**
      * Algoritmo que certifica se o CPF é válido
      * @param cpf CPF a ser verificado
-     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
+     * @throws IllegalArgumentException caso entrada tenha
+     * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
     public static boolean CPF2(String cpf) {
