@@ -50,7 +50,7 @@ public class Algoritmos {
     }
 
     /**
-     * Determina o dia da semana a partir de uma dada data
+     * Determina o dia da semana a partir de uma dada data.
      * @param d o dia
      * @param m o mês
      * @param a o ano
@@ -88,14 +88,14 @@ public class Algoritmos {
             ano -= 1;
         }
 
-        final int s = (dia + (2 * mes) + (3 * (mes + 1) / 5) 
+        final int s = (dia + (2 * mes) + (3 * (mes + 1) / 5)
                        + ano + (ano / 4) - (ano / 100) + (ano / 400));
 
         return s % 7;
     }
 
     /**
-     * Gera o resto da divisão inteira de x por y
+     * Gera o resto da divisão inteira de x por y.
      * @param x dividendo
      * @param y divisor
      * @throws IllegalArgumentException caso entrada esteja fora da faixa
@@ -120,7 +120,7 @@ public class Algoritmos {
     }
 
     /**
-     * Faz a soma dos primeiros naturais, de 1 até n
+     * Faz a soma dos primeiros naturais, de 1 até n.
      * @param n número máximo a ser calculado
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna a soma dos primeiros números até n
@@ -140,7 +140,7 @@ public class Algoritmos {
     }
 
     /**
-     * Algoritmo que faz o fatorial de um número n
+     * Algoritmo que faz o fatorial de um número n.
      * @param n variável que será calculado o fatorial
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna o fatorial de n calculado
@@ -163,7 +163,7 @@ public class Algoritmos {
     }
 
     /**
-     * Verifica o produto de dois inteiros a e b utilizando soma
+     * Verifica o produto de dois inteiros a e b utilizando soma.
      * @param a variável multiplicando
      * @param b variável multiplicador
      * @throws IllegalArgumentException caso entradas sejam menores que zero
@@ -199,7 +199,7 @@ public class Algoritmos {
     }
 
     /**
-     * Verifica potencia de x elevado a y utilizando somas
+     * Verifica potencia de x elevado a y utilizando somas.
      * @param x base da potência
      * @param y expoente da potência
      * @throws IllegalArgumentException caso entradas sejam menores que 0
@@ -228,7 +228,7 @@ public class Algoritmos {
     }
 
     /**
-     * Verifica valor de Pi para um total de n termos
+     * Verifica valor de Pi para um total de n termos.
      * @param n quantidade de termos
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna o valor calculado de pi
@@ -255,7 +255,7 @@ public class Algoritmos {
     }
 
     /**
-     * Calcula logaritmo elevado a n com precisão k
+     * Calcula logaritmo elevado a n com precisão k.
      * @param n variável de potência
      * @param k variável de precisão
      * @throws IllegalArgumentException caso n seja menor que 1 e k menor que 2
@@ -286,7 +286,7 @@ public class Algoritmos {
     }
 
     /**
-     * Calcula a razão áurea usando uma sequência
+     * Calcula a razão áurea usando uma sequência.
      * @param x o primeiro termo da sequência
      * @param y o segundo termo
      * @param k a precisão
@@ -325,7 +325,7 @@ public class Algoritmos {
     }
 
     /**
-     * Calcula um quadrado perfeito dado um n
+     * Calcula um quadrado perfeito dado um n.
      * @param n número a ser calculado o quadrado perfeito
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return o quadrado perfeito
@@ -348,7 +348,7 @@ public class Algoritmos {
     }
 
     /**
-     * Calcula raiz quadrada dada a base e o indice
+     * Calcula raiz quadrada dada a base e o indice.
      * @param n base da raiz quadrada
      * @param i indice da raiz quadrada
      * @throws IllegalArgumentException caso entrada seja menor que 0
@@ -372,7 +372,7 @@ public class Algoritmos {
     }
 
     /**
-     * Calcula se um dado n é primo
+     * Calcula se um dado n é primo.
      * @param n número a ser calculado
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return true caso entrada seja um número primo
@@ -397,7 +397,7 @@ public class Algoritmos {
     }
 
     /**
-     * Algoritmo que encontra números primos
+     * Algoritmo que encontra números primos.
      * @param a vetor de zeros com o tamanho do número a ser checado
      * @throws IllegalArgumentException caso o tamanho do vetor for
      * menor ou igual a 1 ou vetor não estiver zerado
@@ -439,10 +439,11 @@ public class Algoritmos {
     }
 
     /**
-     * Calcula o maior divisor comum entre a e b
+     * Calcula o maior divisor comum entre a e b.
      * @param a número inteiro que será utilizado para o mdc
      * @param b número inteiro que será utilizado para o mdc
-     * @throws IllegalArgumentException caso b seja maior que a, ou b menor que 0
+     * @throws IllegalArgumentException caso b seja maior que a,
+     * ou b menor que 0
      * @return o valor do mdc entre a e b
      */
     public static int MDC(int a, int b) {
@@ -467,7 +468,7 @@ public class Algoritmos {
     }
 
     /**
-     * Calcula outra forma de achar o maior divisor comum entre a e b
+     * Calcula outra forma de achar o maior divisor comum entre a e b.
      * @param a número inteiro que será utilizado para o mdc
      * @param b número inteiro que será utilizado para o mdc
      * @throws IllegalArgumentException caso b seja maior que a,
@@ -498,7 +499,7 @@ public class Algoritmos {
     }
 
     /**
-     * Regra de Horner para avaliação polinomial
+     * Regra de Horner para avaliação polinomial.
      * @param x variável para obter uma aproximação
      * @param g tamanho do polinômio
      * @param a coeficientes do polinômio
@@ -527,7 +528,7 @@ public class Algoritmos {
     }
 
     /**
-     * Algoritmo que calcula o n-esimo número de Fibonacci
+     * Algoritmo que calcula o n-esimo número de Fibonacci.
      * @param n variável a ser calculada
      * @throws IllegalArgumentException caso entrada seja menor que 0
      * @return o n-esimo número de Fibonacci
@@ -557,7 +558,7 @@ public class Algoritmos {
     }
 
     /**
-     * Função que transforma cpf de String para Vetor
+     * Função que transforma cpf de String para Vetor.
      * @param d cpf como string
      * @return cpf como vetor
      */
@@ -570,7 +571,7 @@ public class Algoritmos {
     }
 
     /**
-     * Algoritmo que certifica se o CPF é válido
+     * Algoritmo que certifica se o CPF é válido.
      * @param cpf CPF a ser verificado
      * @throws IllegalArgumentException caso entrada tenha
      * mais ou menos que 11 dígitos
@@ -581,7 +582,7 @@ public class Algoritmos {
         if (cpf.length() > 11 || cpf.length() < 11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
-    
+
         final int[] d = cpfStringToArray(cpf);
         final int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3]
                     + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
@@ -596,7 +597,7 @@ public class Algoritmos {
     }
 
     /**
-     * Algoritmo que certifica se o CPF é válido
+     * Algoritmo que certifica se o CPF é válido.
      * @param cpf CPF a ser verificado
      * @throws IllegalArgumentException caso entrada tenha
      * mais ou menos que 11 dígitos
