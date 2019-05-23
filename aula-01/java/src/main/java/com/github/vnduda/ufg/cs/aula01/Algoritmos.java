@@ -22,13 +22,13 @@ public class Algoritmos {
      * satisfaz a propriedade 3025 e, o valor falso, caso contrário
     */
     public static boolean propriedade3025(final int n) {
-
-        if (n < 0 || n > 9999) {
+        final int limiteMaximo = 9999;
+        if (n < 0 || n > limiteMaximo) {
             throw new IllegalArgumentException("Intervalo de n inválido");
         }
-
-        final int i = n / 100;
-        final int j = n % 100;
+        final int auxiliar1 = 100;
+        final int i = n / auxiliar1;
+        final int j = n % auxiliar1;
 
         return (i + j) * (i + j) == n;
     }
@@ -42,15 +42,18 @@ public class Algoritmos {
      * a propriedade 153 e, o valor falso, caso contrário
     */
     public static boolean propriedade153(final int n) {
-
-        if (n < 100 || n > 999) {
+        final int limiteMinimo = 100;
+        final int limiteMaximo = 999;
+        if (n < limiteMinimo || n > limiteMaximo) {
             throw new IllegalArgumentException("Intervalo de n inválido");
         }
 
-        final int c = n / 100;
-        final int du = n % 100;
-        final int d = du / 10;
-        final int u = du % 10;
+        final int auxiliar1 = 100;
+        final int auxiliar2 = 10;
+        final int c = n / auxiliar1;
+        final int du = n % auxiliar1;
+        final int d = du / auxiliar2;
+        final int u = du % auxiliar2;
 
         return (c * c * c) + (d * d * d) + (u * u * u) == n;
     }
@@ -65,16 +68,18 @@ public class Algoritmos {
     */
 
     public static int diaSemana(final int d, final int m, final int a) {
-
-        if (d < 1 || d > 31) {
+        final int diaMaximo = 31;
+        final int mesMaximo = 12;
+        final int anoMinimo = 1753;
+        if (d < 1 || d > diaMaximo) {
             throw new IllegalArgumentException("Dia inválido");
         }
 
-        if (m < 1 || m > 12) {
+        if (m < 1 || m > mesMaximo) {
             throw new IllegalArgumentException("Mês inválido");
         }
 
-        if (a < 1753) {
+        if (a < anoMinimo) {
             throw new IllegalArgumentException("Ano inválido");
         }
 
@@ -88,16 +93,18 @@ public class Algoritmos {
         int dia = d;
         int mes = m;
         int ano = a;
-
+        final int mesMais = 12;
+        final int anoMenos = 1;
         if (mes == 1 || mes == 2) {
-            mes += 12;
-            ano -= 1;
+            mes += mesMais;
+            ano -= anoMenos;
         }
 
         final int s = (dia + (2 * mes) + (3 * (mes + 1) / 5)
                        + ano + (ano / 4) - (ano / 100) + (ano / 400));
 
-        return s % 7;
+        final int auxResultado = 7;
+        return s % auxResultado;
     }
 
     /**
@@ -249,11 +256,11 @@ public class Algoritmos {
         double s = -1;
         double d = -1;
         int i = 1;
-
+        final int aux = 4;
         while (i <= n) {
             d = d + 2;
             s = -s;
-            p = p + 4 * s / d;
+            p = p + aux * s / d;
             i = i + 1;
         }
 
@@ -467,13 +474,13 @@ public class Algoritmos {
         int auxiliarA = a;
         int auxiliarB = b;
 
-        while (b != 0) {
+        while (auxiliarB != 0) {
             int m = auxiliarA % auxiliarB;
             auxiliarA = auxiliarB;
             auxiliarB = m;
         }
 
-        return a;
+        return auxiliarA;
     }
 
     /**
@@ -574,7 +581,8 @@ public class Algoritmos {
      * @return cpf como vetor
      */
     public static int[] cpfStringToArray(final String d) {
-        int[] cpf = new int[11];
+        final int aux11 = 11;
+        int[] cpf = new int[aux11];
         for (int i = 0; i < d.length(); i++) {
             cpf[i] = Character.getNumericValue(d.charAt(i));
         }
@@ -589,22 +597,34 @@ public class Algoritmos {
      * @return caso CPF seja verdadeiro retorna true
      */
     public static boolean cpf(final String cpf) {
-
-        if (cpf.length() > 11 || cpf.length() < 11) {
+        final int aux11 = 11;
+        if (cpf.length() > aux11 || cpf.length() < aux11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
         final int[] d = cpfStringToArray(cpf);
-        final int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3]
-                    + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
+        final int digito3 = 3;
+        final int digito4 = 4;
+        final int digito5 = 5;
+        final int digito6 = 6;
+        final int digito7 = 7;
+        final int digito8 = 8;
+        final int digito9 = 9;
+        final int digito10 = 10;
 
-        final int k = d[1] + 2 * d[2] + 3 * d[3] + 4 * d[4]
-                    + 5 * d[5] + 6 * d[6] + 7 * d[7] + 8 * d[8] + 9 * d[9];
+        final int j =  d[0] + 2 * d[1] + digito3 * d[2] + digito4 * d[digito3]
+                    + digito5 * d[digito4] + digito6 * d[digito5] + digito7
+                    * d[digito6] + digito8 * d[digito7] + digito9 * d[digito8];
 
-        final int dj = (j % 11) % 10;
-        final int dk = (k % 11) % 10;
+        final int k = d[1] + 2 * d[2] + digito3 * d[digito3] + digito4
+                    * d[digito4] + digito5 * d[digito5] + digito6
+                    * d[digito6] + digito7 * d[digito7] + digito8
+                    * d[digito8] + digito9 * d[digito9];
 
-        return (dj == d[9] && dk == d[10]);
+        final int dj = (j % aux11) % digito10;
+        final int dk = (k % aux11) % digito10;
+
+        return (dj == d[digito9] && dk == d[digito10]);
     }
 
     /**
@@ -615,15 +635,20 @@ public class Algoritmos {
      * @return caso CPF seja verdadeiro retorna true
      */
     public static boolean cpf2(final String cpf) {
-
-        if (cpf.length() < 11 || cpf.length() > 11) {
+        final int aux11 = 11;
+        if (cpf.length() < aux11 || cpf.length() > aux11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
         final int[] d = cpfStringToArray(cpf);
-        int c = 7;
-        int p = d[8];
-        int s = d[8];
+        final int digito7 = 7;
+        final int digito8 = 8;
+        final int digito9 = 9;
+        final int digito10 = 10;
+
+        int c = digito7;
+        int p = d[digito8];
+        int s = d[digito8];
 
         while (c >= 0) {
             p = p + d[c];
@@ -631,9 +656,9 @@ public class Algoritmos {
             c = c - 1;
         }
 
-        final int j = (s % 11) % 10;
-        final int k = ((s - p + 9 * d[9]) % 11) % 10;
+        final int j = (s % aux11) % digito10;
+        final int k = ((s - p + digito9 * d[digito9]) % aux11) % digito10;
 
-        return (j == d[9] && k == d[10]);
+        return (j == d[digito9] && k == d[digito10]);
     }
 }
