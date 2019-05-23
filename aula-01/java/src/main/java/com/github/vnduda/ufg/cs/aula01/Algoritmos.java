@@ -6,6 +6,12 @@ import java.time.LocalDate;
  * Implementação de funções matemáticas.
  */
 public class Algoritmos {
+    /**
+     * Para cobertura.
+     */
+    protected Algoritmos() {
+
+    }
 
     /**
      * Verifica se n satisfaz propriedade 3025.
@@ -261,7 +267,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso n seja menor que 1 e k menor que 2
      * @return o logaritmo elevado a n calculado com precisão k
      */
-    public static float logaritmoNatural(float n, float k) {
+    public static float logaritmoNatural(final float n, final float k) {
 
         if (n < 1) {
             throw new IllegalArgumentException("Intervalo de n inválido");
@@ -354,7 +360,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entrada seja menor que 0
      * @return a raiz quadrada calculada
      */
-    public static float raiz(float n, int i) {
+    public static float raiz(final float n, final int i) {
 
         if (n < 0) {
             throw new IllegalArgumentException(
@@ -362,10 +368,10 @@ public class Algoritmos {
         }
 
         float r = 1;
-
-        while (i >= 0) {
+        int indice = i;
+        while (indice >= 0) {
             r = (r + n / r) / 2;
-            i = i - 1;
+            indice = indice - 1;
         }
 
         return r;
@@ -403,7 +409,7 @@ public class Algoritmos {
      * menor ou igual a 1 ou vetor não estiver zerado
      * @return vetor com resultado calculado
      */
-    public static int[] crivoEratostenes(int a[]) {
+    public static int[] crivoEratostenes(final int a[]) {
 
         if (a == null) {
             throw new IllegalArgumentException("array is null");
@@ -446,7 +452,7 @@ public class Algoritmos {
      * ou b menor que 0
      * @return o valor do mdc entre a e b
      */
-    public static int MDC(int a, int b) {
+    public static int MDC(final int a, final int b) {
 
         if (a < b) {
             throw new IllegalArgumentException(
@@ -458,10 +464,13 @@ public class Algoritmos {
                 "Intervalo da variável b inválido");
         }
 
+        int auxiliarA = a;
+        int auxiliarB = b;
+
         while (b != 0) {
-            int m = a % b;
-            a = b;
-            b = m;
+            int m = auxiliarA % auxiliarB;
+            auxiliarA = auxiliarB;
+            auxiliarB = m;
         }
 
         return a;
@@ -475,7 +484,7 @@ public class Algoritmos {
      * ou b menor que 0
      * @return o valor do mdc entre a e b
      */
-    public static int MDC2(int a, int b) {
+    public static int MDC2(final int a, final int b) {
 
         if (a < b) {
             throw new IllegalArgumentException(
@@ -487,15 +496,17 @@ public class Algoritmos {
                 "Intervalo da variável b inválido");
         }
 
-        while (a != b) {
-            if (a > b) {
-                a = a - b;
+        int auxiliarA = a;
+        int auxiliarB = b;
+        while (auxiliarA != auxiliarB) {
+            if (auxiliarA > auxiliarB) {
+                auxiliarA = auxiliarA - auxiliarB;
             } else {
-                b = b - a;
+                auxiliarB = auxiliarB - auxiliarA;
             }
         }
 
-        return a;
+        return auxiliarA;
     }
 
     /**
@@ -506,7 +517,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso g seja menor que 1
      * @return o valor calculado pelo método de horner
      */
-    public static int horner(int x, int g, int a[]) {
+    public static int horner(final int x, final int g, final int a[]) {
 
         if (g < 1) {
             throw new IllegalArgumentException(
@@ -577,7 +588,7 @@ public class Algoritmos {
      * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF(String cpf) {
+    public static boolean CPF(final String cpf) {
 
         if (cpf.length() > 11 || cpf.length() < 11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
@@ -603,7 +614,7 @@ public class Algoritmos {
      * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF2(String cpf) {
+    public static boolean CPF2(final String cpf) {
 
         if (cpf.length() < 11 || cpf.length() > 11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
