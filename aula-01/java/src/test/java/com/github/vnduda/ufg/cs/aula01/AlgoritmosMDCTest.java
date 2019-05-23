@@ -5,19 +5,19 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosMDCTest {
+public class AlgoritmosmdcTest {
     @Test
     public void mdcCasoClassico() {
-        assertEquals(2, Algoritmos.MDC(4, 2));
+        assertEquals(2, Algoritmos.mdc(4, 2));
     }
 
     @Test
     public void mdcPequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC(2, -1));
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc(2, -1));
     }
 
     @Test
     public void mdcNumeroMenorQueOutro() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.MDC(3, 6));
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc(3, 6));
     }
 }

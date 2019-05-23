@@ -452,7 +452,7 @@ public class Algoritmos {
      * ou b menor que 0
      * @return o valor do mdc entre a e b
      */
-    public static int MDC(final int a, final int b) {
+    public static int mdc(final int a, final int b) {
 
         if (a < b) {
             throw new IllegalArgumentException(
@@ -484,7 +484,7 @@ public class Algoritmos {
      * ou b menor que 0
      * @return o valor do mdc entre a e b
      */
-    public static int MDC2(final int a, final int b) {
+    public static int mdc2(final int a, final int b) {
 
         if (a < b) {
             throw new IllegalArgumentException(
@@ -588,7 +588,7 @@ public class Algoritmos {
      * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF(final String cpf) {
+    public static boolean cpf(final String cpf) {
 
         if (cpf.length() > 11 || cpf.length() < 11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
@@ -614,7 +614,7 @@ public class Algoritmos {
      * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF2(final String cpf) {
+    public static boolean cpf2(final String cpf) {
 
         if (cpf.length() < 11 || cpf.length() > 11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
