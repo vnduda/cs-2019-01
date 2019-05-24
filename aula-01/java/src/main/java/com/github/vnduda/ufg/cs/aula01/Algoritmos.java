@@ -29,7 +29,8 @@ public class Algoritmos {
         final int auxiliar1 = 100;
         final int primDezena = numero / auxiliar1;
         final int segDezena = numero % auxiliar1;
-        final int resultado = (primDezena + segDezena) * (primDezena + segDezena);
+        final int resultado = (primDezena + segDezena)
+                            * (primDezena + segDezena);
 
         return resultado == numero;
     }
@@ -102,7 +103,8 @@ public class Algoritmos {
         }
 
         final int resultado = diaAux + (2 * mesAux) + (3 * (mesAux + 1) / 5)
-                       + anoAux + (anoAux / 4) - (anoAux / 100) + (anoAux / 400);
+                       + anoAux + (anoAux / 4) - (anoAux / 100)
+                       + (anoAux / 400);
 
         final int auxResultado = 7;
         return resultado % auxResultado;
@@ -187,7 +189,8 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso entradas sejam menores que zero
      * @return o produto de dois inteiros
      */
-    public static int produto(final int multiplicando, final int multiplicador) {
+    public static int produto(final int multiplicando,
+                              final int multiplicador) {
 
         if (multiplicando < 0) {
             throw new IllegalArgumentException(
@@ -223,7 +226,7 @@ public class Algoritmos {
      * @param base base da potência
      * @param expoente expoente da potência
      * @throws IllegalArgumentException caso entradas sejam menores que 0
-     * @return retorna o valor da potência 
+     * @return retorna o valor da potência
      */
     public static int potencia(final int base, final int expoente) {
 
@@ -284,7 +287,8 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso n seja menor que 1 e k menor que 2
      * @return o logaritmo elevado a n calculado com precisão k
      */
-    public static float logaritmoNatural(final float potencia, final float precisao) {
+    public static float logaritmoNatural(final float potencia,
+                                         final float precisao) {
 
         if (potencia < 1) {
             throw new IllegalArgumentException(
@@ -313,7 +317,7 @@ public class Algoritmos {
      * Calcula a razão áurea usando uma sequência.
      * @param numeroA o primeiro termo da sequência
      * @param numeroB o segundo termo
-     * @param k a precisão
+     * @param precisao a precisão
      * @throws IllegalArgumentException caso x seja menor que 0,
      * ou y menor que x, ou k menor que 0
      * @return o valor da razao aurea calculado
@@ -500,7 +504,7 @@ public class Algoritmos {
      * @param numeroB número inteiro que será utilizado para o mdc
      * @throws IllegalArgumentException caso b seja maior que a,
      * ou b menor que 0
-     * @return o valor do mdc 
+     * @return o valor do mdc
      */
     public static int mdc2(final int numeroA, final int numeroB) {
 
@@ -535,7 +539,8 @@ public class Algoritmos {
      * @throws IllegalArgumentException caso g seja menor que 1
      * @return o valor calculado pelo método de horner
      */
-    public static int horner(final int numero, final int tam, final int[] array) {
+    public static int horner(final int numero,
+                             final int tam, final int[] array) {
 
         if (tam < 1) {
             throw new IllegalArgumentException(
