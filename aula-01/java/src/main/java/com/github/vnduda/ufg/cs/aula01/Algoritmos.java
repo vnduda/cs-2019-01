@@ -667,9 +667,9 @@ public class Algoritmos {
         int s = d[digito8];
 
         while (c >= 0) {
-            p = p + d[c];
-            s = s + p;
-            c = c - 1;
+            p += d[c];
+            s += p;
+            c -= 1;
         }
 
         final int j = (s % aux11) % digito10;
