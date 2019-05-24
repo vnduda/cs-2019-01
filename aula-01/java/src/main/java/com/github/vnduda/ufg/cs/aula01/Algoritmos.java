@@ -640,7 +640,7 @@ public class Algoritmos {
         final int dj = (j % aux11) % digito10;
         final int dk = (k % aux11) % digito10;
 
-        return (dj == d[digito9] && dk == d[digito10]);
+        return dj == d[digito9] && dk == d[digito10];
     }
 
     /**
@@ -675,6 +675,6 @@ public class Algoritmos {
         final int j = (s % aux11) % digito10;
         final int k = ((s - p + digito9 * d[digito9]) % aux11) % digito10;
 
-        return (j == d[digito9] && k == d[digito10]);
+        return j == d[digito9] && k == d[digito10];
     }
 }
