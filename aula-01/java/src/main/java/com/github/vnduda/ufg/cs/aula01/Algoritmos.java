@@ -10,7 +10,7 @@ public class Algoritmos {
      * Para cobertura.
      */
     protected Algoritmos() {
-        throw new UnsupportedOperationException();
+       
     }
 
     /**
