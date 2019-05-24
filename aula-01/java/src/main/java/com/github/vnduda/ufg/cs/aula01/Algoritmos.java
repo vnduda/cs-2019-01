@@ -441,7 +441,7 @@ public class Algoritmos {
             throw new IllegalArgumentException("Tamanho do array inválido");
         }
 
-        for (int valor : array) {
+        for (final int valor : array) {
             if (valor != 0) {
                 throw new IllegalArgumentException(
                     "O array precisa estar zerado");
@@ -449,7 +449,7 @@ public class Algoritmos {
         }
 
         int i = 2;
-        int limite = (int) Math.floor(Math.sqrt(array.length));
+        final int limite = (int) Math.floor(Math.sqrt(array.length));
 
         while (i <= limite) {
 
@@ -490,7 +490,7 @@ public class Algoritmos {
         int auxiliarB = numeroB;
 
         while (auxiliarB != 0) {
-            int temporario = auxiliarA % auxiliarB;
+            final int temporario = auxiliarA % auxiliarB;
             auxiliarA = auxiliarB;
             auxiliarB = temporario;
         }
@@ -555,7 +555,7 @@ public class Algoritmos {
 
         while (i >= 0) {
             polinomio = polinomio * numero + array[i];
-            i = i - 1;
+            i -= 1;
         }
 
         return polinomio;
@@ -573,14 +573,13 @@ public class Algoritmos {
                 "Intervalo do enesimo termo inválido");
         }
 
-        int proxTermo = 0;
-        int atualTermo = 1;
-        int i = 2;
-
         if (enesimoTermo == 0 || enesimoTermo == 1) {
             return enesimoTermo;
         }
-
+        
+        int proxTermo = 0;
+        int atualTermo = 1;
+        int i = 2;
         while (i <= enesimoTermo) {
             final int t = atualTermo;
             atualTermo = atualTermo + proxTermo;
