@@ -151,8 +151,8 @@ public class Algoritmos {
         }
 
         int soma = 1;
-        for (int i = 2; i <= numero; i++) {
-            soma += i;
+        for (int contador = 2; contador <= numero; contador++) {
+            soma += contador;
         }
 
         return soma;
@@ -265,19 +265,19 @@ public class Algoritmos {
                 "Intervalo da entrada inválido");
         }
 
-        double pi = 0;
-        double s = -1;
-        double d = -1;
-        int i = 1;
+        double valorPi = 0;
+        double sinal = -1;
+        double divisor = -1;
+        int contador = 1;
         final int aux = 4;
-        while (i <= numero) {
-            d += 2;
-            s = -s;
-            pi = pi + aux * s / d;
-            i += 1;
+        while (contador <= numero) {
+            divisor += 2;
+            sinal = -sinal;
+            valorPi = valorPi + aux * sinal / divisor;
+            contador += 1;
         }
 
-        return pi;
+        return valorPi;
     }
 
     /**
@@ -342,12 +342,12 @@ public class Algoritmos {
 
         float numerador = numeroB;
         float denominador = numeroA;
-        float i = 1;
-        while (precisao >= i) {
+        float contador = 1;
+        while (precisao >= contador) {
             final float aux = numerador;
             numerador += denominador;
             denominador = aux;
-            i += 1;
+            contador += 1;
         }
 
         return numerador / denominador;
@@ -366,11 +366,11 @@ public class Algoritmos {
                 "Intervalo da variável inválido");
         }
 
-        int i = 1;
+        int contador = 1;
         int soma = 1;
         while (soma < numero) {
-            i = i + 2;
-            soma += i;
+            contador += 2;
+            soma += contador;
         }
 
         return soma == numero;
@@ -448,19 +448,19 @@ public class Algoritmos {
             }
         }
 
-        int i = 2;
+        int contador = 2;
         final int limite = (int) Math.floor(Math.sqrt(array.length));
 
-        while (i <= limite) {
+        while (contador <= limite) {
 
-            int multiplo = i + i;
+            int multiplo = contador + contador;
 
                 while (multiplo <= array.length) {
                     array[multiplo] = 1;
-                    multiplo += i;
+                    multiplo += contador;
                 }
 
-            i += 1;
+            contador += 1;
         }
 
         return array;
