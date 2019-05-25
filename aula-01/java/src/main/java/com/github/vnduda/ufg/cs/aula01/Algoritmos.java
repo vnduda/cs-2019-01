@@ -2,217 +2,250 @@ package com.github.vnduda.ufg.cs.aula01;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 
+/**
+ * Implementação de funções matemáticas.
+ */
 public class Algoritmos {
-
     /**
-     * Verifica se n satisfaz propriedade 3025.
-     * @param n n variavel a ser verificada
-     * @throws IllegalArgumentException caso entrada seja menor que 0 ou maior que 999
-     * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 3025 e, o valor falso, caso contrário
-    */
-	public static boolean propriedade3025(final int n) {
+     * Para cobertura.
+     */
+    protected Algoritmos() {
 
-        if (n < 0 || n > 9999) {
-            throw new IllegalArgumentException("Intervalo de n inválido");
-        }
-
-		final int i = n / 100;
-		final int j = n % 100;
-
-		return (i + j) * (i + j) == n;
     }
 
     /**
-     * Verifica se n satisfaz a propriedade 153.
-     * @param n n variavel a ser verificada
-     * @throws IllegalArgumentException caso entrada seja menor que 100 ou maior que 999
-     * @return o valor verdadeiro se o argumento fornecido satisfaz a propriedade 153 e, o valor falso, caso contrário 
+     * Verifica se numero satisfaz propriedade 3025.
+     * @param numero variavel a ser verificada
+     * @throws IllegalArgumentException caso entrada seja menor que 0
+     * ou maior que 999
+     * @return o valor verdadeiro se o argumento fornecido
+     * satisfaz a propriedade 3025 e, o valor falso, caso contrário
     */
-    public static boolean propriedade153(final int n) {
-
-        if (n < 100 || n > 999) {
-            throw new IllegalArgumentException("Intervalo de n inválido");
+    public static boolean propriedade3025(final int numero) {
+        final int limiteMaximo = 9999;
+        if (numero < 0 || numero > limiteMaximo) {
+            throw new IllegalArgumentException("Intervalo numerico inválido");
         }
+        final int auxiliar1 = 100;
+        final int primDezena = numero / auxiliar1;
+        final int segDezena = numero % auxiliar1;
+        final int resultado = (primDezena + segDezena)
+                            * (primDezena + segDezena);
 
-        final int c = n / 100;
-        final int du = n % 100;
-        final int d = du / 10;
-        final int u = du % 10;
-
-        return (c * c * c) + (d * d * d) + (u * u * u) == n;
+        return resultado == numero;
     }
 
     /**
-     * Determina o dia da semana a partir de uma dada data
-     * @param d o dia
-     * @param m o mês
-     * @param a o ano
+     * Verifica se numero satisfaz a propriedade 153.
+     * @param numero variavel a ser verificada
+     * @throws IllegalArgumentException caso entrada seja menor que 100
+     * ou maior que 999
+     * @return o valor verdadeiro se o argumento fornecido satisfaz
+     * a propriedade 153 e, o valor falso, caso contrário
+    */
+    public static boolean propriedade153(final int numero) {
+        final int limiteMinimo = 100;
+        final int limiteMaximo = 999;
+        if (numero < limiteMinimo || numero > limiteMaximo) {
+            throw new IllegalArgumentException("Intervalo inválido");
+        }
+
+        final int auxiliar1 = 100;
+        final int auxiliar2 = 10;
+        final int centena = numero / auxiliar1;
+        final int dezenaAux = numero % auxiliar1;
+        final int dezena = dezenaAux / auxiliar2;
+        final int unidade = dezenaAux % auxiliar2;
+
+        return (centena * centena * centena)
+               + (dezena * dezena * dezena)
+               + (unidade * unidade * unidade) == numero;
+    }
+
+    /**
+     * Determina o dia da semana a partir de uma dada data.
+     * @param dia o dia
+     * @param mes o mês
+     * @param ano o ano
      * @throws IllegalArgumentException caso a data não seja válida
      * @return retorna o numero equivalente ao dia da semana que foi calculado
     */
 
-    public static int diaSemana(final int d, final int m, final int a) {
-
-        if (d < 1 || d > 31) {
+    public static int diaSemana(final int dia, final int mes, final int ano) {
+        final int diaMaximo = 31;
+        if (dia < 1 || dia > diaMaximo) {
             throw new IllegalArgumentException("Dia inválido");
         }
-
-        if (m < 1 || m > 12) {
+        final int mesMaximo = 12;
+        if (mes < 1 || mes > mesMaximo) {
             throw new IllegalArgumentException("Mês inválido");
         }
-
-        if (a < 1753) {
+        final int anoMinimo = 1753;
+        if (ano < anoMinimo) {
             throw new IllegalArgumentException("Ano inválido");
         }
 
         try {
-            LocalDate.of(a, m, d);
+            LocalDate.of(ano, mes, dia);
         } catch (DateTimeException exp) {
-            final String data = String.format("%d/%d/%d", d, m, a);
+            final String data = String.format("%d/%d/%d", dia, mes, ano);
             throw new IllegalArgumentException("data invalida: " + data, exp);
         }
 
-        int dia = d;
-        int mes = m;
-        int ano = a;
-
-        if (mes == 1 || mes == 2) {
-            mes += 12;
-            ano -= 1;   
+        final int diaAux = dia;
+        int mesAux = mes;
+        int anoAux = ano;
+        final int mesMais = 12;
+        final int anoMenos = 1;
+        if (mesAux == 1 || mesAux == 2) {
+            mesAux += mesMais;
+            anoAux -= anoMenos;
         }
 
-        final int s = (dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400));
+        final int resultado = diaAux + (2 * mesAux) + (3 * (mesAux + 1) / 5)
+                       + anoAux + (anoAux / 4) - (anoAux / 100)
+                       + (anoAux / 400);
 
-        return s % 7;
+        final int auxResultado = 7;
+        return resultado % auxResultado;
     }
 
     /**
-     * Gera o resto da divisão inteira de x por y
-     * @param x dividendo
-     * @param y divisor
+     * Gera o resto da divisão inteira.
+     * @param dividendo dividendo
+     * @param divisor divisor
      * @throws IllegalArgumentException caso entrada esteja fora da faixa
-     * @return o resultado da divisão inteira de x por y
+     * @return o resultado da divisão inteira
     */
-    public static int restoDivisao(final int x, final int y) {
+    public static int restoDivisao(final int dividendo, final int divisor) {
 
-        if (y < 0) {
-            throw new IllegalArgumentException("Valor de y inválido");
+        if (divisor < 0) {
+            throw new IllegalArgumentException(
+                "Valor do divisor inválido");
         }
 
-        if (x <= 0) {
-            throw new IllegalArgumentException("Valor de x inválido");
-        }
-        
-        int s = x;
-        while (s >= y) {
-            s = s - y;
+        if (dividendo <= 0) {
+            throw new IllegalArgumentException(
+                "Valor do dividendo inválido");
         }
 
-        return s;
+        int resto = dividendo;
+        while (resto >= divisor) {
+            resto = resto - divisor;
+        }
+
+        return resto;
     }
 
     /**
-     * Faz a soma dos primeiros naturais, de 1 até n
-     * @param n número máximo a ser calculado
+     * Faz a soma dos primeiros naturais, de 1 até n.
+     * @param numero número máximo a ser calculado
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna a soma dos primeiros números até n
      */
-     public static int somaNaturais(final int n) {
+     public static int somaNaturais(final int numero) {
 
-        if (n < 1) {
-            throw new IllegalArgumentException("Intervalo de n inválido");
+        if (numero < 1) {
+            throw new IllegalArgumentException(
+                "Intervalo numérico inválido");
         }
 
-        int s = 1;
-        for (int i = 2; i <= n; i++) {
-            s = s + i;
+        int soma = 1;
+        for (int contador = 2; contador <= numero; contador++) {
+            soma += contador;
         }
 
-        return s;
+        return soma;
     }
 
     /**
-     * Algoritmo que faz o fatorial de um número n
-     * @param n variável que será calculado o fatorial
+     * Algoritmo que faz o fatorial de um número n.
+     * @param numero variável que será calculado o fatorial
      * @throws IllegalArgumentException caso entrada seja menor que 1
-     * @return retorna o fatorial de n calculado
+     * @return retorna o fatorial calculado
      */
-    public static int fatorial(final int n) {
+    public static int fatorial(final int numero) {
 
-        if (n < 1) {
-            throw new IllegalArgumentException("Intervalo de n inválido");
+        if (numero < 1) {
+            throw new IllegalArgumentException(
+                "Intervalo da variável inválido");
         }
 
-        int f = 1;
-        int i = 2;
+        int fatorial = 1;
+        int aux = 2;
 
-        while (i <= n) {
-            f = f * i;
-            i = i + 1;
+        while (aux <= numero) {
+            fatorial *= aux;
+            aux = aux + 1;
         }
 
-        return f;
+        return fatorial;
     }
 
     /**
-     * Verifica o produto de dois inteiros a e b utilizando soma
-     * @param a variável multiplicando
-     * @param b variável multiplicador
+     * Verifica o produto de dois inteiros utilizando soma.
+     * @param multiplicando variável multiplicando
+     * @param multiplicador variável multiplicador
      * @throws IllegalArgumentException caso entradas sejam menores que zero
      * @return o produto de dois inteiros
      */
-    public static int produto(final int a, final int b) {
+    public static int produto(final int multiplicando,
+                              final int multiplicador) {
 
-        if (a < 0) {
-            throw new IllegalArgumentException("Intervalo de a inválido");
+        if (multiplicando < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo do multiplicando inválido");
         }
 
-        if (b < 0) {
-            throw new IllegalArgumentException("Intervalo de b inválido");
+        if (multiplicador < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo do multiplicador inválido");
         }
 
-        int totalParcelas = a;
-        int parcela = b;
+        int totalParcelas = multiplicando;
+        int parcela = multiplicador;
 
-        if (a > b) {
-            totalParcelas = b;
-            parcela = a;
+        if (multiplicando > multiplicador) {
+            totalParcelas = multiplicador;
+            parcela = multiplicando;
         }
 
-        int s = 0;
-        int i = 1;
+        int produto = 0;
+        int aux = 1;
 
-        while (i <= totalParcelas) {
-            s = s + parcela;
-            i = i + 1;
+        while (aux <= totalParcelas) {
+            produto += parcela;
+            aux += 1;
         }
 
-        return s;
+        return produto;
     }
 
     /**
-     * Verifica potencia de x elevado a y utilizando somas
-     * @param x base da potência
-     * @param y expoente da potência
+     * Verifica potencia utilizando somas.
+     * @param base base da potência
+     * @param expoente expoente da potência
      * @throws IllegalArgumentException caso entradas sejam menores que 0
-     * @return retorna o valor da potência de x por y
+     * @return retorna o valor da potência
      */
-    public static int potencia(final int x, final int y) {
+    public static int potencia(final int base, final int expoente) {
 
-        if (x < 0) {
-            throw new IllegalArgumentException("Intervalo de x inválido");
+        if (base < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo da base inválido");
         }
 
-        if (y < 0) {
-            throw new IllegalArgumentException("Intervalo de y inválido");
+        if (expoente < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo do expoente inválido");
         }
 
-        int i = 1;
+        int aux = 1;
         int potencia = 1;
 
-        while (i <= y) {
-            potencia = produto(potencia, x);
-            i = i + 1;
+        while (aux <= expoente) {
+            potencia = produto(potencia, base);
+            aux += 1;
         }
 
         return potencia;
@@ -220,326 +253,351 @@ public class Algoritmos {
     }
 
     /**
-     * Verifica valor de Pi para um total de n termos
-     * @param n quantidade de termos
+     * Verifica valor de Pi para um total de n termos.
+     * @param numero quantidade de termos
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return retorna o valor calculado de pi
      */
-    public static double pi(final int n) {
+    public static double algoritmoPi(final int numero) {
 
-        if (n < 1) {
-            throw new IllegalArgumentException("Intervalo inválido de n");
+        if (numero < 1) {
+            throw new IllegalArgumentException(
+                "Intervalo da entrada inválido");
         }
 
-        double p = 0;
-        double s = -1;
-        double d = -1;
-        int i = 1;
-
-        while (i <= n) {
-            d = d + 2;
-            s = -s;
-            p = p + 4 * s / d;
-            i = i + 1;
+        double valorPi = 0;
+        double sinal = -1;
+        double divisor = -1;
+        int contador = 1;
+        final int aux = 4;
+        while (contador <= numero) {
+            divisor += 2;
+            sinal = -sinal;
+            valorPi = valorPi + aux * sinal / divisor;
+            contador += 1;
         }
 
-        return p;
+        return valorPi;
     }
 
     /**
-     * Calcula logaritmo elevado a n com precisão k
-     * @param n variável de potência
-     * @param k variável de precisão
+     * Calcula logaritmo elevado a n com precisão k.
+     * @param potencia variável de potência
+     * @param precisao variável de precisão
      * @throws IllegalArgumentException caso n seja menor que 1 e k menor que 2
      * @return o logaritmo elevado a n calculado com precisão k
      */
-    public static float logaritmoNatural(float n, float k) {
+    public static float logaritmoNatural(final float potencia,
+                                         final float precisao) {
 
-        if (n < 1) {
-            throw new IllegalArgumentException("Intervalo de n inválido");
+        if (potencia < 1) {
+            throw new IllegalArgumentException(
+                "Intervalo da potencia inválido");
         }
 
-        if (k < 2) {
+        if (precisao < 2) {
             throw new IllegalArgumentException("Intervalo de k inválido");
         }
 
-        float i = 2;
-        float e = 1 + n;
-        float numerador = n;
+        float aux = 2;
+        float euler = 1 + potencia;
+        float numerador = potencia;
         float denominador = 1;
-        while (k >= i) {
-            numerador = numerador * numerador;
-            denominador = denominador * i;
-            e = e + numerador / denominador;
-            i = i + 1;
+        while (precisao >= aux) {
+            numerador *= numerador;
+            denominador *= aux;
+            euler = euler + numerador / denominador;
+            aux += 1;
         }
 
-        return e;
+        return euler;
     }
 
     /**
-     * Calcula a razão áurea usando uma sequência
-     * @param x o primeiro termo da sequência
-     * @param y o segundo termo
-     * @param k a precisão
-     * @throws IllegalArgumentException caso x seja menor que 0, ou y menor que x, ou k menor que 0
+     * Calcula a razão áurea usando uma sequência.
+     * @param numeroA o primeiro termo da sequência
+     * @param numeroB o segundo termo
+     * @param precisao a precisão
+     * @throws IllegalArgumentException caso x seja menor que 0,
+     * ou y menor que x, ou k menor que 0
      * @return o valor da razao aurea calculado
      */
-    public static float razaoAurea(final float x, final float y, final float k) {
+    public static float razaoAurea(final float numeroA,
+                                   final float numeroB, final float precisao) {
 
-        if (x < 0) {
-            throw new IllegalArgumentException("Intervalo de x inválido");
+        if (numeroA < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo do primeiro número inválido");
         }
 
-        if (y < x) {
-            throw new IllegalArgumentException("Variável y tem que ser maior que x");
+        if (numeroB < numeroA) {
+            throw new IllegalArgumentException(
+                "NúmeroB tem que ser maior que numeroA");
         }
 
-        if (k < 0) {
-            throw new IllegalArgumentException("Intervalo de k inválido");
+        if (precisao < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo da precisão inválido");
         }
 
-        float c = y;
-        float a = x;
-        float i = 1;
-        float t;
-        while (k >= i) {
-            t = c;
-            c = c + a;
-            a = t;
-            i = i + 1;
+        float numerador = numeroB;
+        float denominador = numeroA;
+        float contador = 1;
+        while (precisao >= contador) {
+            final float aux = numerador;
+            numerador += denominador;
+            denominador = aux;
+            contador += 1;
         }
 
-        return c / a;
+        return numerador / denominador;
     }
 
     /**
-     * Calcula um quadrado perfeito dado um n
-     * @param n número a ser calculado o quadrado perfeito
+     * Calcula um quadrado perfeito dado um n.
+     * @param numero número a ser calculado o quadrado perfeito
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return o quadrado perfeito
      */
-    public static boolean quadradoPerfeito(final int n) {
+    public static boolean quadradoPerfeito(final int numero) {
 
-        if (n < 1) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+        if (numero < 1) {
+            throw new IllegalArgumentException(
+                "Intervalo da variável inválido");
         }
 
-        int i = 1;
-        int s = 1;
-        while (s < n) {
-            i = i + 2;
-            s = s + i;
+        int contador = 1;
+        int soma = 1;
+        while (soma < numero) {
+            contador += 2;
+            soma += contador;
         }
 
-        return s == n;
+        return soma == numero;
     }
 
     /**
-     * Calcula raiz quadrada dada a base e o indice
-     * @param n base da raiz quadrada
-     * @param i indice da raiz quadrada
+     * Calcula raiz quadrada dada a base e o indice.
+     * @param base base da raiz quadrada
+     * @param precisao precisao da raiz quadrada
      * @throws IllegalArgumentException caso entrada seja menor que 0
      * @return a raiz quadrada calculada
      */
-    public static float raiz(float n, int i) {
+    public static float raiz(final float base, final int precisao) {
 
-        if (n < 0) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+        if (base < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo da variável n inválido");
         }
 
-        float r = 1;
-
-        while (i >= 0) {
-            r = (r + n / r) / 2;
-            i = i - 1;
+        float raiz = 1;
+        int indice = precisao;
+        for (; indice >= 0; indice--) {
+            raiz = (raiz + base / raiz) / 2;
         }
 
-        return r;
+        return raiz;
     }
 
     /**
-     * Calcula se um dado n é primo
-     * @param n número a ser calculado
+     * Calcula se um dado n é primo.
+     * @param numero número a ser calculado
      * @throws IllegalArgumentException caso entrada seja menor que 1
      * @return true caso entrada seja um número primo
      */
-    public static boolean primo(final int n) {
+    public static boolean primo(final int numero) {
 
-        if (n < 1) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+        if (numero < 1) {
+            throw new IllegalArgumentException(
+                "Intervalo de número inválido");
         }
 
-        int i = 2;
+        int aux = 2;
 
-        while (n > i) {
-            if (n % i == 0) {
+        while (numero > aux) {
+            if (numero % aux == 0) {
                 return false;
             }
-            i = i + 1;
+            aux += 1;
         }
 
         return true;
     }
 
     /**
-     * Algoritmo que encontra números primos
-     * @param a vetor de zeros com o tamanho do número a ser checado
-     * @throws IllegalArgumentException caso o tamanho do vetor for menor ou igual a 1 ou vetor não estiver zerado
+     * Algoritmo que encontra números primos.
+     * @param array vetor de zeros com o tamanho do número a ser checado
+     * @throws IllegalArgumentException caso o tamanho do vetor for
+     * menor ou igual a 1 ou vetor não estiver zerado
      * @return vetor com resultado calculado
      */
-    public static int[] crivoEratostenes(int a[]) {
+    public static int[] crivoEratostenes(final int[] array) {
 
-        if (a == null) {
+        if (array == null) {
             throw new IllegalArgumentException("array is null");
         }
 
-        if (a.length < 1) {
+        if (array.length < 1) {
             throw new IllegalArgumentException("Tamanho do array inválido");
         }
 
-        for (int valor : a) {
+        for (final int valor : array) {
             if (valor != 0) {
-                throw new IllegalArgumentException("O array precisa estar zerado");
+                throw new IllegalArgumentException(
+                    "O array precisa estar zerado");
             }
         }
 
-        int i = 2;
-        int limite = (int) Math.floor(Math.sqrt(a.length));
+        int contador = 2;
+        final int limite = (int) Math.floor(Math.sqrt(array.length));
 
-        while (i <= limite) {
+        while (contador <= limite) {
 
-            int multiplo = i + i;
+            int multiplo = contador + contador;
 
-                while (multiplo <= a.length) {
-                    a[multiplo] = 1;
-                    multiplo = multiplo + i;
+                while (multiplo <= array.length) {
+                    array[multiplo] = 1;
+                    multiplo += contador;
                 }
-            
-            i = i + 1;
+
+            contador += 1;
         }
 
-        return a;
+        return array;
     }
 
     /**
-     * Calcula o maior divisor comum entre a e b
-     * @param a número inteiro que será utilizado para o mdc
-     * @param b número inteiro que será utilizado para o mdc
-     * @throws IllegalArgumentException caso b seja maior que a, ou b menor que 0
+     * Calcula o maior divisor comum entre a e b.
+     * @param numeroA número inteiro que será utilizado para o mdc
+     * @param numeroB número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException caso b seja maior que a,
+     * ou b menor que 0
      * @return o valor do mdc entre a e b
      */
-    public static int MDC(int a, int b) {
+    public static int mdc(final int numeroA, final int numeroB) {
 
-        if (a < b) {
-            throw new IllegalArgumentException("Variável a deve ser maior que b");
+        if (numeroA < numeroB) {
+            throw new IllegalArgumentException(
+                "NumeroA deve ser maior que numeroB");
         }
 
-        if (b < 0) {
-            throw new IllegalArgumentException("Intervalo da variável b inválido");
+        if (numeroB < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo da variável b inválido");
         }
 
-        while (b != 0) {
-            int m = a % b;
-            a = b;
-            b = m;
+        int auxiliarA = numeroA;
+        int auxiliarB = numeroB;
+
+        while (auxiliarB != 0) {
+            final int temporario = auxiliarA % auxiliarB;
+            auxiliarA = auxiliarB;
+            auxiliarB = temporario;
         }
 
-        return a;
+        return auxiliarA;
     }
 
     /**
-     * Calcula outra forma de achar o maior divisor comum entre a e b
-     * @param a número inteiro que será utilizado para o mdc
-     * @param b número inteiro que será utilizado para o mdc
-     * @throws IllegalArgumentException caso b seja maior que a, ou b menor que 0
-     * @return o valor do mdc entre a e b
+     * Calcula outra forma de achar o maior divisor comum entre a e b.
+     * @param numeroA número inteiro que será utilizado para o mdc
+     * @param numeroB número inteiro que será utilizado para o mdc
+     * @throws IllegalArgumentException caso b seja maior que a,
+     * ou b menor que 0
+     * @return o valor do mdc
      */
-    public static int MDC2(int a, int b) {
+    public static int mdc2(final int numeroA, final int numeroB) {
 
-        if (a < b) {
-            throw new IllegalArgumentException("Variável a deve ser maior que b");
+        if (numeroA < numeroB) {
+            throw new IllegalArgumentException(
+                "Variável numeroA deve ser maior que numeroB");
         }
 
-        if (b < 0) {
-            throw new IllegalArgumentException("Intervalo da variável b inválido");
+        if (numeroB < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo de numeroB inválido");
         }
 
-        while (a != b) {
-            if (a > b) {
-                a = a - b;
+        int auxiliarA = numeroA;
+        int auxiliarB = numeroB;
+        while (auxiliarA != auxiliarB) {
+            if (auxiliarA > auxiliarB) {
+                auxiliarA -= auxiliarB;
             } else {
-                b = b - a;
+                auxiliarB -= auxiliarA;
             }
         }
 
-        return a;
+        return auxiliarA;
     }
 
     /**
-     * Regra de Horner para avaliação polinomial
-     * @param x variável para obter uma aproximação 
-     * @param g tamanho do polinômio
-     * @param a coeficientes do polinômio
+     * Regra de Horner para avaliação polinomial.
+     * @param numero variável para obter uma aproximação
+     * @param tam tamanho do polinômio
+     * @param array coeficientes do polinômio
      * @throws IllegalArgumentException caso g seja menor que 1
      * @return o valor calculado pelo método de horner
      */
-    public static int horner(int x, int g, int a[]) {
+    public static int horner(final int numero,
+                             final int tam, final int[] array) {
 
-        if (g < 1) {
-            throw new IllegalArgumentException("Intervalo da variável g inválido");
+        if (tam < 1) {
+            throw new IllegalArgumentException(
+                "Tamanho inválido");
         }
-        if (a == null) {
+        if (array == null) {
             throw new IllegalArgumentException("array is null");
         }
 
-        int p = a[g];
-        int i = g - 1;
+        int polinomio = array[tam];
+        int contador = tam - 1;
 
-        while (i >= 0) {
-            p = p * x + a[i];
-            i = i - 1;
+        while (contador >= 0) {
+            polinomio = polinomio * numero + array[contador];
+            contador -= 1;
         }
 
-        return p;
+        return polinomio;
     }
 
     /**
-     * Algoritmo que calcula o n-esimo número de Fibonacci
-     * @param n variável a ser calculada
+     * Algoritmo que calcula o n-esimo número de Fibonacci.
+     * @param enesimoTermo variável a ser calculada
      * @throws IllegalArgumentException caso entrada seja menor que 0
      * @return o n-esimo número de Fibonacci
      */
-    public static int fibonacci(final int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("Intervalo da variável n inválido");
+    public static int fibonacci(final int enesimoTermo) {
+        if (enesimoTermo < 0) {
+            throw new IllegalArgumentException(
+                "Intervalo do enesimo termo inválido");
         }
 
-        int a = 0;
-        int c = 1;
-        int i = 2;
-
-        if (n == 0 || n == 1) {
-            return n;
+        if (enesimoTermo == 0 || enesimoTermo == 1) {
+            return enesimoTermo;
         }
 
-        while (i <= n) {
-            final int t = c;
-            c = c + a;
-            a = t;
-            i = i + 1;
+        int proxTermo = 0;
+        int atualTermo = 1;
+        int contador = 2;
+        while (contador <= enesimoTermo) {
+            final int t = atualTermo;
+            atualTermo = atualTermo + proxTermo;
+            proxTermo = t;
+            contador += 1;
         }
 
-        return c;
+        return atualTermo;
     }
 
     /**
-     * Função que transforma cpf de String para Vetor
+     * Função que transforma cpf de String para Vetor.
      * @param d cpf como string
      * @return cpf como vetor
      */
     public static int[] cpfStringToArray(final String d) {
-        int[] cpf = new int[11];
+        final int aux11 = 11;
+        int[] cpf = new int[aux11];
         for (int i = 0; i < d.length(); i++) {
             cpf[i] = Character.getNumericValue(d.charAt(i));
         }
@@ -547,54 +605,76 @@ public class Algoritmos {
     }
 
     /**
-     * Algoritmo que certifica se o CPF é válido
+     * Algoritmo que certifica se o CPF é válido.
      * @param cpf CPF a ser verificado
-     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
+     * @throws IllegalArgumentException caso entrada tenha
+     * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF(String cpf) {
-
-        if (cpf.length() > 11 || cpf.length() < 11) {
+    public static boolean cpf(final String cpf) {
+        final int aux11 = 11;
+        if (cpf.length() > aux11 || cpf.length() < aux11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
-    
+
         final int[] d = cpfStringToArray(cpf);
-        final int j =  d[0] + 2 * d[1] + 3 * d[2] + 4 * d[3] + 5 * d[4] + 6 * d[5] + 7 * d[6] + 8 * d[7] + 9 * d[8];
+        final int digito3 = 3;
+        final int digito4 = 4;
+        final int digito5 = 5;
+        final int digito6 = 6;
+        final int digito7 = 7;
+        final int digito8 = 8;
+        final int digito9 = 9;
+        final int digito10 = 10;
 
-        final int k = d[1] + 2 * d[2] + 3 * d[3] + 4 * d[4] + 5 * d[5] + 6 * d[6] + 7 * d[7] + 8 * d[8] + 9 * d[9];
+        final int j =  d[0] + 2 * d[1] + digito3 * d[2] + digito4 * d[digito3]
+                    + digito5 * d[digito4] + digito6 * d[digito5] + digito7
+                    * d[digito6] + digito8 * d[digito7] + digito9 * d[digito8];
 
-        final int dj = (j % 11) % 10;
-        final int dk = (k % 11) % 10;
+        final int k = d[1] + 2 * d[2] + digito3 * d[digito3] + digito4
+                    * d[digito4] + digito5 * d[digito5] + digito6
+                    * d[digito6] + digito7 * d[digito7] + digito8
+                    * d[digito8] + digito9 * d[digito9];
 
-        return (dj == d[9] && dk == d[10]);
+        final int dj = (j % aux11) % digito10;
+        final int dk = (k % aux11) % digito10;
+
+        return dj == d[digito9] && dk == d[digito10];
     }
 
     /**
-     * Algoritmo que certifica se o CPF é válido
+     * Algoritmo que certifica se o CPF é válido.
      * @param cpf CPF a ser verificado
-     * @throws IllegalArgumentException caso entrada tenha mais ou menos que 11 dígitos
+     * @throws IllegalArgumentException caso entrada tenha
+     * mais ou menos que 11 dígitos
      * @return caso CPF seja verdadeiro retorna true
      */
-    public static boolean CPF2(String cpf) {
-
-        if (cpf.length() < 11 || cpf.length() > 11) {
+    public static boolean cpf2(final String cpf) {
+        final int aux11 = 11;
+        if (cpf.length() < aux11 || cpf.length() > aux11) {
             throw new IllegalArgumentException("O CPF deve conter 11 dígitos");
         }
 
         final int[] d = cpfStringToArray(cpf);
-        int c = 7;
-        int p = d[8];
-        int s = d[8];
+        final int digito7 = 7;
+        final int digito8 = 8;
+        final int digito9 = 9;
+        final int digito10 = 10;
 
-        while (c >= 0) {
-            p = p + d[c];
-            s = s + p;
-            c = c - 1;
+        int aux7 = digito7;
+        int auxiliar1 = d[digito8];
+        int auxiliar2 = d[digito8];
+
+        while (aux7 >= 0) {
+            auxiliar1 += d[aux7];
+            auxiliar2 += auxiliar1;
+            aux7 -= 1;
         }
 
-        final int j = (s % 11) % 10;
-        final int k = ((s - p + 9 * d[9]) % 11) % 10;
+        final int j = (auxiliar2 % aux11) % digito10;
+        final int k = ((auxiliar2 - auxiliar1 + digito9
+                      * d[digito9]) % aux11) % digito10;
 
-        return (j == d[9] && k == d[10]);
+        return j == d[digito9] && k == d[digito10];
     }
 }
