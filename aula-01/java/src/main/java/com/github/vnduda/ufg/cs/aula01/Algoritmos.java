@@ -10,7 +10,7 @@ public class Algoritmos {
      * Para cobertura.
      */
     protected Algoritmos() {
-       
+
     }
 
     /**
@@ -576,7 +576,7 @@ public class Algoritmos {
         if (enesimoTermo == 0 || enesimoTermo == 1) {
             return enesimoTermo;
         }
-        
+
         int proxTermo = 0;
         int atualTermo = 1;
         int contador = 2;
@@ -672,7 +672,8 @@ public class Algoritmos {
         }
 
         final int j = (auxiliar2 % aux11) % digito10;
-        final int k = ((auxiliar2 - auxiliar1 + digito9 * d[digito9]) % aux11) % digito10;
+        final int k = ((auxiliar2 - auxiliar1 + digito9
+                      * d[digito9]) % aux11) % digito10;
 
         return j == d[digito9] && k == d[digito10];
     }
