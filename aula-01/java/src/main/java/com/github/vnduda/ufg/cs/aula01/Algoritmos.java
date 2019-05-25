@@ -551,11 +551,11 @@ public class Algoritmos {
         }
 
         int polinomio = array[tam];
-        int i = tam - 1;
+        int contador = tam - 1;
 
-        while (i >= 0) {
-            polinomio = polinomio * numero + array[i];
-            i -= 1;
+        while (contador >= 0) {
+            polinomio = polinomio * numero + array[contador];
+            contador -= 1;
         }
 
         return polinomio;
@@ -579,12 +579,12 @@ public class Algoritmos {
         
         int proxTermo = 0;
         int atualTermo = 1;
-        int i = 2;
-        while (i <= enesimoTermo) {
+        int contador = 2;
+        while (contador <= enesimoTermo) {
             final int t = atualTermo;
             atualTermo = atualTermo + proxTermo;
             proxTermo = t;
-            i += 1;
+            contador += 1;
         }
 
         return atualTermo;
@@ -661,18 +661,18 @@ public class Algoritmos {
         final int digito9 = 9;
         final int digito10 = 10;
 
-        int c = digito7;
-        int p = d[digito8];
-        int s = d[digito8];
+        int aux7 = digito7;
+        int auxiliar1 = d[digito8];
+        int auxiliar2 = d[digito8];
 
-        while (c >= 0) {
-            p += d[c];
-            s += p;
-            c -= 1;
+        while (aux7 >= 0) {
+            auxiliar1 += d[aux7];
+            auxiliar2 += auxiliar1;
+            aux7 -= 1;
         }
 
-        final int j = (s % aux11) % digito10;
-        final int k = ((s - p + digito9 * d[digito9]) % aux11) % digito10;
+        final int j = (auxiliar2 % aux11) % digito10;
+        final int k = ((auxiliar2 - auxiliar1 + digito9 * d[digito9]) % aux11) % digito10;
 
         return j == d[digito9] && k == d[digito10];
     }
