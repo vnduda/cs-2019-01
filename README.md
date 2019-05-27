@@ -11,4 +11,10 @@ Contexto da disciplina no curso
 Refatoração de condições e nomes
 
 **Aula 04**
-Refatoração dos algoritmos em JavaScript
+Refatoração dos algoritmos em JavaScript, com documentação, análise estática e testes
+
+**Aula 05**
+Organização do diretório dos algoritmos em Java
+
+**Aula 06**
+Refatoração dos algoritmos em Java, com documentação, testes, qualidade e segurança
