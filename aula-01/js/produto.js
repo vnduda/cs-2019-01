@@ -26,8 +26,8 @@ function produto(a, b) {
         throw new TypeError("n precisa ser um número");
     }
 
-    const totalParcelas = a;
-    const parcela = b;
+    let totalParcelas = a;
+    let parcela = b;
     if (b < a) {
         totalParcelas = b;
         parcela = a;

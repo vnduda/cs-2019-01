@@ -14,7 +14,7 @@ function pi(n) {
     if (n == null || n == undefined) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
-    if (typeof n !== 'number') {
+    if (typeof n !== "number") {
         throw new TypeError("n precisa ser um número");
     }
 
