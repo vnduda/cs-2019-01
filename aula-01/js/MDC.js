@@ -24,7 +24,7 @@ function MDC(a, b) {
 
 
     while (b != 0) {
-        let m = a % b;
+        const m = a % b;
         a = b;
         b = m;
     }

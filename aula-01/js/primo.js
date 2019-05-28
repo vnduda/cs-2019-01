@@ -18,7 +18,7 @@ function primo(n) {
         throw new TypeError("n precisa ser um número");
     }
 
-    const i = 2;
+    let i = 2;
 
     while (i < n) {
         if ((n % i) == 0) {

@@ -22,7 +22,7 @@ function mod(x, y) {
         throw new TypeError("Entrada precisa ser um número");
     }
 
-    const s = x;
+    let s = x;
     while (s >= y) {
         s = s - y;
     }

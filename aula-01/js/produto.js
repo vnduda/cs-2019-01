@@ -33,8 +33,8 @@ function produto(a, b) {
         parcela = a;
     }
 
-    const i = 1;
-    const s = 0;
+    let i = 1;
+    let s = 0;
     while (i <= totalParcelas) {
         s = s + parcela;
         i = i + 1;

@@ -45,37 +45,5 @@ function crivoEratostenes(s, n) {
 
     }
 
-    if (n > 1) {
-
-        let a = s;
-
-        for (i = 2; i <= n; i++) {
-            if (a[i] == 0) {
-                return false;
-            }
-        }
-
-        const i = 2;
-        const limite = Math.floor(Math.sqrt(n));
-        const multiplo;
-
-        while (i <= limite) {
-
-            if (a[i] == 0) {
-                multiplo = i + i;
-
-                while (multiplo <= n) {
-                    a[multiplo] = 1;
-                    multiplo = multiplo + i;
-                }
-
-            }
-
-            i = i + 1;
-        }
-
-        return a;
-    }
 }
-
 module.exports = crivoEratostenes;
