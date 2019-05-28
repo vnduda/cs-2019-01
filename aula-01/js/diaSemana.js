@@ -35,5 +35,8 @@ function diaSemana(dia, mes, ano) {
     return (parseInt(drDobbsExp) % 7);
 }
 
-module.exports = diaSemana;
+module.exports = {
+    diaSemana:diaSemana, 
+    DataInvalidaError:DataInvalidaError
+};
     
