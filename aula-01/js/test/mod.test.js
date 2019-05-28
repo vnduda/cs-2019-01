@@ -5,7 +5,7 @@ test("Mod satisfaz (caso classico)", () => {
 });
 
 test("Mod nao satisfaz, y inválido", () => {
-    expect(() => { mod(5, 0); }).toThrow(RangeError);
+    expect(() => { mod(5, -1); }).toThrow(RangeError);
 });
 
 test("Mod nao satisfaz, x inválido", () => {
