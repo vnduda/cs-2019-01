@@ -102,9 +102,14 @@ public class Algoritmos {
             anoAux -= anoMenos;
         }
 
-        final int resultado = diaAux + (2 * mesAux) + (3 * (mesAux + 1) / 5)
-                       + anoAux + (anoAux / 4) - (anoAux / 100)
-                       + (anoAux / 400);
+        final int digito3 = 3;
+        final int digito4 = 4;
+        final int digito5 = 5;
+        final int digito100 = 100;
+        final int digito400 = 400;
+        final int resultado = diaAux + (2 * mesAux) + (digito3 * (mesAux + 1) / digito5)
+                       + anoAux + (anoAux / digito4) - (anoAux / digito100)
+                       + (anoAux / digito400);
 
         final int auxResultado = 7;
         return resultado % auxResultado;
