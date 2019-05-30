@@ -202,13 +202,12 @@ public class Algoritmos {
                 "Intervalo do multiplicador inválido");
         }
 
-        int totalParcelas = multiplicando;
-        int parcela = multiplicador;
-
-        if (multiplicando > multiplicador) {
-            totalParcelas = multiplicador;
-            parcela = multiplicando;
-        }
+        final int totalParcelas = multiplicando > multiplicador
+                                ? multiplicador
+                                : multiplicando;
+        final int parcela = multiplicador < multiplicando
+                            ? multiplicando
+                            : multiplicador;
 
         int produto = 0;
         int aux = 1;
