@@ -17,7 +17,7 @@ function raiz(n, i) {
     if (typeof n !== "number" || typeof i !== "number") {
         throw new TypeError("n precisa ser um número");
     }
-    const r = 1;
+    let r = 1;
 
     while (0 <= i) {
         r = (r + n / r) / 2;

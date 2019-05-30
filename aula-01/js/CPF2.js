@@ -21,9 +21,9 @@ function CPF2(d) {
         throw new RangeError("O CPF não pode conter mais ou menos que 11 dígitos");
     }
     const cpf = cpfStringToArray(d);
-    const c = 7;
-    const p = cpf[8];
-    const s = cpf[8];
+    let c = 7;
+    let p = cpf[8];
+    let s = cpf[8];
     while (c >= 0) {
         p = p + cpf[c];
         s = s + p;

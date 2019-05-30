@@ -18,8 +18,8 @@ function quadradoPerfeito(n) {
         throw new TypeError("n precisa ser um número");
     }
 
-    const i = 1;
-    const s = 1;
+    let i = 1;
+    let s = 1;
 
     while (s < n) {
         i = i + 2;

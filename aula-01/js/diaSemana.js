@@ -27,7 +27,7 @@ function diaSemana(dia, mes, ano) {
         throw new DataInvalidaError("Ano invalido: " + ano);
     }
 
-    const janeiroOuFevereiro = m == 1 || m == 2;
+    const janeiroOuFevereiro = mes == 1 || mes == 2;
     const m = janeiroOuFevereiro ? mes + 12 : mes;
     const a = janeiroOuFevereiro ? ano - 1 : ano;
 
@@ -35,5 +35,8 @@ function diaSemana(dia, mes, ano) {
     return (parseInt(drDobbsExp) % 7);
 }
 
-module.exports = diaSemana;
+module.exports = {
+    diaSemana:diaSemana, 
+    DataInvalidaError:DataInvalidaError
+};
     

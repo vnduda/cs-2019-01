@@ -1,11 +1,11 @@
 const CPF = require("../CPF.js");
 
 test("Caso classico", () => {
-  expect(CPF('70039371158')).toBe(true);
+  expect(CPF("70039371158")).toBe(true);
 });
 
 test("3024 nao satisfaz", () => {
-  expect(CPF('12345678910')).toBe(false);
+  expect(CPF("12345678910")).toBe(false);
 });
 
 test("argumento nao string", () => {
@@ -13,5 +13,5 @@ test("argumento nao string", () => {
 });
 
 test("valor fora da faixa", () => {
-  expect(() => { CPF('123456789101'); }).toThrow(RangeError);
+  expect(() => { CPF("123456789101"); }).toThrow(RangeError);
 });

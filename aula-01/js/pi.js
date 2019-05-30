@@ -14,14 +14,14 @@ function pi(n) {
     if (n == null || n == undefined) {
         throw new Error("Entrada não pode ser null ou undefined");
     }
-    if (typeof n !== 'number') {
+    if (typeof n !== "number") {
         throw new TypeError("n precisa ser um número");
     }
 
-    const i = 1;
-    const s = -1;
-    const impar = -1;
-    const p = 0;
+    let i = 1;
+    let s = -1;
+    let impar = -1;
+    let p = 0;
     while (i <= n) {
         impar = impar + 2;
         s = (-1) * s;
