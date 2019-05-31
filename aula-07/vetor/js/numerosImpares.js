@@ -1,6 +1,6 @@
 /**
  * Função que retorna soma de números impares em um vetor.
- * @param array vetor contendo os números
+ * @param array vetor contendo os números a serem calculados
  * @returns soma dos números impares do vetor
  */
 function numerosImpares(array) {
