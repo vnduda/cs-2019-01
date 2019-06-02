@@ -11,7 +11,7 @@ function frequenciaSorteio(maximo, quantidade) {
 
     for (let contador = 0; contador < quantidade; contador++) {
         let numero = Math.floor(Math.random() * Math.floor(maximo));
-        vetor.push(numero);
+        array.push(numero);
         contagem[numero]++;
     }
 
