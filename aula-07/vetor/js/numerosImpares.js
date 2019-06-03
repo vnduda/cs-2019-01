@@ -17,3 +17,4 @@ function numerosImpares(array) {
     }
     return somaImpares;
 }
+module.exports = numerosImpares;

@@ -12,3 +12,5 @@ function menorTemperatura (array) {
 
     return menorElemento;
 }
+
+module.exports = menorTemperatura;
