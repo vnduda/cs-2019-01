@@ -19,9 +19,9 @@ public class Algoritmos {
     public static double menorTemperatura(final double[] temperatura) {
         double menorTemperatura = temperatura[0];
 
-        for (int contador = 1; contador < temperatura.lenght; contador++) {
+        for (int contador = 1; contador < temperatura.length; contador++) {
             if (menorTemperatura > temperatura[contador]) {
-                menorTemperatura = temperatura[i];
+                menorTemperatura = temperatura[contador];
             }
         }
         return menorTemperatura;
@@ -34,7 +34,7 @@ public class Algoritmos {
      */
     public static int numerosImpares(final int[] numeros) {
         int soma = 0;
-        for (int contador = 0; contador < numeros.lenght; contador++) {
+        for (int contador = 0; contador < numeros.length; contador++) {
             if (numeros[contador] % 2 == 1) {
                 soma += numeros[contador];
             }
@@ -62,7 +62,7 @@ public class Algoritmos {
      * Algoritmo que calcula a quantidade em que cada elemento
      * aparece em um vetor.
      * @param caracteres string que contém sequência de caracteres
-     * @return a quantidade 
+     * @return a quantidade de caracteres
      */
     public static int caractereMaisFrequente(final String caracteres) {
         int caractereMaisFrequente = 0;
@@ -73,14 +73,4 @@ public class Algoritmos {
         }
         return caractereMaisFrequente;
     }
-
-    
-
-
-
-
-
-
-
-
 }
