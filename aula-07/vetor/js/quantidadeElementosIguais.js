@@ -1,6 +1,5 @@
 /**
  * Função para encontrar quantos elementos iguais há entre dois vetores.
- * 
  * @param {Array} array1 O primeiro vetor
  * @param {Array} array2 O segundo vetor
  * @returns A quantidade de elementos iguais.

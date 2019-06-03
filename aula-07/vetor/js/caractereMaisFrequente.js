@@ -5,7 +5,7 @@
  * @param {Array} array O vetor
  * @returns {Array} Um vetor com a quantidade de recorrencias
  */
-function quantidadeRepeticoes(array) {
+function caractereMaisFrequente(array) {
     if (!Array.isArray(array)) {
         throw new TypeError("A entrada não é um vetor");
     }
