@@ -18,3 +18,6 @@ Organização do diretório dos algoritmos em Java
 
 **Aula 06**
 Refatoração dos algoritmos em Java, com documentação, testes, qualidade e segurança
+
+**Aula 07**
+Implementação de algoritmos usando vetor em Java e JavaScript
