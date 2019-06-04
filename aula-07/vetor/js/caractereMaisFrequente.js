@@ -23,3 +23,4 @@ function caractereMaisFrequente(array) {
 
     return arrayResultado;
 }
+module.exports = caractereMaisFrequente;
