@@ -11,8 +11,7 @@ public final class saidaArquivo {
         DataInputStream dis = new DataInputStream(fis);
 
         int valor = dis.readInt();
-        dis.close();
         System.out.println(Integer.toHexString(valor));
-
+        dis.close();
     }
 }
