@@ -6,11 +6,11 @@ import java.time.LocalDate;
  * Implementação de funções matemáticas.
  */
 public class Algoritmos {
+    
     /**
      * Para cobertura.
      */
-    protected Algoritmos() {
-
+    private Algoritmos() {
     }
 
     /**
@@ -72,25 +72,7 @@ public class Algoritmos {
     */
 
     public static int diaSemana(final int dia, final int mes, final int ano) {
-        final int diaMaximo = 31;
-        if (dia < 1 || dia > diaMaximo) {
-            throw new IllegalArgumentException("Dia inválido");
-        }
-        final int mesMaximo = 12;
-        if (mes < 1 || mes > mesMaximo) {
-            throw new IllegalArgumentException("Mês inválido");
-        }
-        final int anoMinimo = 1753;
-        if (ano < anoMinimo) {
-            throw new IllegalArgumentException("Ano inválido");
-        }
-
-        try {
-            LocalDate.of(ano, mes, dia);
-        } catch (DateTimeException exp) {
-            final String data = String.format("%d/%d/%d", dia, mes, ano);
-            throw new IllegalArgumentException("data invalida: " + data, exp);
-        }
+        validaData(dia, mes, ano);
 
         final int diaAux = dia;
         int mesAux = mes;
@@ -113,6 +95,30 @@ public class Algoritmos {
 
         final int auxResultado = 7;
         return resultado % auxResultado;
+    }
+
+    public void validaData(final int dia, final int mes, final int ano) {
+        final int diaMaximo = 31;
+        if (dia < 1 || dia > diaMaximo) {
+            throw new IllegalArgumentException("Dia inválido");
+        }
+
+        final int mesMaximo = 12;
+        if (mes < 1 || mes > mesMaximo) {
+            throw new IllegalArgumentException("Mês inválido");
+        }
+        
+        final int anoMinimo = 1753;
+        if (ano < anoMinimo) {
+            throw new IllegalArgumentException("Ano inválido");
+        }
+
+        try {
+            LocalDate.of(ano, mes, dia);
+        } catch (DateTimeException exp) {
+            final String data = String.format("%d/%d/%d", dia, mes, ano);
+            throw new IllegalArgumentException("data invalida: " + data, exp);
+        }
     }
 
     /**
