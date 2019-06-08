@@ -10,7 +10,7 @@ public class Algoritmos {
     /**
      * Para cobertura.
      */
-    private Algoritmos() {
+    Algoritmos() {
     }
 
     /**
