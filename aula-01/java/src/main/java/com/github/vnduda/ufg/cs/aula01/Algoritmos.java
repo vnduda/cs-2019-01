@@ -97,7 +97,7 @@ public class Algoritmos {
         return resultado % auxResultado;
     }
 
-    public void validaData(final int dia, final int mes, final int ano) {
+    public static void validaData(final int dia, final int mes, final int ano) {
         final int diaMaximo = 31;
         if (dia < 1 || dia > diaMaximo) {
             throw new IllegalArgumentException("Dia inválido");
