@@ -1,10 +1,10 @@
-package main.java.com.github.vnduda.cs.aula08;
+package main.java.com.github.vnduda.cs.aula08.domain;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public final class saidaArquivo {
+public final class SaidaArquivo {
 
     public static void imprimeHexadecimal(String nomeArquivo) throws IOException {
         FileInputStream fis = new FileInputStream(nomeArquivo);
