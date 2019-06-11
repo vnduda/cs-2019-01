@@ -1,4 +1,4 @@
-package main.java.com.github.vnduda.cs.aula08.domain;
+package com.github.vnduda.cs.aula08.domain;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;

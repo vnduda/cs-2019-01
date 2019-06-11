@@ -1,4 +1,4 @@
-package main.java.com.github.vnduda.ufg.cs.aula07;
+package com.github.vnduda.ufg.cs.aula07;
 
 /**
  * Implementação de algoritmos usando vetores.

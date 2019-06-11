@@ -1,5 +1,5 @@
-package main.java.com.github.vnduda.cs.aula08.application.console;
-import main.java.com.github.vnduda.cs.aula08.domain.SaidaArquivo;
+package com.github.vnduda.cs.aula08.application.console;
+import com.github.vnduda.cs.aula08.domain.SaidaArquivo;
 import java.io.IOException;
 
 public class ProgramaInteiro {
