@@ -339,11 +339,11 @@ public final class AlgoritmosUtils {
         float euler = 1 + potencia;
         float numerador = potencia;
         float denominador = 1;
-        
-        for (int i = 2; i <= potencia; i++){
+
+        for (int i = 2; i <= potencia; i++) {
             numerador *= numerador;
             denominador += i;
-            euler += numerador/denominador;
+            euler += numerador / denominador;
         }
 
         return euler;
