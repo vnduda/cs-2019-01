@@ -333,7 +333,7 @@ public final class AlgoritmosUtils {
         }
         final int num2Min = 2;
         if (precisao < num2Min) {
-            throw new IllegalArgumentException("Intervalo de k inválido");
+            throw new IllegalArgumentException("Intervalo da precisão inválido");
         }
 
         float euler = 1 + potencia;
