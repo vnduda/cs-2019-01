@@ -8,16 +8,16 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosRestoDivisaoTest {
       @Test
       void restoDivisaoCasoClassico() {
-          assertEquals(0, Algoritmos.restoDivisao(6, 3));
+          assertEquals(0, AlgoritmosUtils.restoDivisao(6, 3));
       }
 
       @Test
       void restoDivisaoDivisorPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(6, -1));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.restoDivisao(6, -1));
       }
 
       @Test
       void restoDivisaoDividendoPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(0, 3));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.restoDivisao(0, 3));
       }
     }

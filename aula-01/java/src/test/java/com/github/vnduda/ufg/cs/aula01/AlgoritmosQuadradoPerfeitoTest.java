@@ -8,16 +8,16 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosQuadradoPerfeitoTest {
       @Test
       void quadradoPerfeitoCasoClassico() {
-          assertEquals(true, Algoritmos.quadradoPerfeito(4));
+          assertEquals(true, AlgoritmosUtils.quadradoPerfeito(4));
       }
 
       @Test
       void quadradoPerfeitoisFalse() {
-          assertEquals(false, Algoritmos.quadradoPerfeito(5));
+          assertEquals(false, AlgoritmosUtils.quadradoPerfeito(5));
       }
 
       @Test
       void quadradoPerfeitoPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.quadradoPerfeito(0));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.quadradoPerfeito(0));
       }
     }

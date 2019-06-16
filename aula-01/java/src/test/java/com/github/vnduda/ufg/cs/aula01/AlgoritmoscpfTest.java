@@ -8,22 +8,22 @@ import org.junit.jupiter.api.Test;
 class AlgoritmoscpfTest {
     @Test
     void cpfCasoClassico() {
-        assertEquals(true, Algoritmos.cpf("70039371158"));
+        assertEquals(true, AlgoritmosUtils.cpf("70039371158"));
     }
 
     @Test
     void cpfisFalse() {
-        assertEquals(false, Algoritmos.cpf("85813526010"));
-        assertEquals(false, Algoritmos.cpf("85813526006"));
+        assertEquals(false, AlgoritmosUtils.cpf("85813526010"));
+        assertEquals(false, AlgoritmosUtils.cpf("85813526006"));
     }
 
     @Test
     void cpfisPequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.cpf("123456789101"));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.cpf("123456789101"));
     }
 
     @Test
-    void cpfisGrande() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.cpf("1234567891"));
+    void cpfisGrande(AlgoritmosUtils Algoritmos) {
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.cpf("1234567891"));
     }
 }

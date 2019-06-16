@@ -5,12 +5,12 @@ import java.time.LocalDate;
 /**
  * Implementação de funções matemáticas.
  */
-public final class Algoritmos {
+public final class AlgoritmosUtils {
 
     /**
      * Para cobertura.
      */
-    private Algoritmos() {
+    private AlgoritmosUtils() {
     }
 
     /**
@@ -72,7 +72,10 @@ public final class Algoritmos {
     */
 
     public static int diaSemana(final int dia, final int mes, final int ano) {
-        validaData(dia, mes, ano);
+        validaDia(dia);
+        validaMes(mes);
+        validaAno(ano);
+        validaExcecao(dia, mes, ano);
 
         final int diaAux = dia;
         int mesAux = mes;
@@ -97,22 +100,46 @@ public final class Algoritmos {
         return resultado % auxResultado;
     }
 
-    public static void validaData(final int dia, final int mes, final int ano) {
+    /**
+     * Método para validar dia.
+     * @param dia Dia
+     */
+    public static void validaDia(final int dia) {
         final int diaMaximo = 31;
         if (dia < 1 || dia > diaMaximo) {
             throw new IllegalArgumentException("Dia inválido");
         }
+    }
 
+    /**
+     * Método para validar mês.
+     * @param mes Mes
+     */
+    public static void validaMes(final int mes) {
         final int mesMaximo = 12;
         if (mes < 1 || mes > mesMaximo) {
             throw new IllegalArgumentException("Mês inválido");
         }
+    }
 
+    /**
+     * Método para validar ano.
+     * @param ano Ano
+     */
+    public static void validaAno(final int ano) {
         final int anoMinimo = 1753;
         if (ano < anoMinimo) {
             throw new IllegalArgumentException("Ano inválido");
         }
+    }
 
+    /**
+     * Método para validar data.
+     * @param dia Dia
+     * @param mes Mes
+     * @param ano Ano
+     */
+    public static void validaExcecao(final int dia, final int mes, final int ano) {
         try {
             LocalDate.of(ano, mes, dia);
         } catch (DateTimeException exp) {
@@ -155,8 +182,8 @@ public final class Algoritmos {
      * @return retorna a soma dos primeiros números até n
      */
      public static int somaNaturais(final int numero) {
-
-        if (numero < 1) {
+        final int numMin = 1;
+        if (numero < numMin) {
             throw new IllegalArgumentException(
                 "Intervalo numérico inválido");
         }
@@ -176,8 +203,8 @@ public final class Algoritmos {
      * @return retorna o fatorial calculado
      */
     public static int fatorial(final int numero) {
-
-        if (numero < 1) {
+        final int numMin = 1;
+        if (numero < numMin) {
             throw new IllegalArgumentException(
                 "Intervalo da variável inválido");
         }
@@ -269,8 +296,8 @@ public final class Algoritmos {
      * @return retorna o valor calculado de pi
      */
     public static double algoritmoPi(final int numero) {
-
-        if (numero < 1) {
+        final int numMin = 1;
+        if (numero < numMin) {
             throw new IllegalArgumentException(
                 "Intervalo da entrada inválido");
         }
@@ -299,13 +326,13 @@ public final class Algoritmos {
      */
     public static float logaritmoNatural(final float potencia,
                                          final float precisao) {
-
-        if (potencia < 1) {
+        final int numMin = 1;
+        if (potencia < numMin) {
             throw new IllegalArgumentException(
                 "Intervalo da potencia inválido");
         }
-
-        if (precisao < 2) {
+        final int num2Min = 2;
+        if (precisao < num2Min) {
             throw new IllegalArgumentException("Intervalo de k inválido");
         }
 
@@ -370,8 +397,8 @@ public final class Algoritmos {
      * @return o quadrado perfeito
      */
     public static boolean quadradoPerfeito(final int numero) {
-
-        if (numero < 1) {
+        final int numMin = 1;
+        if (numero < numMin) {
             throw new IllegalArgumentException(
                 "Intervalo da variável inválido");
         }
@@ -416,8 +443,8 @@ public final class Algoritmos {
      * @return true caso entrada seja um número primo
      */
     public static boolean primo(final int numero) {
-
-        if (numero < 1) {
+        final int numMin = 1;
+        if (numero < numMin) {
             throw new IllegalArgumentException(
                 "Intervalo de número inválido");
         }
@@ -442,15 +469,6 @@ public final class Algoritmos {
      * @return vetor com resultado calculado
      */
     public static int[] crivoEratostenes(final int[] array) {
-
-        if (array == null) {
-            throw new IllegalArgumentException("array is null");
-        }
-
-        if (array.length < 1) {
-            throw new IllegalArgumentException("Tamanho do array inválido");
-        }
-
         for (final int valor : array) {
             if (valor != 0) {
                 throw new IllegalArgumentException(
@@ -474,6 +492,27 @@ public final class Algoritmos {
         }
 
         return array;
+    }
+
+    /**
+     * Método para exceção caso array seja null.
+     * @param array Vetor
+     */
+    public static void arrayNull(final int[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("array is null");
+        }
+    }
+
+    /**
+     * Método para exceção caso array tenha tamanho inválido.
+     * @param array Vetor
+     */
+    public static void arrayTamanho(final int[] array) {
+        final int arrayTamMin = 1;
+        if (array.length < arrayTamMin) {
+            throw new IllegalArgumentException("Tamanho do array inválido");
+        }
     }
 
     /**
@@ -551,8 +590,8 @@ public final class Algoritmos {
      */
     public static int horner(final int numero,
                              final int tam, final int[] array) {
-
-        if (tam < 1) {
+        final int tamMinimo = 1;
+        if (tam < tamMinimo) {
             throw new IllegalArgumentException(
                 "Tamanho inválido");
         }

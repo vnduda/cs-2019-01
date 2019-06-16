@@ -8,21 +8,21 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosFibonacciTest {
     @Test
     void fibonacciCasoClassico() {
-        assertEquals(55, Algoritmos.fibonacci(10));
+        assertEquals(55, AlgoritmosUtils.fibonacci(10));
     }
 
     @Test
     void fibonacciNIgualAZero() {
-        assertEquals(0, Algoritmos.fibonacci(0));
+        assertEquals(0, AlgoritmosUtils.fibonacci(0));
     }
 
     @Test
     void fibonacciNIgualAUm() {
-        assertEquals(1, Algoritmos.fibonacci(1));
+        assertEquals(1, AlgoritmosUtils.fibonacci(1));
     }
 
     @Test
     void fibonacciGrande() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.fibonacci(-1));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.fibonacci(-1));
     }
 }

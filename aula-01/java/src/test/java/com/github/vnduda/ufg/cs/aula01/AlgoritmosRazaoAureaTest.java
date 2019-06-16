@@ -8,21 +8,21 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosRazaoAureaTest {
       @Test
       void razaoAureaCasoClassico() {
-          assertEquals(1.5, Algoritmos.razaoAurea(2, 2, 2));
+          assertEquals(1.5, AlgoritmosUtils.razaoAurea(2, 2, 2));
       }
 
       @Test
       void razaoAureaPrimeiroTermoPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(-1, 2, 2));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.razaoAurea(-1, 2, 2));
       }
 
       @Test
       void razaoAureaSegundoTermoPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 0, 2));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.razaoAurea(2, 0, 2));
       }
 
       @Test
       void razaoAureaPrecisaoPequena() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 2, -1));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.razaoAurea(2, 2, -1));
       }
     }

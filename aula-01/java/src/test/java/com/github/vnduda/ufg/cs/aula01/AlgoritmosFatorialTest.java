@@ -9,11 +9,11 @@ class AlgoritmosFatorialTest {
       
       @Test
       void fatorialCasoClassico() {
-          assertEquals(6, Algoritmos.fatorial(3));
+          assertEquals(6, AlgoritmosUtils.fatorial(3));
       }
 
        @Test
       void fatorialPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.fatorial(0));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.fatorial(0));
       }
 }

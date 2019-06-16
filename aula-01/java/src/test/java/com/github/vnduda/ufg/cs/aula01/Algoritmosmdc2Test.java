@@ -8,21 +8,21 @@ import org.junit.jupiter.api.Test;
 class Algoritmosmdc2Test {
       @Test
       void mdc2CasoClassico() {
-          assertEquals(2, Algoritmos.mdc2(4, 2));
+          assertEquals(2, AlgoritmosUtils.mdc2(4, 2));
       }
 
       @Test
       void mdc2LacoIfCobertura() {
-          assertEquals(2, Algoritmos.mdc2(54, 10));
+          assertEquals(2, AlgoritmosUtils.mdc2(54, 10));
       }
 
       @Test
       void mdc2Pequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc2(2, -1));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.mdc2(2, -1));
       }
 
       @Test
       void mdc2NumeroMenorQueOutro() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc2(3, 6));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.mdc2(3, 6));
       }
     }

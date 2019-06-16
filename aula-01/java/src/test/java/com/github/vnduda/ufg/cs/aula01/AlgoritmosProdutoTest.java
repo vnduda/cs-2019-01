@@ -8,26 +8,26 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosProdutoTest {
     @Test
     void produtoCasoClassico() {
-        assertEquals(4, Algoritmos.produto(2, 2));
+        assertEquals(4, AlgoritmosUtils.produto(2, 2));
     }
 
     @Test
     void produtoCasoClassico2() {
-        assertEquals(6, Algoritmos.produto(3, 2));
+        assertEquals(6, AlgoritmosUtils.produto(3, 2));
     }
 
     @Test
     void produtoCasoClassico3() {
-        assertEquals(2, Algoritmos.produto(1, 2));
+        assertEquals(2, AlgoritmosUtils.produto(1, 2));
     }
 
     @Test
     void produtoMultiplicandoPequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.produto(-1, 2));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.produto(-1, 2));
     }
 
     @Test
     void produtoMultiplicadorPequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.produto(2, -1));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.produto(2, -1));
     }
 }

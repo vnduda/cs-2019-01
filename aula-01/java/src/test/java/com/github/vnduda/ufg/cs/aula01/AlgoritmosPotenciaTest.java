@@ -9,16 +9,16 @@ class AlgoritmosPotenciaTest {
       
       @Test
       void potenciaCasoClassico() {
-          assertEquals(4, Algoritmos.potencia(2, 2));
+          assertEquals(4, AlgoritmosUtils.potencia(2, 2));
       }
 
       @Test
       void potenciaBasePequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.potencia(-1, 2));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.potencia(-1, 2));
       }
 
       @Test
       void potenciaExpoentePequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.potencia(2, -1));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.potencia(2, -1));
       }
     }

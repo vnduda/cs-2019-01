@@ -9,21 +9,21 @@ class AlgoritmosPropriedade3025Test {
 
     @Test
     void propriedade3025isTrue() {
-        assertEquals(true, Algoritmos.propriedade3025(3025));
+        assertEquals(true, AlgoritmosUtils.propriedade3025(3025));
     }
 
      @Test
     void propriedade3025isfalse() {
-        assertEquals(false, Algoritmos.propriedade3025(3024));
+        assertEquals(false, AlgoritmosUtils.propriedade3025(3024));
     }
 
      @Test
     void propriedade3025Pequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade3025(-1));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.propriedade3025(-1));
     }
 
      @Test
     void propriedade3025Grande() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade3025(10000));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.propriedade3025(10000));
     }
 }

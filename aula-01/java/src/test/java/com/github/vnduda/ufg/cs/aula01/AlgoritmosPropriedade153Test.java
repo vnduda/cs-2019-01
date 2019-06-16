@@ -8,21 +8,21 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosPropriedade153Test {
     @Test 
     void propriedade153isTrue() {
-        assertEquals(true, Algoritmos.propriedade153(153));
+        assertEquals(true, AlgoritmosUtils.propriedade153(153));
     }
 
      @Test 
     void propriedade153isfalse() {
-        assertEquals(false, Algoritmos.propriedade153(152));
+        assertEquals(false, AlgoritmosUtils.propriedade153(152));
     }
 
      @Test
     void propriedade153Pequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade153(-1));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.propriedade153(-1));
     }
 
      @Test
     void propriedade153Grande() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.propriedade153(1000));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.propriedade153(1000));
     }
 }

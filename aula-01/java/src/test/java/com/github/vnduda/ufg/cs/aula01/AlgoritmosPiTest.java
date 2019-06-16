@@ -9,11 +9,11 @@ class AlgoritmosPiTest {
       
       @Test
       void piCasoClassico() {
-          assertEquals(3.3396825396825403, Algoritmos.algoritmoPi(5));
+          assertEquals(3.3396825396825403, AlgoritmosUtils.algoritmoPi(5));
       }
 
       @Test
       void piForadaFaixa() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.algoritmoPi(0));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.algoritmoPi(0));
       }
 }

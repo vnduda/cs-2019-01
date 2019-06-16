@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosSomaNaturaisTest {
      @Test
       void somaNaturaisCasoClassico() {
-          assertEquals(6, Algoritmos.somaNaturais(3));
+          assertEquals(6, AlgoritmosUtils.somaNaturais(3));
       }
 
       @Test
       void somaNaturaisPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.somaNaturais(0));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.somaNaturais(0));
       }
 }

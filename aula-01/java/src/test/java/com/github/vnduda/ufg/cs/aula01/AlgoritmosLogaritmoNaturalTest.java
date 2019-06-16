@@ -8,16 +8,16 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosLogaritmoNaturalTest {
       @Test
       void logaritmoNaturalCasoClassico() {
-          assertEquals(8.5, Algoritmos.logaritmoNatural(3, 2));
+          assertEquals(8.5, AlgoritmosUtils.logaritmoNatural(3, 2));
       }
 
       @Test
       void logaritmoNaturalPotenciaPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.logaritmoNatural(0, 3));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.logaritmoNatural(0, 3));
       }
 
       @Test
       void logaritmoNaturalPrecisaoPequeno() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.logaritmoNatural(2, 1));
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.logaritmoNatural(2, 1));
       }
     }

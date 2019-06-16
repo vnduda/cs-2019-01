@@ -8,16 +8,16 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosmdcTest {
     @Test
     void mdcCasoClassico() {
-        assertEquals(2, Algoritmos.mdc(4, 2));
+        assertEquals(2, AlgoritmosUtils.mdc(4, 2));
     }
 
     @Test
     void mdcPequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc(2, -1));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.mdc(2, -1));
     }
 
     @Test
     void mdcNumeroMenorQueOutro() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc(3, 6));
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.mdc(3, 6));
     }
 }
