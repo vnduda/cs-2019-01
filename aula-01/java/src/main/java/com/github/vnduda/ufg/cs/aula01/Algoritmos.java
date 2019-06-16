@@ -5,12 +5,12 @@ import java.time.LocalDate;
 /**
  * Implementação de funções matemáticas.
  */
-public class Algoritmos {
-    
+public final class Algoritmos {
+
     /**
      * Para cobertura.
      */
-    Algoritmos() {
+    private Algoritmos() {
     }
 
     /**
@@ -107,7 +107,7 @@ public class Algoritmos {
         if (mes < 1 || mes > mesMaximo) {
             throw new IllegalArgumentException("Mês inválido");
         }
-        
+
         final int anoMinimo = 1753;
         if (ano < anoMinimo) {
             throw new IllegalArgumentException("Ano inválido");
