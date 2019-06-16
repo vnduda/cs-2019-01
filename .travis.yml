@@ -4,7 +4,7 @@ script:
   - cd aula-01/java && mvn clean test 
   - cd aula-01/java && checkstyle:check
   - cd aula-01/java && spotbugs:check 
-
+  - cd ../..
   - cd aula-07/java && mvn clean test
   - cd aula-07/java && checkstyle:check
   - cd aula-07/java && spotbugs:check 
