@@ -3,11 +3,11 @@ package com.github.vnduda.ufg.cs.aula07;
 /**
  * Implementação de algoritmos usando vetores.
  */
-public class Algoritmos {
+public final class AlgoritmosUtils {
     /**
      * Para cobertura.
      */
-    protected Algoritmos() {
+    private AlgoritmosUtils() {
 
     }
 
