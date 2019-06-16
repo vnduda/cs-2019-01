@@ -23,7 +23,7 @@ class AlgoritmoscpfTest {
     }
 
     @Test
-    void cpfisGrande(AlgoritmosUtils Algoritmos) {
-        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.cpf("1234567891"));
+    void cpfisGrande() {
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.cpf("8581352601"));
     }
 }
