@@ -5,15 +5,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosPiTest {
+class AlgoritmosPiTest {
       
       @Test
-      public void piCasoClassico() {
+      void piCasoClassico() {
           assertEquals(3.3396825396825403, Algoritmos.algoritmoPi(5));
       }
 
       @Test
-      public void piForadaFaixa() {
+      void piForadaFaixa() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.algoritmoPi(0));
       }
 }

@@ -5,51 +5,51 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosDiaDaSemanaTest {
+class AlgoritmosDiaDaSemanaTest {
     @Test
-    public void diaSemanaCasoClassico() {
+    void diaSemanaCasoClassico() {
         assertEquals(3, Algoritmos.diaSemana(16, 5, 2019));
         assertEquals(2, Algoritmos.diaSemana(16, 1, 2019));
         assertEquals(5, Algoritmos.diaSemana(16, 2, 2019));
     }
 
     @Test
-    public void diaSemanaDiaPequeno() {
+    void diaSemanaDiaPequeno() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(0, 5, 2019));
     }
 
     @Test
-    public void diaSemanaDiaGrande() {
+    void diaSemanaDiaGrande() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 5, 2019));
     }
 
     @Test
-    public void diaSemanaMesPequeno() {
+    void diaSemanaMesPequeno() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 0, 2019));
     }
 
     @Test
-    public void diaSemanaMesGrande() {
+    void diaSemanaMesGrande() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 13, 2019));
     }
 
     @Test
-    public void diaSemanaAnoPequeno() {
+    void diaSemanaAnoPequeno() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(16, 5, 1752));
     }
 
     @Test
-    public void diaSemanaForadaFaixa() {
+    void diaSemanaForadaFaixa() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 2, 2019));
     }
 
     @Test
-    public void diaSemanaFevereiroFalso() {
+    void diaSemanaFevereiroFalso() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(32, 2, 2019));
     }
 
     @Test
-    public void diaSemanaAbrilFalso() {
+    void diaSemanaAbrilFalso() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.diaSemana(31, 4, 2019));
     }
 }

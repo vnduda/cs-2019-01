@@ -5,19 +5,19 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosPrimoTest {
+class AlgoritmosPrimoTest {
       @Test
-      public void primoCasoClassico() {
+      void primoCasoClassico() {
           assertEquals(true, Algoritmos.primo(3));
       }
 
       @Test
-      public void primoisFalse() {
+      void primoisFalse() {
           assertEquals(false, Algoritmos.primo(4));
       }
 
       @Test 
-      public void primoPequeno() {
+      void primoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.primo(0));
       }
     }

@@ -5,24 +5,24 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosRazaoAureaTest {
+class AlgoritmosRazaoAureaTest {
       @Test
-      public void razaoAureaCasoClassico() {
+      void razaoAureaCasoClassico() {
           assertEquals(1.5, Algoritmos.razaoAurea(2, 2, 2));
       }
 
       @Test
-      public void razaoAureaPrimeiroTermoPequeno() {
+      void razaoAureaPrimeiroTermoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(-1, 2, 2));
       }
 
       @Test
-      public void razaoAureaSegundoTermoPequeno() {
+      void razaoAureaSegundoTermoPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 0, 2));
       }
 
       @Test
-      public void razaoAureaPrecisaoPequena() {
+      void razaoAureaPrecisaoPequena() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 2, -1));
       }
     }

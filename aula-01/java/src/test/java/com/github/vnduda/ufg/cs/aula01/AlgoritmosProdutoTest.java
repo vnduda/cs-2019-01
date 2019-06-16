@@ -5,29 +5,29 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosProdutoTest {
+class AlgoritmosProdutoTest {
     @Test
-    public void produtoCasoClassico() {
+    void produtoCasoClassico() {
         assertEquals(4, Algoritmos.produto(2, 2));
     }
 
     @Test
-    public void produtoCasoClassico2() {
+    void produtoCasoClassico2() {
         assertEquals(6, Algoritmos.produto(3, 2));
     }
 
     @Test
-    public void produtoCasoClassico3() {
+    void produtoCasoClassico3() {
         assertEquals(2, Algoritmos.produto(1, 2));
     }
 
     @Test
-    public void produtoMultiplicandoPequeno() {
+    void produtoMultiplicandoPequeno() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.produto(-1, 2));
     }
 
     @Test
-    public void produtoMultiplicadorPequeno() {
+    void produtoMultiplicadorPequeno() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.produto(2, -1));
     }
 }

@@ -5,15 +5,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosFatorialTest {
+class AlgoritmosFatorialTest {
       
       @Test
-      public void fatorialCasoClassico() {
+      void fatorialCasoClassico() {
           assertEquals(6, Algoritmos.fatorial(3));
       }
 
        @Test
-      public void fatorialPequeno() {
+      void fatorialPequeno() {
           assertThrows(IllegalArgumentException.class, () -> Algoritmos.fatorial(0));
       }
 }
