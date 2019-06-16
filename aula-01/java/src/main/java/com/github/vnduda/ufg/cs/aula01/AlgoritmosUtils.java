@@ -78,14 +78,13 @@ public final class AlgoritmosUtils {
         validaExcecao(dia, mes, ano);
 
         final int diaAux = dia;
-        int mesAux = mes;
-        int anoAux = ano;
-        final int mesMais = 12;
-        final int anoMenos = 1;
-        if (mesAux == 1 || mesAux == 2) {
-            mesAux += mesMais;
-            anoAux -= anoMenos;
-        }
+        final int totalMesesDeAno = 12;
+        final int mesAux = mes == 1 || mes == 2
+                ? mes + totalMesesDeAno
+                : mes;
+        final int anoAux = mes == 1 || mes == 2
+                ? ano - 1
+                : ano;
 
         final int digito3 = 3;
         final int digito4 = 4;
@@ -306,11 +305,12 @@ public final class AlgoritmosUtils {
         double sinal = -1;
         double divisor = -1;
         int contador = 1;
-        final int aux = 4;
+
         while (contador <= numero) {
+            final int aux = 4;
             divisor += 2;
             sinal = -sinal;
-            valorPi = valorPi + aux * sinal / divisor;
+            valorPi += aux * sinal / divisor;
             contador += 1;
         }
 
@@ -336,15 +336,14 @@ public final class AlgoritmosUtils {
             throw new IllegalArgumentException("Intervalo de k inválido");
         }
 
-        float aux = 2;
         float euler = 1 + potencia;
         float numerador = potencia;
         float denominador = 1;
-        while (precisao >= aux) {
+        
+        for (int i = 2; i <= potencia; i++){
             numerador *= numerador;
-            denominador *= aux;
-            euler = euler + numerador / denominador;
-            aux += 1;
+            denominador += i;
+            euler += numerador/denominador;
         }
 
         return euler;
@@ -469,12 +468,8 @@ public final class AlgoritmosUtils {
      * @return vetor com resultado calculado
      */
     public static int[] crivoEratostenes(final int[] array) {
-        for (final int valor : array) {
-            if (valor != 0) {
-                throw new IllegalArgumentException(
-                    "O array precisa estar zerado");
-            }
-        }
+        arrayNull(array);
+        arrayTamanho(array);
 
         int contador = 2;
         final int limite = (int) Math.floor(Math.sqrt(array.length));
