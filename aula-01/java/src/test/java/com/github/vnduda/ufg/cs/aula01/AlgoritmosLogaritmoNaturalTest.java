@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class AlgoritmosLogaritmoNaturalTest {
       @Test
       void logaritmoNaturalCasoClassico() {
-          assertEquals(8.5, AlgoritmosUtils.logaritmoNatural(3, 2));
+          assertEquals(20.5, AlgoritmosUtils.logaritmoNatural(3, 2));
       }
 
       @Test

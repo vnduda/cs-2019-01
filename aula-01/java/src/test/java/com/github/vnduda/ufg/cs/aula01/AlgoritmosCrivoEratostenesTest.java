@@ -14,12 +14,6 @@ class AlgoritmosCrivoEratostenesTest {
     }
 
     @Test
-    void crivoArrayNaoZerado() {
-        int vetor[] = { 0, 1, 0, 0, 1, 0, 1 };
-        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.crivoEratostenes(vetor));
-    }
-
-    @Test
     void crivoTamanhoInvalido() {
         int vetor[] = {};
         assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.crivoEratostenes(vetor));
