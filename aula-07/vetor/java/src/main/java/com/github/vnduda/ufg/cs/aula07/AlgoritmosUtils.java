@@ -1,13 +1,13 @@
-package main.java.com.github.vnduda.ufg.cs.aula07;
+package com.github.vnduda.ufg.cs.aula07;
 
 /**
  * Implementação de algoritmos usando vetores.
  */
-public class Algoritmos {
+public final class AlgoritmosUtils {
     /**
      * Para cobertura.
      */
-    protected Algoritmos() {
+    private AlgoritmosUtils() {
 
     }
 
@@ -34,8 +34,9 @@ public class Algoritmos {
      */
     public static int numerosImpares(final int[] numeros) {
         int soma = 0;
+        final int aux = 1;
         for (int contador = 0; contador < numeros.length; contador++) {
-            if (numeros[contador] % 2 == 1) {
+            if (numeros[contador] % 2 == aux) {
                 soma += numeros[contador];
             }
         }
@@ -49,13 +50,13 @@ public class Algoritmos {
      * @return A quantidade de elementos iguais
      */
     public static int quantidadeElementosIguais(final double[] numeros, final double comparador) {
-        int quantidadeElementosIguais = 0;
+        int elementosIguais = 0;
         for (int contador = 0; contador < numeros.length; contador++) {
             if (numeros[contador] == comparador) {
-                quantidadeElementosIguais++;
+                elementosIguais++;
             }
         }
-        return quantidadeElementosIguais;
+        return elementosIguais;
     }
 
     /**
@@ -65,12 +66,12 @@ public class Algoritmos {
      * @return a quantidade de caracteres
      */
     public static int caractereMaisFrequente(final String caracteres) {
-        int caractereMaisFrequente = 0;
+        int maisFrequente = 0;
         for (int contador = 0; contador < caracteres.length(); contador++) {
             if (Character.isLetter(caracteres.charAt(contador))) {
-                caractereMaisFrequente++;
+                maisFrequente++;
             }
         }
-        return caractereMaisFrequente;
+        return maisFrequente;
     }
 }

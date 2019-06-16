@@ -5,25 +5,25 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmoscpfTest {
+class AlgoritmoscpfTest {
     @Test
-    public void cpfCasoClassico() {
-        assertEquals(true, Algoritmos.cpf("70039371158"));
+    void cpfCasoClassico() {
+        assertEquals(true, AlgoritmosUtils.cpf("70039371158"));
     }
 
     @Test
-    public void cpfisFalse() {
-        assertEquals(false, Algoritmos.cpf("85813526010"));
-        assertEquals(false, Algoritmos.cpf("85813526006"));
+    void cpfisFalse() {
+        assertEquals(false, AlgoritmosUtils.cpf("85813526010"));
+        assertEquals(false, AlgoritmosUtils.cpf("85813526006"));
     }
 
     @Test
-    public void cpfisPequeno() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.cpf("123456789101"));
+    void cpfisPequeno() {
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.cpf("123456789101"));
     }
 
     @Test
-    public void cpfisGrande() {
-        assertThrows(IllegalArgumentException.class, () -> Algoritmos.cpf("1234567891"));
+    void cpfisGrande() {
+        assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.cpf("8581352601"));
     }
 }

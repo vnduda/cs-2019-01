@@ -5,15 +5,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-public class AlgoritmosRaizTest {
+class AlgoritmosRaizTest {
      
       @Test
-      public void raizCasoClassico() {
-          assertEquals(2, Algoritmos.raiz(4, 25));
+      void raizCasoClassico() {
+          assertEquals(2, AlgoritmosUtils.raiz(4, 25));
       }
 
       @Test
-      public void raizBasePequena() {
-          assertThrows(IllegalArgumentException.class, () -> Algoritmos.raiz(-1, 2));
+      void raizBasePequena() {
+          assertThrows(IllegalArgumentException.class, () -> AlgoritmosUtils.raiz(-1, 2));
       }
     }
