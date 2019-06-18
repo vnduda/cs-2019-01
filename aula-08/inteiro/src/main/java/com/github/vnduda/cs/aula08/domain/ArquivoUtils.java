@@ -7,6 +7,10 @@ import java.io.IOException;
 public final class ArquivoUtils {
 
     public static byte[] leQuatroPrimeirosBytesDoArquivo(final String nomeArquivo) {
+        if (nomeArquivo == null) {
+            return null;            
+        }
+        
         try (FileInputStream fis = new FileInputStream(nomeArquivo);
             DataInputStream dis = new DataInputStream(fis)) {
 
