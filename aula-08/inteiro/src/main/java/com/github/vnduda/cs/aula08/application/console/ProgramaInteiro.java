@@ -1,6 +1,6 @@
 package com.github.vnduda.cs.aula08.application.console;
 
-import com.github.vnduda.cs.aula08.application.console.SaidaArquivo;
+import com.github.vnduda.cs.aula08.application.console.InterfaceUtils;
 import com.github.vnduda.cs.aula08.domain.ArquivoUtils;
 
 import java.io.IOException;

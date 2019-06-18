@@ -4,7 +4,7 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public final class SaidaArquivo {
+public final class InterfaceUtils {
 
     public static String converteParaHexadecimal(byte[] bytes) {
 
