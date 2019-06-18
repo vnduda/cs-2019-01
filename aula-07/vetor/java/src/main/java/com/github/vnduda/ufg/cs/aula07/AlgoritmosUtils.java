@@ -34,9 +34,9 @@ public final class AlgoritmosUtils {
      */
     public static int numerosImpares(final int[] numeros) {
         int soma = 0;
-        final int aux = 1;
+        //final int aux = 0;
         for (int contador = 0; contador < numeros.length; contador++) {
-            if (numeros[contador] % 2 == aux) {
+            if (numeros[contador] % 2 != 0) {
                 soma = soma + numeros[contador];
             }
         }
