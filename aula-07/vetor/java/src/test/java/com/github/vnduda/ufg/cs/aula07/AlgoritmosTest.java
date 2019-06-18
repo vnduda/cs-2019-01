@@ -8,7 +8,9 @@ public class AlgoritmosTest {
     @Test
     public void menorTemperaturaClassico() {
         double[] vetor = {1, 2, 3, 4, 5, 6};
+        double[] vetor1 = {15.8};
         assertEquals(1, AlgoritmosUtils.menorTemperatura(vetor));
+        assertEquals(15.8, AlgoritmosUtils.menorTemperatura(vetor1));
     }
 
     @Test
