@@ -4,54 +4,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.vnduda</groupId>
-    <artifactId>cs-2019-01</artifactId>
-    <packaging>jar</packaging>
-    <version>1.0.1</version>
+    
+    <groupId>com.github.vnduda.ufg.cs.aula01</groupId>
+    <artifactId>java</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
-
-    <description>
-        Projeto de java para a aula de Construção de Software, turma de 2019.1
-    </description>
-
-    <url>https://github.com/vnduda/cs-2019-01</url>
-
-    <inceptionYear>2019</inceptionYear>
-
-    <licenses>
-        <license>
-            <name>Creative Commons Attribution 4.0 International (CC BY 4.0)
-            </name>
-            <comments>
-                Copyright (c) 2016. Fábrica de Software - Instituto de
-                Informática (UFG)
-            </comments>
-            <url>https://creativecommons.org/licenses/by/4.0/</url>
-        </license>
-    </licenses>
-
-    <scm>
-        <connection>scm:git:https://github.com/kyriosdata/exemplo.git
-        </connection>
-        <developerConnection>scm:git:https://github.com/kyriosdata/exemplo.git
-        </developerConnection>
-        <url>https://github.com/kyriosdata/exemplo</url>
-    </scm>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.0.RELEASE</version>
+        <version>2.1.4.RELEASE</version>
     </parent>
 
- <properties>
+    <properties>
         <java.version>10</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.mainClass>
-            com.github.vnduda.ufg.cs.aula01
+            com.github.vnduda.ufg.cs.aula01.AlgoritmosUtils
         </project.mainClass>
 
         <tools.dir>${project.basedir}/tools</tools.dir>
@@ -65,8 +37,15 @@
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.4.2</version>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.3.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
 
@@ -103,7 +82,7 @@
 
     <build>
 
-        <pluginManagement>
+<pluginManagement>
             <plugins>
 
                 <!-- PMD plugin pode usar versão mais recente do PMD -->
@@ -143,7 +122,7 @@
         </pluginManagement>
 
         <!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
-        <finalName>exemplo</finalName>
+        <finalName>exercicio_vnduda</finalName>
 
         <plugins>            
 
@@ -155,7 +134,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.11</version>
+                <version>3.1.8</version>
             </plugin>
 
             <plugin>
@@ -167,7 +146,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.0.0</version>
             </plugin>
 
             <plugin>
@@ -185,7 +164,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>3.1.0</version>
             </plugin>
 
             <plugin>
@@ -197,7 +176,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.0.1</version>
             </plugin>
 
             <plugin>
@@ -209,7 +188,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.1.0</version>
             </plugin>
 
             <!-- FIM DE ATUALIZACAO DE PLUGINS -->
@@ -231,7 +210,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>2.22.0</version>
                 <!--<dependencies>-->
                 <!--<dependency>-->
                 <!--<groupId>org.junit.platform</groupId>-->
@@ -256,7 +235,7 @@
                 <configuration>
                     <show>public</show>
                     <additionalOptions>
-                        <additionalOption>-html5</additionalOption>
+                 
                     </additionalOptions>
                 </configuration>
             </plugin>
@@ -279,33 +258,31 @@
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.6.0.1398</version>
+                <version>3.4.1.1168</version>
             </plugin>
 
             <!-- maven-compiler-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.8.0</version>
             </plugin>
 
-             <!-- PMD                  -->
-            <!-- mvn pmd:pmd          -->
-            <!-- mvn pmd:check        -->
-            <!-- target/site/pmd.html -->
+            <!-- PMD -->
+            <!-- mvn pmd:pmd -->
+            <!-- mvn pmd:check -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>${pmd.plugin}</version>
                 <configuration>
+                    <targetJdk>9</targetJdk>
                     <linkXRef>true</linkXRef>
                     <sourceEncoding>utf-8</sourceEncoding>
                     <minimumTokens>10</minimumTokens>
-                    <targetJdk>1.8</targetJdk>
                     <excludes>
                         <exclude>**/*Bean.java</exclude>
                         <exclude>**/generated/*.java</exclude>
-                        <exclude>**/*Application.java</exclude>
                     </excludes>
                     <excludeRoots>
                         <excludeRoot>target/generated-sources/stubs
@@ -349,7 +326,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>4.0.2</version>
+                <version>3.3.4</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -408,8 +385,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>${pmd.plugin}</version>
+                <version>3.11.0</version>
                 <configuration>
+                    <targetJdk>9</targetJdk>
                     <linkXref>true</linkXref>
                     <sourceEncoding>utf-8</sourceEncoding>
                     <minimumTokens>100</minimumTokens>
@@ -465,14 +443,14 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.11</version>
+                <version>3.1.8</version>
             </plugin>
 
             <!-- Jacoco -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
+                <version>0.8.2</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -510,7 +488,7 @@
                     <plugin>
                         <groupId>org.pitest</groupId>
                         <artifactId>pitest</artifactId>
-                        <version>1.4.8</version>
+                        <version>1.4.3</version>
                         <dependencies>
                             <dependency>
                                 <groupId>org.pitest</groupId>
@@ -521,11 +499,11 @@
                         <configuration>
                             <targetClasses>
                                 <param>
-                                    com.github.kyriosdata.exemplo.domain.Calendario
+                                    com.github.ottoleggio.cs.aula1.domain.Exercicio
                                 </param>
                             </targetClasses>
                             <targetTests>
-                                <param>com.github.kyriosdata.exemplo.*</param>
+                                <param>com.github.ottoleggio.cs.aula1.*</param>
                             </targetTests>
                         </configuration>
                     </plugin>
@@ -541,7 +519,7 @@
                     <plugin>
                         <groupId>com.spotify</groupId>
                         <artifactId>dockerfile-maven-plugin</artifactId>
-                        <version>1.4.10</version>
+                        <version>1.4.8</version>
                         <executions>
                             <execution>
                                 <id>default</id>
@@ -555,7 +533,7 @@
                             <repository>spotify/foobar</repository>
                             <tag>${project.version}</tag>
                             <buildArgs>
-                                <JAR_FILE>target/exemplo-unico.jar</JAR_FILE>
+                                <JAR_FILE>target/exercicio-unico.jar</JAR_FILE>
                             </buildArgs>
                         </configuration>
                     </plugin>
@@ -575,7 +553,7 @@
                     <plugin>
                         <groupId>org.owasp</groupId>
                         <artifactId>dependency-check-maven</artifactId>
-                        <version>4.0.2</version>
+                        <version>3.3.4</version>
                         <executions>
                             <execution>
                                 <goals>
@@ -597,13 +575,17 @@
                     <plugin>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs-maven-plugin</artifactId>
-                        <version>3.1.11</version>
+                        <version>3.1.8</version>
                         <configuration>
-                            <excludeFilterFile>${tools.dir}/spotbugs.xml
-                            </excludeFilterFile>
                             <effort>Max</effort>
                             <threshold>Low</threshold>
                             <failOnError>true</failOnError>
+                            <includeFilterFile>
+                                ${project.basedir}/spotbugs-security-include.xml
+                            </includeFilterFile>
+                            <excludeFilterFile>
+                                ${project.basedir}/spotbugs-security-exclude.xml
+                            </excludeFilterFile>
                             <plugins>
                                 <plugin>
                                     <groupId>com.h3xstream.findsecbugs</groupId>
@@ -620,7 +602,7 @@
                     <plugin>
                         <groupId>io.snyk</groupId>
                         <artifactId>snyk-maven-plugin</artifactId>
-                        <version>1.2.0</version>
+                        <version>1.1.1</version>
                         <executions>
                             <execution>
                                 <id>snyk-test</id>
@@ -640,7 +622,7 @@
                         <configuration>
                             <apiToken>${snyk.token}</apiToken>
                             <failOnSeverity>low</failOnSeverity>
-                            <org>kyriosdata</org>
+                            <org>ottoleggio</org>
                         </configuration>
                     </plugin>
 
@@ -685,9 +667,9 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
-                        <version>3.1.2</version>
+                        <version>3.0.2</version>
                         <configuration>
-                            <finalName>exemplo-dir</finalName>
+                            <finalName>exercicio_ottoleggio-dir</finalName>
                             <archive>
                                 <!-- Evita inclusão dir 'maven' em META-INF -->
                                 <addMavenDescriptor>false</addMavenDescriptor>
@@ -713,7 +695,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
-                        <version>3.1.1</version>
+                        <version>3.1.0</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>
@@ -721,7 +703,7 @@
                                     <goal>single</goal>
                                 </goals>
                                 <configuration>
-                                    <finalName>exemplo-unico</finalName>
+                                    <finalName>exercicio-unico</finalName>
                                     <archive>
                                         <manifest>
                                             <mainClass>${project.mainClass}
@@ -752,7 +734,7 @@
                     <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>0.8.4</version>
+                        <version>0.8.2</version>
                         <executions>
                             <execution>
                                 <id>default-prepare-agent</id>
@@ -802,7 +784,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.8.1</version>
+                        <version>3.7.0</version>
                         <configuration>
                             <source>1.8</source>
                             <target>1.8</target>
@@ -864,7 +846,7 @@
                         <configuration>
                             <show>public</show>
                             <additionalOptions>
-                                <additionalOption>-html5</additionalOption>
+                        
                             </additionalOptions>
                         </configuration>
                         <executions>
