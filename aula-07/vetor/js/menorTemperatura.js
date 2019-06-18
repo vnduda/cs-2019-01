@@ -4,11 +4,18 @@
  * @returns menor elemento do vetor
  */
 function menorTemperatura (array) {
-    if (!Array.isArray(array)) {
-        throw new TypeError("A entrada não é um vetor");
+    for (let i = 0; i < array.length; i++) {
+        if (isNaN(array[i])) {
+            throw new TypeError("Argumento deve ser número");
+        }
     }
 
-    let menorElemento = Math.min(array);
+    let menorElemento = array[0];
+    for(let i = 1; i < array.length; i++) {
+        if (menorElemento > array[i]) {
+            menorElemento = array[i];
+        }
+    }
 
     return menorElemento;
 }

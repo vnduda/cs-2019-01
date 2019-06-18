@@ -4,8 +4,10 @@
  * @returns soma dos números impares do vetor
  */
 function numerosImpares(array) {
-    if (!Array.isArray(array)) {
-        throw new TypeError("A entrada não é um vetor");
+    for (let i = 0; i < array.length; i++) {
+       if (!Number.isInteger(array[i])) {
+           throw new TypeError("Argumento deve ser inteiro");
+       }
     }
 
     let somaImpares = 0;

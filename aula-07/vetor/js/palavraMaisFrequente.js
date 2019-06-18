@@ -24,3 +24,4 @@ function palavraMaisFrequente(string) {
 
     return maisFrequente;
 }
+module.exports = palavraMaisFrequente;

@@ -1,25 +1,27 @@
 /**
  * Algoritmo que calcula a quantidade em que cada elemento
- * aparece em um vetor.
+ * aparece em um vetor de palavras.
  * 
- * @param {Array} array O vetor
- * @returns {Array} Um vetor com a quantidade de recorrencias
+ * @param {Array} array A string de palavras a ser comparado
+ * @param {string} palavra A palavra que será contada
+ * @returns {number} quantidade de recorrencias
  */
-function caractereMaisFrequente(array) {
-    if (!Array.isArray(array)) {
-        throw new TypeError("A entrada não é um vetor");
+function caractereMaisFrequente(palavra ,array) {
+     if (typeof palavra !== "string") {
+        throw new TypeError("Argumento deve ser String");
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (typeof array[i] !== "string") {
+            throw new TypeError("Argumento deve ser uma string");
+        }
     }
 
-    let arrayResultado = [];
-    array.forEach(function (numero1, indice) {
-        let recorrencias = 0;
-        array.forEach(numero2 => {
-            if (numero1 == numero2) {
-                recorrencias++;
-            }
-        });
-        arrayResultado[indice] = recorrencias;
-    });
+    let arrayResultado = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (palavra === array[i]) {
+            arrayResultado++;
+        }
+    }
 
     return arrayResultado;
 }

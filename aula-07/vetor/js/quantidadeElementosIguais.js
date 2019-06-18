@@ -4,20 +4,24 @@
  * @param {Array} array2 O segundo vetor
  * @returns A quantidade de elementos iguais.
  */
-function quantidadeElementosIguais(array1, array2) {
-    if (!Array.isArray(array1) || !Array.isArray(array2)) {
-        throw new TypeError("A entrada não é um vetor");
+function quantidadeElementosIguais(array, comparador) {
+    for (let i = 0; i < array.length; i++) {
+        if (isNaN(array[i])) {
+            throw new TypeError("Argumento tem que ser um número");
+        }
     }
+    if (isNaN(comparador)) {
+        throw new TypeError("Argumento tem que ser um número");
+    }
+
 
     let quantidadeValoresIguais = 0;
 
-    array1.forEach(valor1 => {
-        array2.forEach(valor2 => {
-            if (valor1 == valor2) {
-                quantidadeValoresIguais++;
-            }
-        });
-    });
+    for (let i = 0; i < array.length; i++) {
+       if (array[i] === comparador) {
+           quantidadeValoresIguais++;
+       }
+    }
 
     return quantidadeValoresIguais;
 }
