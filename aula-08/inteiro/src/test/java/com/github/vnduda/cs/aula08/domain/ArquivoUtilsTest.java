@@ -17,7 +17,9 @@ class ArquivoUtilsTest {
     @Test
     void bytecodesIniciamComCafeBabe() {
         final String arquivo = getFileNameFromResourcesDir("UmaClasse.class");
+
         byte[] bytes = ArquivoUtils.leQuatroPrimeirosBytesDoArquivo(arquivo);
+        
         assertEquals((byte)0xCA, bytes[0]);
         assertEquals((byte)0xFE, bytes[1]);
         assertEquals((byte)0xBA, bytes[2]);
