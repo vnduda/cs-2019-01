@@ -37,7 +37,7 @@ public final class AlgoritmosUtils {
         final int aux = 1;
         for (int contador = 0; contador < numeros.length; contador++) {
             if (numeros[contador] % 2 == aux) {
-                soma += numeros[contador];
+                soma = soma + numeros[contador];
             }
         }
         return soma;
