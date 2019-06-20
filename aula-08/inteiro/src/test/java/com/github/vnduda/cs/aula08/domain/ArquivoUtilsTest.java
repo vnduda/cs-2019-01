@@ -1,4 +1,3 @@
-
 package com.github.vnduda.cs.aula08.domain;
 
 import org.junit.jupiter.api.Test;
