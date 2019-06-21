@@ -18,12 +18,13 @@ public final class ProgramaInteiro {
      * @param args caminho do arquivo
      */
     public static void main(final String[] args) {
-        if (args.length != 1) {
+        final int aux = 1;
+        if (args.length != aux) {
             System.out.println("USAGE: mostrar como usar corretamente a aplicacao.");
             System.exit(1);
         }
 
-        byte[] quatroPrimeiros =
+        final byte[] quatroPrimeiros =
             ArquivoUtils.leQuatroPrimeirosBytesDoArquivo(args[0]);
 
         if (quatroPrimeiros == null) {
@@ -31,7 +32,7 @@ public final class ProgramaInteiro {
             System.exit(2);
         }
 
-        String hexa = InterfaceUtils.converteParaHexadecimal(quatroPrimeiros);
+        final String hexa = InterfaceUtils.converteParaHexadecimal(quatroPrimeiros);
         System.out.println(hexa);
     }
 }

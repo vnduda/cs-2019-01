@@ -29,7 +29,7 @@ public final class ArquivoUtils {
             DataInputStream dis = new DataInputStream(fis)) {
 
             final int aux = 4;
-            byte[] bytesLidos = new byte[aux];
+            final byte[] bytesLidos = new byte[aux];
             dis.readFully(bytesLidos);
             return bytesLidos;
         } catch (IOException exp) {

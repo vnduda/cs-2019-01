@@ -18,8 +18,8 @@ public final class InterfaceUtils {
      */
     public static String converteParaHexadecimal(final byte[] bytes) {
 
-        StringBuilder sb = new StringBuilder();
-        for (byte umByte : bytes) {
+        final StringBuilder sb = new StringBuilder();
+        for (final byte umByte : bytes) {
             sb.append(String.format("%02X", umByte));
         }
 
