@@ -12,12 +12,6 @@ import java.nio.file.Paths;
 public final class JpegUtils {
 
     /**
-     * Construtor para evitar instanciação.
-     */
-    private JpegUtils() {
-    }
-
-    /**
      * Primeiro byte em hexadecimal de um jpeg.
      */
     public static final String PRIMEIRO_BYTE = "ff";
@@ -36,6 +30,12 @@ public final class JpegUtils {
      * Quarto byte em hexadecimal de um jpeg.
      */
     public static final String QUARTO_BYTE = "d9";
+
+    /**
+     * Construtor para evitar instanciação.
+     */
+    private JpegUtils() {
+    }
 
     /**
      * Verifica se arquivo é Jpeg.

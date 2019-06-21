@@ -9,16 +9,16 @@ import com.github.vnduda.cs.aula08.domain.JpegUtils;
 public final class ProgramaJpeg {
 
     /**
-     * Construtor para evitar instanciação.
-     */
-    private ProgramaJpeg() {
-    }
-
-    /**
      * Substituto do system.out para mensagens para o usuário.
      */
     private static final Logger LOGGER =
             Logger.getLogger(ProgramaJpeg.class.getName());
+
+    /**
+    * Construtor para evitar instanciação.
+    */
+    private ProgramaJpeg() {
+    }
 
     /**
      * Programa para execução e filtragem de entradas inválidas.
