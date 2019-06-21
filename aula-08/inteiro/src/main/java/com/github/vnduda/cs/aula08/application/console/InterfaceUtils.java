@@ -16,13 +16,13 @@ public final class InterfaceUtils {
      * @param bytes bytes a ser convertido
      * @return uma string de hexadecimal
      */
-    public static String converteParaHexadecimal(byte[] bytes) {
+    public static String converteParaHexadecimal(final byte[] bytes) {
 
         StringBuilder sb = new StringBuilder();
         for (byte umByte : bytes) {
             sb.append(String.format("%02X", umByte));
         }
 
-        return sb.toString();        
+        return sb.toString();
     }
 }

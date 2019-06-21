@@ -22,13 +22,14 @@ public final class ArquivoUtils {
      */
     public static byte[] leQuatroPrimeirosBytesDoArquivo(final String nomeArquivo) {
         if (nomeArquivo == null) {
-            return null;            
+            return null;
         }
-        
+
         try (FileInputStream fis = new FileInputStream(nomeArquivo);
             DataInputStream dis = new DataInputStream(fis)) {
 
-            byte[] bytesLidos = new byte[4];
+            final int aux = 4;
+            byte[] bytesLidos = new byte[aux];
             dis.readFully(bytesLidos);
             return bytesLidos;
         } catch (IOException exp) {
