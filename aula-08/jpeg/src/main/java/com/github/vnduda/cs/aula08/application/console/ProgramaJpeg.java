@@ -5,7 +5,7 @@ import com.github.vnduda.cs.aula08.domain.jpegUtils;
 
 public class ProgramaJpeg {
 
-    private static final Logger LOG =
+    private static final Logger LOGGER =
             Logger.getLogger(ProgramaJpeg.class.getName());
     public static void main(final String[] args) throws IOException {
 
@@ -13,7 +13,7 @@ public class ProgramaJpeg {
             throw new IllegalArgumentException("Entrada não fornecida");
         }
 
-        LOG.info("verificando se arquivo é Jpeg");
+        LOGGER.info("verificando se arquivo é Jpeg");
         System.out.println(jpegUtils.isJpeg(args[0]));
     }
 }
