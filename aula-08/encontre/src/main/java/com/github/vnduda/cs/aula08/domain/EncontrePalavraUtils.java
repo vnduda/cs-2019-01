@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.regex.Matcher;
+import java.io.IOException;
+import java.io.File;
+import java.nio.file.Paths;
+import java.util.regex.Pattern;
 
 public final class EncontrePalavraUtils {
     public static String encontrePalavra(final String enderecoArquivo,
