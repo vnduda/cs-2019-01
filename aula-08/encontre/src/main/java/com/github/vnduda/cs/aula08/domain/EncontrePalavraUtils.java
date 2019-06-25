@@ -36,14 +36,14 @@ public final class EncontrePalavraUtils {
         while ((conteudoLinha = br.readLine()) != null) {
             int numColuna = conteudoLinha.indexOf(palavraBuscada);
             if (numColuna != -1) {
-                sb.append(String.format("L%d C%d: %s\n", numLinha, numColuna, conteudoLinha));
+                sb.append(String.format("L%d C%d: %s%n", numLinha, numColuna, conteudoLinha));
             }
             numLinha++;
             ocorrencia = ocorrencia + conteOcorrencias(palavraBuscada, conteudoLinha);
         }
         br.close();
 
-        return String.format("Encontradas: %d\n%s", ocorrencia, sb.toString());
+        return String.format("Encontradas: %d%n%s", ocorrencia, sb.toString());
     }
 
 
