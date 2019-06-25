@@ -1,4 +1,4 @@
-package com.github.vnduda.cs.aula8.domain;
+package com.github.vnduda.cs.aula08.domain;
 import java.io.File;
 import java.io.IOException;
 import org.junit.jupiter.api.Test;
@@ -31,8 +31,8 @@ public class EncontreTest {
     @Test
     public void EncontrePalavraTest() throws IOException {
         String teste = "Encontradas: 3\n" +
-                "L1 C10: tudo bem ola\n" +
-                "L3 C1:  ola ola\n";
+                "L1 C9: tudo bem ola\n" +
+                "L3 C0: ola ola\n";
 
         assertEquals(teste, EncontrePalavraUtils.encontrePalavra(
                 getFilename("frase.txt"), "ola"));
