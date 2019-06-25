@@ -54,7 +54,7 @@ public final class JpegUtils {
         final String primeiroByteHex = String.format("%02x", is.read());
         final String segundoByteHex = String.format("%02x", is.read());
 
-        if (primeiroByteHex.equals(PRIMEIRO_BYTE) & segundoByteHex.equals(SEGUNDO_BYTE)) {
+        if (primeiroByteHex.equals(PRIMEIRO_BYTE) && segundoByteHex.equals(SEGUNDO_BYTE)) {
             String terceiroByteHex = "";
             String quartoByteHex = "";
             int aux = 0;
