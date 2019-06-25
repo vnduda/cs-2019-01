@@ -4,6 +4,13 @@ import java.io.IOException;
 import com.github.vnduda.cs.aula08.domain.EncontrePalavraUtils;
 
 public final class ProgramaEncontre {
+
+     /**
+     * Construtor para evitar instanciação.
+     */
+    private ProgramaEncontre() {
+    }
+
     public static void main(final String[] args) throws IOException {
         final int numParametros = 2;
         if (args.length < numParametros) {

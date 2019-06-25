@@ -10,6 +10,13 @@ import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 public final class EncontrePalavraUtils {
+
+     /**
+     * Construtor para evitar instanciação.
+     */
+    private EncontrePalavraUtils() {
+    }
+
     public static String encontrePalavra(final String enderecoArquivo,
         final String palavraBuscada) throws IOException {
 
