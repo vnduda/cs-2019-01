@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class EncontreTest {
+public class EncontrePalavraUtilsTest {
 
     private String getFilename(String string) {
         ClassLoader classLoader = getClass().getClassLoader();
@@ -30,16 +30,16 @@ public class EncontreTest {
 
     @Test
     public void EncontrePalavraTest() throws IOException {
-        String teste = "Encontradas: 3\n" +
+        String teste1 = "Encontradas: 3\n" +
                 "L1 C9: tudo bem ola\n" +
                 "L3 C0: ola ola\n";
 
-        assertEquals(teste, EncontrePalavraUtils.encontrePalavra(
-                getFilename("frase.txt"), "ola"));
+        assertEquals(teste1, EncontrePalavraUtils.encontrePalavra(
+                getFilename("fraseParaTeste.txt"), "ola"));
 
         String teste2 = "Encontradas: 0\n";
         assertEquals(teste2, EncontrePalavraUtils.encontrePalavra(
-                getFilename("frase.txt"), "oi"));
+                getFilename("fraseParaTeste.txt"), "oi"));
     }
 
 }
