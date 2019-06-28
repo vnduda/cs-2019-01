@@ -11,4 +11,4 @@ script:
   - "$HOME/.m2/repository"
   - "$HOME/.sonar/cache"
 jdk:
-  - openjdk11
+  - openjdk8
