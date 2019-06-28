@@ -43,7 +43,7 @@ public final class EncontrePalavraUtils {
         int ocorrencia = 0;
 
         while ((conteudoLinha = br.readLine()) != null) {
-            int numColuna = conteudoLinha.indexOf(palavraBuscada);
+            final int numColuna = conteudoLinha.indexOf(palavraBuscada);
             if (numColuna != -1) {
                 sb.append(String.format("L%d C%d: %s%n", numLinha, numColuna, conteudoLinha));
             }
