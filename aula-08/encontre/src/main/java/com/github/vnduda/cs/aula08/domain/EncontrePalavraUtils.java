@@ -9,6 +9,9 @@ import java.io.File;
 import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
+/**
+ * Classe para encontrar palavras em um arquivo.
+ */
 public final class EncontrePalavraUtils {
 
      /**
@@ -16,7 +19,13 @@ public final class EncontrePalavraUtils {
      */
     private EncontrePalavraUtils() {
     }
-
+    /**
+     *  Gera o número de ocorrencias de linhas e colunas de uma palavra em um dado arquivo.
+     * @param enderecoArquivo endereço do Arquivo
+     * @param palavraBuscada palavra a ser buscada no arquivo
+     * @return número de ocorrências total da palabra e a linha e coluna que ocorre
+     * @throws IOException se o arquivo não puder ser lido corretamente
+     */
     public static String encontrePalavra(final String enderecoArquivo,
         final String palavraBuscada) throws IOException {
 
@@ -46,7 +55,12 @@ public final class EncontrePalavraUtils {
         return String.format("Encontradas: %d%n%s", ocorrencia, sb.toString());
     }
 
-
+    /**
+     * Gera número de ocorrências de uma palavra em uma String.
+     * @param palavraBuscada palavra a ser buscada
+     * @param texto texto em que a palavra será buscada
+     * @return número de vezes que a palavra aparece no texto
+     */
     public static int conteOcorrencias(final String palavraBuscada, final String texto) {
         final Pattern p = Pattern.compile(palavraBuscada);
         final Matcher m = p.matcher(texto);
