@@ -23,3 +23,6 @@ Refatoração dos algoritmos em Java, com documentação, testes, qualidade e se
 
 **Aula 07**
 Implementação de algoritmos usando vetor em Java e JavaScript
+
+**Aula 08**
+Implementação de algoritmos com arquivos
