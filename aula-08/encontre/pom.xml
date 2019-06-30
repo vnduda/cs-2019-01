@@ -752,7 +752,7 @@
                     <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>0.8.4</version>
+                        <version>0.8.2</version>
                         <executions>
                             <execution>
                                 <id>default-prepare-agent</id>
@@ -773,6 +773,9 @@
                                     <goal>check</goal>
                                 </goals>
                                 <configuration>
+<excludes>
+        <exclude>**/Programa*.*</exclude>
+    </excludes>
                                     <rules>
                                         <rule implementation="org.jacoco.maven.RuleConfiguration">
                                             <element>BUNDLE</element>
