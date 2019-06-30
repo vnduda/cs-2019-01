@@ -1,5 +1,9 @@
 package com.github.vnduda.cs.aula10.domain;
 
+/**
+ * Classe que encontra o dia da semana de uma data desejada, usando como parâmetros
+ * data desejada, data de origem e ano.
+ */
 public class EncontraDiaSemanaUtils {
 
     /**
@@ -59,10 +63,10 @@ public class EncontraDiaSemanaUtils {
     }
 
     /**
-     * 
-     * @param ano
-     * @param anoBissexto
-     * @return
+     * Algoritmo para saber se o ano é ou não Bissexto.
+     * @param ano ano a ser verificado
+     * @param anoBissexto ano de referência
+     * @return verdadeiro se for bissexto e falso caso contrário
      */
     public static boolean Bissexto(final int ano, final int anoBissexto){
         final int quatro = 4;
@@ -79,6 +83,13 @@ public class EncontraDiaSemanaUtils {
         return false;
     }
 
+    /**
+     * Algoritmo que identifica o último dia do mês.
+     * @param mes mês do qual queremos saber o último dia
+     * @param ano ano para saber se é Bissexto
+     * @param anoBissexto ano bissexto usado para referência
+     * @return o último dia do mês em inteiro
+     */
     public static int ultimoDiaDoMes(final int mes, final int ano, final int anoBissexto) {
         final boolean Bissexto = Bissexto(ano, anoBissexto);
 
@@ -120,11 +131,28 @@ public class EncontraDiaSemanaUtils {
         }
     }
 
+    /**
+     * Compara duas datas.
+     * @param diaUm dia da primeira data
+     * @param mesUm mês da primeira data
+     * @param anoUm ano da primeira data
+     * @param diaDois dia da segunda data
+     * @param mesDois mês da segunda data
+     * @param anoDois ano da segunda data
+     * @return verdadeiro se as datas forem equivalentes
+     */
     private static boolean comparaDatas(final int diaUm, final int mesUm,
         final int anoUm, final int diaDois, final int mesDois, final int anoDois) {
             return anoUm == anoDois && mesUm == mesDois && diaUm == diaDois;
         }
 
+    /**
+     * Algoritmo que avança até a data desejada.
+     * @param dataOrigem data origem
+     * @param dataDesejada data de destino
+     * @param bissextoRef ano bissexto de referência
+     * @return número de dias de diferença ente as datas
+     */
     public static int avancaData(final String dataOrigem, final String dataDesejada, final int bissextoRef) {
         int diaOrigem = extraiDia(dataOrigem);
         int mesOrigem = extraiMes(dataOrigem);
@@ -163,8 +191,15 @@ public class EncontraDiaSemanaUtils {
         }
 
         return contadorDias;
-}
+    }
     
+    /**
+     * Algoritmo que recua até a data desejada.
+     * @param dataOrigem data origem
+     * @param dataDesejada data de destino
+     * @param bissextoRef ano bissexto de referência
+     * @return
+     */
     public static int recuaData(final String dataOrigem, final String dataDesejada, final int bissextoRef) {
         int diaOrigem = extraiDia(dataOrigem);
         int mesOrigem = extraiMes(dataOrigem);
@@ -201,7 +236,12 @@ public class EncontraDiaSemanaUtils {
         return contadorDias;
         }
 
-
+    /**
+     * Avança os dias ao longo da semana de acordo com o parâmetro.
+     * @param dias quantidade de dias a avançar
+     * @param diaDaSemanaRef dia da semana referência (inicial)
+     * @return dia da semana
+     */
     public static int avancaDiaSemana(final int dias, final int diaDaSemanaRef) {
         int diaDaSemana = diaDaSemanaRef;
         final int diaInvalido = 7;
@@ -216,6 +256,12 @@ public class EncontraDiaSemanaUtils {
         return diaDaSemana;
     }
 
+    /**
+     * Recua os dias ao longo da semana de acordo com o parâmetro
+     * @param dias quantidade de dias a recuar
+     * @param diaDaSemanaRef dia da semana referência (inicial)
+     * @return dia da semana
+     */
     public static int recuaDiaSemana(final int dias, final int diaDaSemanaRef) {
         int diaDaSemana = diaDaSemanaRef;
         final int diaValido = 6;
@@ -230,6 +276,14 @@ public class EncontraDiaSemanaUtils {
         return diaDaSemana;
     }
 
+    /**
+     * Subtrai o dia conferindo o último dia do mês.
+     * @param dia dia para a subtração
+     * @param mes mês que contém o dia a ser subtraído
+     * @param ano ano que contém o dia a ser subtraído
+     * @param anoBissexto ano bissexto que verifica fevereiro
+     * @return o dia
+     */
     public static int subtraiDia(final int dia, final int mes, final int ano, final int anoBissexto) {
         int diaAux = dia;
         final int um = 1;
@@ -241,7 +295,11 @@ public class EncontraDiaSemanaUtils {
         return diaAux;
     }
 
-
+    /**
+     * Subtrai o mês.
+     * @param mes mês a ser subtraido
+     * @return mês subtraído
+     */
     public static int subtraiMes(final int mes) {
         int mesAux = mes;
         final int ultimoMes = 12;
@@ -254,7 +312,13 @@ public class EncontraDiaSemanaUtils {
         return mesAux;
     }
 
-
+    /**
+     * Compara duas datas em formato string e verifica se a primeira é maior,
+     * menor ou igual a segunda.
+     * @param dataOrigem data de origem
+     * @param dataDesejada data de destino
+     * @return 1 se for maior, 0 se for igual e -1 se for menor
+     */
     public static int dataMaior(final String dataOrigem,
         final String dataDesejada) {
         int diaOrigem = extraiDia(dataOrigem);
@@ -285,6 +349,12 @@ public class EncontraDiaSemanaUtils {
         }
     }
 
+    /**
+     * Recebe uma entrada em forma de String, verifica as exceções, e caso esteja
+     * de acordo, executa.
+     * @param args vetor de String
+     * @return -1 para inválido ou um número int de 0 a 6 que representa os dias da semana
+     */
     public static int encontraDia(final String[] args) {
         final int um = 1;
         if (EntradaUtils.executaEntrada(args) != um) {
