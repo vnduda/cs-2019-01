@@ -2,29 +2,68 @@ package com.github.vnduda.cs.aula10.domain;
 
 public class EncontraDiaSemanaUtils {
 
+    /**
+     * Total de dias que o mês de fevereiro tem, em anos que não são bissextos.
+     */
     private static final int DIA_VINTEEOITO = 28;
+    /**
+     * Total de dias que o mês de fevereiro tem, em anos que são bissextos.
+     */
     private static final int DIA_VINTEENOVE = 29;
+    /**
+     * Meses com 30 dias.
+     */
     private static final int DIA_TRINTA = 30;
+    /**
+     * Meses com 31 dias.
+     */
     private static final int DIA_TRINTAEUM = 31;
 
+    /**
+     * Construtor para evitar instanciação da classe.
+     */
+    private EncontraDiaSemanaUtils() {
+    }
+
+    /**
+     * Converte uma data (aaaammdd) para formato int.
+     * @param data String com data
+     * @return inteiro correspondente
+     */
     public static int extraiDia(final String data) {
         final int diaInicio = 6;
         final int diaFinal = 8;
         return Integer.parseInt(data.substring(diaInicio, diaFinal));
     }
 
+    /**
+     * Converte uma data (aaaammdd) para formato int.
+     * @param data String com data
+     * @return inteiro correspondente
+     */
     public static int extraiMes(final String data) {
         final int mesInicio = 4;
         final int mesFinal = 6;
         return Integer.parseInt(data.substring(mesInicio, mesFinal));
     }
 
+    /**
+     * Converte uma data (aaaammdd) para formato int.
+     * @param data String com data
+     * @return inteiro correspondente
+     */
     public static int extraiAno(final String data) {
         final int anoInicio = 0;
         final int anoFinal = 4;
         return Integer.parseInt(data.substring(anoInicio, anoFinal));
     }
 
+    /**
+     * 
+     * @param ano
+     * @param anoBissexto
+     * @return
+     */
     public static boolean Bissexto(final int ano, final int anoBissexto){
         final int quatro = 4;
         final int cem = 100;
