@@ -40,7 +40,7 @@ public class EncontraDiaSemanaUtils {
         return false;
     }
 
-    public static int ultimoDiaDoMes(final int mes, final int ano, final int bissextoRef) {
+    public static int ultimoDiaDoMes(final int mes, final int ano, final int anoBissexto) {
         final boolean Bissexto = Bissexto(ano, anoBissexto);
 
         final int janeiro = 1;
@@ -195,7 +195,7 @@ public class EncontraDiaSemanaUtils {
         int diaAux = dia;
         final int um = 1;
         if (dia == um) {
-            diaAux = ultimoDiaDoMes(mes - 1, ano, bissextoRef);
+            diaAux = ultimoDiaDoMes(mes - 1, ano, anoBissexto);
         } else {
             diaAux--;
         }
@@ -248,7 +248,7 @@ public class EncontraDiaSemanaUtils {
 
     public static int encontraDia(final String[] args) {
         final int um = 1;
-        if (EntradaUtils.encontraDia(args) != um) {
+        if (EntradaUtils.executaEntrada(args) != um) {
             return -1;
         }
 
