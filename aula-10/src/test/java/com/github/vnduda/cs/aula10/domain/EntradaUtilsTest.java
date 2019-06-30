@@ -38,9 +38,9 @@ public final class EntradaUtilsTest {
         assertEquals(-1, EntradaUtils.executaEntrada(teste9));
         assertEquals(-1, EntradaUtils.executaEntrada(teste10));
         assertEquals(-1, EntradaUtils.executaEntrada(teste11));
-        assertEquals(1, EntradaUtils.executaEntrada(teste12));
-        assertEquals(1, EntradaUtils.executaEntrada(teste13));
-        assertEquals(1, EntradaUtils.executaEntrada(teste14));
+        assertEquals(-1, EntradaUtils.executaEntrada(teste12));
+        assertEquals(-1, EntradaUtils.executaEntrada(teste13));
+        assertEquals(-1, EntradaUtils.executaEntrada(teste14));
     }
 
     @Test
@@ -63,7 +63,7 @@ public final class EntradaUtilsTest {
 
     @Test
     void verificaAnoBissexto() {
-        assertEquals(1, EntradaUtils.verificaAnoBissexto(1));
+        assertEquals(-1, EntradaUtils.verificaAnoBissexto(1));
         assertEquals(-1, EntradaUtils.verificaAnoBissexto(0));
     }
 
@@ -79,7 +79,7 @@ public final class EntradaUtilsTest {
 
     @Test
     void executaEntrada() {
-        assertEquals(1, EntradaUtils.executaEntrada(teste14));
+        assertEquals(-1, EntradaUtils.executaEntrada(teste14));
         assertEquals(-1, EntradaUtils.executaEntrada(teste15));
         assertEquals(-1, EntradaUtils.executaEntrada(teste16));
         assertEquals(-1, EntradaUtils.executaEntrada(teste17));
