@@ -1,7 +1,5 @@
 package com.github.vnduda.cs.aula10.domain;
 
-import com.sun.javafx.scene.control.IntegerField;
-
 public class EncontraDiaSemanaUtils {
 
     private static final int DIA_VINTEEOITO = 28;
@@ -143,14 +141,14 @@ public class EncontraDiaSemanaUtils {
                 if (comparaDatas(diaOrigem, mesOrigem, anoOrigem, diaDesejado, mesDesejado, anoDesejado)) {
                     break;
                 }
-                diaOrigem = recuaDia(bissextoRef, diaOrigem, mesOrigem, anoOrigem);
+                diaOrigem = subtraiDia(bissextoRef, diaOrigem, mesOrigem, anoOrigem);
                 contadorDias++;
             }
             
             if (comparaDatas(diaOrigem, mesOrigem, anoOrigem, diaDesejado, mesDesejado, anoDesejado)) {
                 break;
             }
-            mesOrigem = recuaMes(mesOrigem);
+            mesOrigem = subtraiMes(mesOrigem);
             diaOrigem = ultimoDiaDoMes(mesOrigem, anoOrigem, bissextoRef);
         }
 
@@ -197,7 +195,7 @@ public class EncontraDiaSemanaUtils {
         int diaAux = dia;
         final int um = 1;
         if (dia == um) {
-            diaAux = UltimoDiaMes(mes - 1, ano, anoBissexto);
+            diaAux = ultimoDiaDoMes(mes - 1, ano, bissextoRef);
         } else {
             diaAux--;
         }
@@ -227,8 +225,8 @@ public class EncontraDiaSemanaUtils {
         int mesDesejado = extraiMes(dataDesejada);
         int anoDesejado = extraiAno(dataDesejada);
 
-        if (anoDestino == anoOrigem) {
-            if (mesDestino == mesOrigem) {
+        if (anoDesejado == anoOrigem) {
+            if (mesDesejado == mesOrigem) {
                 if (diaOrigem > diaDesejado) {
                     return -1;
                 } else if (diaOrigem == diaDesejado) {
@@ -249,6 +247,28 @@ public class EncontraDiaSemanaUtils {
     }
 
     public static int encontraDia(final String[] args) {
-        
+        final int um = 1;
+        if (EntradaUtils.encontraDia(args) != um) {
+            return -1;
+        }
+
+        int resultado = -1;
+        final int dois = 2;
+        final int tres = 3;
+        if (dataMaior(args[0], args[dois]) == 0) {
+            resultado = Integer.parseInt(args[tres]);
+        }
+
+        if (dataMaior(args[0], args[dois]) == um) {
+            resultado = avancaDiaSemana(avancaData(args[0], args[dois],
+                                        Integer.parseInt(args[1])), Integer.parseInt(args[tres]));
+        }
+
+        if (dataMaior(args[0], args[dois]) == -1) {
+            resultado = recuaDiaSemana(recuaData(args[0], args[dois],
+                                       Integer.parseInt(args[1])), Integer.parseInt(args[tres]));
+        }
+
+        return resultado;
     }
 }
