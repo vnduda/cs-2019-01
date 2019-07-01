@@ -24,6 +24,8 @@ public final class EntradaUtilsTest {
     String[] teste17 = {"20000101", "0", "20000101", "1"};
     String[] teste18 = {"20000101", "2000", "200001010", "1"};
     String[] teste19 = {"20000101", "2000", "20000101", "7"};
+    String[] teste20 = {"20000101", "2000", "20160332", "3"};
+    String[] teste21 = {"20190229", "2018", "20190301", "3"};
 
     @Test
     void casosClassicos() {
@@ -75,6 +77,7 @@ public final class EntradaUtilsTest {
         assertEquals(-1, EntradaUtils.verificaData("20001301", "2000"));
         assertEquals(-1, EntradaUtils.verificaData("20000100", "2000"));
         assertEquals(-1, EntradaUtils.verificaData("20000132", "2000"));
+        assertEquals(-1, EntradaUtils.verificaData("201900156", "2018"));
     }
 
     @Test

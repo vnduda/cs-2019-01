@@ -24,6 +24,12 @@ public class EncontraDiaSemanaTest {
     String[] teste15 = {"20000101", "2000", "19900101", "1"};
     String[] teste16 = {"19900101", "2000", "20000101", "1"};
     String[] teste17 = {"20000101", "2000", "20000101", "5"};
+    String[] teste18 = {"2018", "20160331", "3"};
+    String[] teste19 = {"a", "2018", "20160331", "3"};
+    String[] teste20 = {"20160331", "2018", "20160331", "-3"};
+    String[] teste21 = {"20160331", "2018", "20160331", "7"};
+    String[] teste22 = {"20160331", "0", "20160331", "3"};
+    String[] teste23 = {"20160331", "2018", "20160332", "3"};
 
     @Test
     void casosClassicos() {
@@ -43,6 +49,13 @@ public class EncontraDiaSemanaTest {
         assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste14));
         assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste15));
         assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste16));
+        assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste17));
+        assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste18));
+        assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste19));
+        assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste20));
+        assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste21));
+        assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste22));
+        assertEquals(-1, EncontraDiaSemanaUtils.encontraDia(teste23));
     }
 
     @Test
@@ -64,8 +77,10 @@ public class EncontraDiaSemanaTest {
     void VerificaSeEBissexto() {
         assertTrue(EncontraDiaSemanaUtils.bissexto(2000, 2000));
         assertTrue(EncontraDiaSemanaUtils.bissexto(2004, 2000));
+        assertTrue(EncontraDiaSemanaUtils.bissexto(2015,2015));
         assertTrue(EncontraDiaSemanaUtils.bissexto(2000, 2004));
         assertFalse(EncontraDiaSemanaUtils.bissexto(2001, 2000));
+        assertTrue(EncontraDiaSemanaUtils.bissexto(2000,1996));
         assertFalse(EncontraDiaSemanaUtils.bissexto(1900, 2000));
     }
 
@@ -85,6 +100,7 @@ public class EncontraDiaSemanaTest {
         assertEquals(30, EncontraDiaSemanaUtils.ultimoDiaDoMes(11, 2000, 2000));
         assertEquals(31, EncontraDiaSemanaUtils.ultimoDiaDoMes(12, 2000, 2000));
         assertEquals(0, EncontraDiaSemanaUtils.ultimoDiaDoMes(0, 2000, 2000));
+        
     }
 
     @Test
@@ -103,6 +119,7 @@ public class EncontraDiaSemanaTest {
     @Test
     void recuaData() {
         assertEquals(0, EncontraDiaSemanaUtils.recuaData("20000101", "20000101", 2000));
+        assertEquals(0, EncontraDiaSemanaUtils.recuaData("20190101", "20190101", 2018));
     }
 
     @Test
@@ -115,4 +132,29 @@ public class EncontraDiaSemanaTest {
         assertEquals(-1, EncontraDiaSemanaUtils.dataMaior("20010101", "20000101"));
         assertEquals(1, EncontraDiaSemanaUtils.dataMaior("20000101", "20010101"));
     }
+
+    @Test
+    void subtraiDia() {
+        assertEquals(2 , EncontraDiaSemanaUtils.subtraiDia(3, 2, 2018, 2018));
+        assertEquals(31 , EncontraDiaSemanaUtils.subtraiDia(1, 2, 2018, 2018));
+    }
+
+    @Test
+    void subtraiMes() {
+        assertEquals(12, EncontraDiaSemanaUtils.subtraiMes(1));
+        assertEquals(1, EncontraDiaSemanaUtils.subtraiMes(2));
+    }
+
+    @Test
+    void avancaDiaSemana() {
+        assertEquals(2, EncontraDiaSemanaUtils.avancaDiaSemana(0, 2));
+        assertEquals(0 , EncontraDiaSemanaUtils.avancaDiaSemana(7, 0));
+    }
+
+    @Test
+    void recuaDiaSemana() {
+        assertEquals(6, EncontraDiaSemanaUtils.recuaDiaSemana(7, 6));
+    }
+
+    
 }

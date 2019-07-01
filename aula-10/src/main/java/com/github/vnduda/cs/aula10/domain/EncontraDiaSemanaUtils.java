@@ -148,46 +148,43 @@ public final class EncontraDiaSemanaUtils {
 
     /**
      * Algoritmo que avança até a data desejada.
-     * @param dataOrigem data origem
      * @param dataDesejada data de destino
+     * @param dataRef data de referência
      * @param bissextoRef ano bissexto de referência
      * @return número de dias de diferença ente as datas
      */
-    public static int avancaData(final String dataOrigem, final String dataDesejada, final int bissextoRef) {
-        int diaOrigem = extraiDia(dataOrigem);
-        int mesOrigem = extraiMes(dataOrigem);
-        int anoOrigem = extraiAno(dataOrigem);
+    public static int avancaData(final String dataDesejada,
+    final String dataRef, final int anoBissexto) {
         final int diaDesejado = extraiDia(dataDesejada);
         final int mesDesejado = extraiMes(dataDesejada);
         final int anoDesejado = extraiAno(dataDesejada);
+        int diaRef = extraiDia(dataRef);
+        int mesRef = extraiMes(dataRef);
+        int anoRef = extraiAno(dataRef);
         int contadorDias = 0;
-        final int dezembro = 12;
 
-        while (!comparaDatas(diaOrigem, mesOrigem, anoOrigem,
-                diaDesejado, mesDesejado, anoDesejado)) {
-            for (int j = mesOrigem; j <= dezembro; j++) {
-                for (int i = diaOrigem; i <= ultimoDiaDoMes(mesOrigem,
-                        anoOrigem, bissextoRef); i++) {
-                    if (comparaDatas(diaOrigem, mesOrigem, anoOrigem,
-                            diaDesejado, mesDesejado, anoDesejado)) {
+        final int dezembro = 12;
+        while (!comparaDatas(diaDesejado, mesDesejado, anoDesejado, diaRef, mesRef, anoRef)) {
+            for (int contaMes = mesRef; contaMes <= dezembro; contaMes++) {
+                for (int contaDia = diaRef; contaDia <= ultimoDiaDoMes(mesRef, anoRef, anoBissexto);
+                    contaDia++) {
+                    if (comparaDatas(diaDesejado, mesDesejado, anoDesejado, diaRef, mesRef, anoRef)) {
                         break;
                     }
-                    diaOrigem++;
+                    diaRef++;
                     contadorDias++;
                 }
-                if (comparaDatas(diaOrigem, mesOrigem, anoOrigem,
-                        diaDesejado, mesDesejado, anoDesejado)) {
+                if (comparaDatas(diaDesejado, mesDesejado, anoDesejado, diaRef, mesRef, anoRef)) {
                     break;
                 }
-                diaOrigem = 1;
-                mesOrigem++;
+                diaRef = 1;
+                mesRef++;
             }
-            if (comparaDatas(diaOrigem, mesOrigem, anoOrigem,
-                    diaDesejado, mesDesejado, anoDesejado)) {
+            if (comparaDatas(diaDesejado, mesDesejado, anoDesejado, diaRef, mesRef, anoRef)) {
                 break;
             }
-            mesOrigem = 1;
-            anoOrigem++;
+            mesRef = 1;
+            anoRef++;
         }
 
         return contadorDias;
@@ -195,46 +192,47 @@ public final class EncontraDiaSemanaUtils {
 
     /**
      * Algoritmo que recua até a data desejada.
-     * @param dataOrigem data origem
      * @param dataDesejada data de destino
+     * @param dataRef data de referência
      * @param bissextoRef ano bissexto de referência
      * @return data desejada
      */
-    public static int recuaData(final String dataOrigem, final String dataDesejada, final int bissextoRef) {
-        int diaOrigem = extraiDia(dataOrigem);
-        int mesOrigem = extraiMes(dataOrigem);
-        int anoOrigem = extraiAno(dataOrigem);
+    public static int recuaData(final String dataDesejada, final String dataRef, final int anoBissexto) {
         final int diaDesejado = extraiDia(dataDesejada);
         final int mesDesejado = extraiMes(dataDesejada);
         final int anoDesejado = extraiAno(dataDesejada);
+        int diaRef = extraiDia(dataRef);
+        int mesRef = extraiMes(dataRef);
+        int anoRef = extraiAno(dataRef);
         int contadorDias = 0;
 
-        while (!comparaDatas(diaOrigem, mesOrigem, anoOrigem, diaDesejado, mesDesejado, anoDesejado)) {
-        for (int j = mesOrigem; j > 0; j--) {
-            for (int i = diaOrigem; i > 0; i--) {
-                if (comparaDatas(diaOrigem, mesOrigem, anoOrigem, diaDesejado, mesDesejado, anoDesejado)) {
+        while (!comparaDatas(diaDesejado, mesDesejado, anoDesejado,
+        diaRef, mesRef, anoRef)) {
+            for (int contaMes = mesRef; contaMes > 0; contaMes--) {
+                for (int contaDia = diaRef; contaDia > 0; contaDia--) {
+                    if (comparaDatas(diaDesejado, mesDesejado, anoDesejado,
+                        diaRef, mesRef, anoRef)) {
+                        break;
+                    }
+                    diaRef = subtraiDia(diaRef, mesRef, anoRef, anoBissexto);
+                    contadorDias++;
+                }
+                if (comparaDatas(diaDesejado, mesDesejado, anoDesejado,
+                    diaRef, mesRef, anoRef)) {
                     break;
                 }
-                diaOrigem = subtraiDia(bissextoRef, diaOrigem, mesOrigem, anoOrigem);
-                contadorDias++;
+                mesRef = subtraiMes(mesRef);
+                diaRef = ultimoDiaDoMes(mesRef, anoRef, anoBissexto);
             }
-
-            if (comparaDatas(diaOrigem, mesOrigem, anoOrigem, diaDesejado, mesDesejado, anoDesejado)) {
+            if (comparaDatas(diaDesejado, mesDesejado, anoDesejado,
+                diaRef, mesRef, anoRef)) {
                 break;
             }
-            mesOrigem = subtraiMes(mesOrigem);
-            diaOrigem = ultimoDiaDoMes(mesOrigem, anoOrigem, bissextoRef);
-        }
-
-        if (comparaDatas(diaOrigem, mesOrigem, anoOrigem, diaDesejado, mesDesejado, anoDesejado)) {
-            break;
-        }
-
-        anoOrigem--;
+            anoRef--;
         }
 
         return contadorDias;
-        }
+    }
 
     /**
      * Avança os dias ao longo da semana de acordo com o parâmetro.
