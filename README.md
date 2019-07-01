@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/vnduda/cs-2019-01.svg?branch=master)](https://travis-ci.com/vnduda/cs-2019-01)
 
 # cs-2019-01
-Repositório para a matéria de **Construção de Software - INF/UFG**
+Repositório para a matéria de **Construção de Software - UFG**
 
 **Aula 01**
 Implementação de 21 algoritmos em Java e JavaScript
@@ -23,3 +23,6 @@ Refatoração dos algoritmos em Java, com documentação, testes, qualidade e se
 
 **Aula 07**
 Implementação de algoritmos usando vetor em Java e JavaScript
+
+**Aula 08**
+Implementação de algoritmos com arquivos
