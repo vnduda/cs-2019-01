@@ -5,12 +5,12 @@ import com.github.vnduda.cs.aula10.domain.EncontraDiaSemanaUtils;
  * Classe que executa o programa que encontra o dia da semana,
  * dado um ano bissexto de referência e uma data.
  */
-public class ProgramaDiaDaSemana {
+public final class ProgramaDiaDaSemana {
 
     /**
-     * Construtor para evitar instanciação
+     * Construtor para evitar instanciação.
      */
-    private ProgramaDiaDaSemana(){
+    private ProgramaDiaDaSemana() {
     }
 
     /**

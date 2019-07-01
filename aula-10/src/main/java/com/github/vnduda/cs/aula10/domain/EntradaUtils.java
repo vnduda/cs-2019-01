@@ -3,12 +3,12 @@ package com.github.vnduda.cs.aula10.domain;
 /**
  * Classe que confere os parâmetros e calcula o dia da semana.
  */
-public class EntradaUtils {
+public final class EntradaUtils {
 
     /**
      * Construtor para evitar a instanciação.
      */
-    private EntradaUtils(){
+    private EntradaUtils() {
     }
 
     /**
