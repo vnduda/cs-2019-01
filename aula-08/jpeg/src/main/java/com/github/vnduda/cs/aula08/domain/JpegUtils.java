@@ -64,7 +64,7 @@ public final class JpegUtils {
                 quartoByteHex = String.format("%02x", aux);
             }
 
-            if (terceiroByteHex.equals(TERCEIRO_BYTE) & quartoByteHex.equals(QUARTO_BYTE)) {
+            if (terceiroByteHex.equals(TERCEIRO_BYTE) && quartoByteHex.equals(QUARTO_BYTE)) {
                 is.close();
                 return true;
             }
