@@ -1,7 +1,21 @@
 package com.github.vnduda.cs.aula10.domain;
 
+/**
+ * Classe que confere os parâmetros e calcula o dia da semana.
+ */
 public class EntradaUtils {
 
+    /**
+     * Construtor para evitar a instanciação.
+     */
+    private EntradaUtils(){
+    }
+
+    /**
+     * Algoritmo que confere se argumentos são positivos.
+     * @param args vetor de string que contém os argumentos
+     * @return -1 para argumentos positivos e -1 para negativos
+     */
     public static int verificaArgumentos(final String[] args) {
         int verificaPositivo = 0;
         int verificaInteiro = -1;
@@ -22,6 +36,11 @@ public class EntradaUtils {
         return verificaInteiro;
     }
 
+    /**
+     * Algoritmo que confere a quantidade de argumentos.
+     * @param args vetor de string que contém argumentos
+     * @return 1 para quantidade correta e -1 para incorreta
+     */
     public static int verificaQtdArgumentos(final String[] args) {
         final int qtdArgumentos = 4;
         if (args.length != qtdArgumentos) {
@@ -31,6 +50,11 @@ public class EntradaUtils {
         return 1;
     }
 
+    /**
+     * Algoritmo que confere se o ano é bissexto.
+     * @param anoBissexto ano a ser verificado
+     * @return 1 para bissexto correto e -1 para incorreto
+     */
     public static int verificaAnoBissexto(final int anoBissexto) {
         final int menorBissexto = 1;
         if (anoBissexto < menorBissexto) {
@@ -40,6 +64,11 @@ public class EntradaUtils {
         }
     }
 
+    /**
+     * Algoritmo que verifica se o dia da semana é correto.
+     * @param diaSemana dia da semana que será verificado
+     * @return 1 para dia correto e -1 para incorreto
+     */
     public static int verificaDiaSemana(final int diaSemana) {
         final int diaMax = 6;
         if (diaSemana > diaMax) {
@@ -49,6 +78,12 @@ public class EntradaUtils {
         }
     }
 
+    /**
+     * Algoritmo que verifica se a data é correta.
+     * @param args string que contém a data a ser verificada
+     * @param stringBissexto ano usado para referência
+     * @return 1 para data correta e -1 para data incorreta
+     */
     public static int verificaData(final String args, final String stringBissexto) {
         final int tamData = 8;
         if (args.length() != tamData) {
@@ -84,6 +119,12 @@ public class EntradaUtils {
         return 1;
     }
 
+    /**
+     * Algoritmo que executa todos os métodos da classe para conferir
+     * se argumentos estão corretos para se obter o dia da semana desejado.
+     * @param args argumentos que serão verificados
+     * @return 1 para argumentos corretos e -1 para incorretos
+     */
     public static int executaEntrada(final String[] args) {
         final int um = 1;
 
