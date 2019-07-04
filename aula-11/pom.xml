@@ -4,29 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.kyriosdata</groupId>
-    <artifactId>exemplo</artifactId>
+    <groupId>com.github.vnduda</groupId>
+    <artifactId>cs-2019-01</artifactId>
     <packaging>jar</packaging>
     <version>1.0.1</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
 
     <description>
-        Projeto de referência para desenvolvimento em Java.
-        A expectativa é que o presente projeto possa ser empregado como ponto
-        de partida e, a partir dele, ajustes realizados para se adequar às
-        necessidades específicas do projeto em questão.
+        Projeto de java para a aula de Construção de Software, turma de 2019.1
     </description>
 
-    <url>https://github.com/kyriosdata/exemplo</url>
+    <url>https://github.com/vnduda/cs-2019-01</url>
 
-    <organization>
-        <name>Instituto de Informática (UFG) - Fábrica de Software</name>
-        <url>http://www.inf.ufg.br</url>
-    </organization>
-
-    <inceptionYear>2016</inceptionYear>
-
+    <inceptionYear>2019</inceptionYear>
     <licenses>
         <license>
             <name>Creative Commons Attribution 4.0 International (CC BY 4.0)
@@ -40,24 +31,6 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <id>kyriosdata</id>
-            <name>Fábio Nogueira de Lucena</name>
-            <email>fabio@inf.ufg.br</email>
-            <organization>Instituto de Informática (UFG)</organization>
-            <organizationUrl>http://www.inf.ufg.br</organizationUrl>
-        </developer>
-    </developers>
-
-    <scm>
-        <connection>scm:git:https://github.com/kyriosdata/exemplo.git
-        </connection>
-        <developerConnection>scm:git:https://github.com/kyriosdata/exemplo.git
-        </developerConnection>
-        <url>https://github.com/kyriosdata/exemplo</url>
-    </scm>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -65,7 +38,7 @@
     </parent>
 
     <properties>
-        <java.version>8</java.version>
+        <java.version>10</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
