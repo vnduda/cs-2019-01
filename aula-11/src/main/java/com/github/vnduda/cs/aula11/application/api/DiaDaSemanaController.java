@@ -10,7 +10,7 @@ import java.util.Locale;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-import com.github.vnduda.cs.aula11.domain.DiferencaDTO;
+import com.github.vnduda.cs.aula11.domain.DiferencaDeDatas;;
 
 @RestController
 public class DiaDaSemanaController {
@@ -21,7 +21,7 @@ public class DiaDaSemanaController {
         @RequestParam(value="final", defaultValue = "não fornecida") String dataFinalStr) throws ParseException {
             final Date dataInicial = fromString(dataInicialStr);
             final Date dataFinal = fromString(dataFinalStr);
-            return DiferencaDTO.diferencaEntreDatas(dataInicial, dataFinal);
+            return DiferencaDeDatas.diferencaEntreDatas(dataInicial, dataFinal);
     }
 
     public static Date fromString(final String data) throws ParseException {
