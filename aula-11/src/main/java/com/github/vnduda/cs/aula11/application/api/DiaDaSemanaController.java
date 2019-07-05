@@ -5,9 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import com.github.vnduda.cs.aula11.domain.DiferencaDTO;
 
 @RestController
@@ -22,8 +24,8 @@ public class DiaDaSemanaController {
             return DiferencaDTO.diferencaEntreDatas(dataInicial, dataFinal);
     }
 
-    public static Date fromString(final String data) {
-        final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
-        return sdf.parse(data);
+    public static Date fromString(final String data) throws ParseException {
+        final SimpleDateFormat stringParaDate = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+        return stringParaDate.parse(data);
     }
 }
