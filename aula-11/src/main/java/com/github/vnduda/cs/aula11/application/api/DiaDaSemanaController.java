@@ -15,8 +15,15 @@ public class DiaDaSemanaController {
     @CrossOrigin
     @RequestMapping("ds")
     public int diaDaSemana(
-        @RequestParam(value="inicio", defaultValue = "não fornecida") String dataInicial,
-        @RequestParam(value="final", defaultValue = "não fornecida") String dataFinal) throws ParseException {
+        @RequestParam(value="inicio", defaultValue = "não fornecida") String dataInicialStr,
+        @RequestParam(value="final", defaultValue = "não fornecida") String dataFinalStr) throws ParseException {
+            final Date dataInicial = fromString(dataInicialStr);
+            final Date dataFinal = fromString(dataFinalStr);
             return DiferencaDTO.diferencaEntreDatas(dataInicial, dataFinal);
+    }
+
+    public static Date fromString(final String data) {
+        final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+        return sdf.parse(data);
     }
 }
