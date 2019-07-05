@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dia da Semana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // Path para a requisição (URL)
+        const PATH = "http://localhost:9876/ds?inicio=";
+
+        function atualizaDiaDaSemana() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let dds = extraiDiaDaSemanaDaResposta(xhttp.responseText);
+                    document.getElementById("resultado").innerHTML = `${dds} dia(s) de diferença entre as datas.`;
+                }
+            };
+
+            let dataAnoMesDia = document.getElementById("dataInicial").value;
+            let dataInicial = formataData(dataAnoMesDia);
+            let dataAnoMesDia2 = document.getElementById("dataFinal").value;
+            let dataFinal = formataData(dataAnoMesDia2);
+            xhttp.open("GET", PATH + dataInicial + '&final=' + dataFinal, true);
+            xhttp.send();
+        }
+
+        function dataCorrente() {
+            document.getElementById("dataInicial").valueAsDate = new Date();
+            document.getElementById("dataFinal").valueAsDate = new Date();
+        }
+
+        // Funções para integração (satisfazer contrato do servidor)
+
+        function extraiDiaDaSemanaDaResposta(resposta) {
+            return resposta;
+        }
+
+        // Dia ou mês deve possuir dois dígitos
+        function formataDiaOuMes(n) {
+            return ("00" + n).substr(-2, 2);
+        }
+
+        // Ano deve possuir quatro dígitos
+        function formataAno(n) {
+            return ("0000" + n).substr(-4,4);
+        }
+
+        // ENTRADA: ano-mes-dia SAIDA: dd-mm-yyyy
+        function formataData(dataInicial) {
+            let [a, m, d] = dataInicial.split("-");
+
+            let dia = formataDiaOuMes(d);
+            let mes = formataDiaOuMes(m);
+            let ano = formataAno(a);
+
+            return `${d}-${m}-${a}`;
+        }
+    </script>
+     </script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body style="text-align: center"onload="dataCorrente()">
+    <h1>Diferença entre datas</h1>
+    <h3 for="data">Mês / Dia / Ano</h3>
+    <input type="date" id="dataInicial" onchange="atualizaDiaDaSemana()"><br>
+    <br><h3 for="data">Mês / Dia / Ano</h3>
+    <input type="date" id="dataFinal" onchange="atualizaDiaDaSemana()"><br>
+    <br><button onclick="atualizaDiaDaSemana();" class="btn btn-primary btn-md">Obtenha diferenças entre dias</button><br>
+    <br><span style="color: #007bff; font-size: 20pt;" id="resultado"></span>
+</body>
+</html>
