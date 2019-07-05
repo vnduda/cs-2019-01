@@ -14,7 +14,7 @@
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     let dds = extraiDiaDaSemanaDaResposta(xhttp.responseText);
-                    document.getElementById("resultado").innerHTML = `${dds} diferença em dias entre as datas.`;
+                    document.getElementById("resultado").innerHTML = `${dds} dia(s) de diferença entre as datas.`;
                 }
             };
 
