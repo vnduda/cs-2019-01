@@ -14,6 +14,15 @@ import com.github.vnduda.cs.aula11.domain.DiferencaDeDatas;;
 
 @RestController
 public class DiaDaSemanaController {
+
+    /**
+     * Método principal, que atribui uma data em formato String para Date,
+     * onde será retornado a diferença em dias.
+     * @param dataInicialStr
+     * @param dataFinalStr
+     * @return a diferença entre datas em dias (date)
+     * @throws ParseException
+     */
     @CrossOrigin
     @RequestMapping("ds")
     public int diaDaSemana(
@@ -24,6 +33,12 @@ public class DiaDaSemanaController {
             return DiferencaDeDatas.diferencaEntreDatas(dataInicial, dataFinal);
     }
 
+    /**
+     * Método que converte String para Data.
+     * @param data data a ser convertida
+     * @return data em formato de date
+     * @throws ParseException
+     */
     public static Date fromString(final String data) throws ParseException {
         final SimpleDateFormat stringParaDate = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         return stringParaDate.parse(data);
