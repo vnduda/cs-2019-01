@@ -18,12 +18,12 @@
     <url>https://github.com/vnduda/cs-2019-01</url>
 
     <inceptionYear>2019</inceptionYear>
+
     <licenses>
         <license>
             <name>Creative Commons Attribution 4.0 International (CC BY 4.0)
             </name>
-            <comments>A atribuição deve conter, explicitamente, a seguinte
-                linha:
+            <comments>
                 Copyright (c) 2016. Fábrica de Software - Instituto de
                 Informática (UFG)
             </comments>
@@ -31,26 +31,34 @@
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:https://github.com/kyriosdata/exemplo.git
+        </connection>
+        <developerConnection>scm:git:https://github.com/kyriosdata/exemplo.git
+        </developerConnection>
+        <url>https://github.com/kyriosdata/exemplo</url>
+    </scm>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.5.RELEASE</version>
+        <version>2.1.0.RELEASE</version>
     </parent>
 
-    <properties>
+ <properties>
         <java.version>10</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.mainClass>
-            com.github.kyriosdata.exemplo.application.console.ProgramaCalendario
+            com.github.vnduda.cs.aula11.application.console.ProgramaCalendario
         </project.mainClass>
 
         <tools.dir>${project.basedir}/tools</tools.dir>
         <pmd.plugin>3.12.0</pmd.plugin>
         <pmd.version>6.15.0</pmd.version>
         <checkstyle.plugin>3.1.0</checkstyle.plugin>
-        <checkstyle.version>8.22</checkstyle.version>
+        <checkstyle.version>8.21</checkstyle.version>
     </properties>
 
     <dependencies>
@@ -65,7 +73,7 @@
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.11.1</version>
+            <version>2.11.2</version>
         </dependency>
 
         <dependency>
@@ -102,7 +110,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>
-                    <version>3.11.0</version>
+                    <version>${pmd.plugin}</version>
                     <dependencies>
                         <dependency>
                             <groupId>net.sourceforge.pmd</groupId>
@@ -147,7 +155,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.12</version>
+                <version>3.1.11</version>
             </plugin>
 
             <plugin>
@@ -279,15 +287,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                    <compilerArgs>
-                        <arg>-XDcompilePolicy=simple</arg>
-                        <arg>-Xplugin:ErrorProne</arg>
-                    </compilerArgs>
-
-                </configuration>
             </plugin>
 
              <!-- PMD                  -->
@@ -337,24 +336,6 @@
                 </configuration>
             </plugin>
 
-            <!-- mvn org.pitest:pitest-maven:mutationCoverage -->
-            <!-- Relatório gerado em target\pit-reports\DATAHORA -->
-            <plugin>
-                <groupId>org.pitest</groupId>
-                <artifactId>pitest-maven</artifactId>
-                <version>1.4.9</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.pitest</groupId>
-                        <artifactId>pitest-junit5-plugin</artifactId>
-                        <version>0.7</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <coverageThreshold>95</coverageThreshold>
-                </configuration>
-            </plugin>
-
         </plugins>
     </build>
 
@@ -368,7 +349,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>5.0.0</version>
+                <version>4.0.2</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -484,7 +465,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.12</version>
+                <version>3.1.11</version>
             </plugin>
 
             <!-- Jacoco -->
@@ -529,12 +510,12 @@
                     <plugin>
                         <groupId>org.pitest</groupId>
                         <artifactId>pitest</artifactId>
-                        <version>1.4.9</version>
+                        <version>1.4.8</version>
                         <dependencies>
                             <dependency>
                                 <groupId>org.pitest</groupId>
                                 <artifactId>pitest-junit5-plugin</artifactId>
-                                <version>0.9</version>
+                                <version>0.8</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -594,7 +575,7 @@
                     <plugin>
                         <groupId>org.owasp</groupId>
                         <artifactId>dependency-check-maven</artifactId>
-                        <version>5.0.0</version>
+                        <version>4.0.2</version>
                         <executions>
                             <execution>
                                 <goals>
@@ -616,7 +597,7 @@
                     <plugin>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs-maven-plugin</artifactId>
-                        <version>3.1.12</version>
+                        <version>3.1.11</version>
                         <configuration>
                             <excludeFilterFile>${tools.dir}/spotbugs.xml
                             </excludeFilterFile>
@@ -771,7 +752,7 @@
                     <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
-                        <version>0.8.4</version>
+                        <version>0.8.2</version>
                         <executions>
                             <execution>
                                 <id>default-prepare-agent</id>
@@ -792,6 +773,9 @@
                                     <goal>check</goal>
                                 </goals>
                                 <configuration>
+<excludes>
+        <exclude>**/Programa*.*</exclude>
+    </excludes>
                                     <rules>
                                         <rule implementation="org.jacoco.maven.RuleConfiguration">
                                             <element>BUNDLE</element>
