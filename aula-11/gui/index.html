@@ -58,14 +58,17 @@
             return `${d}-${m}-${a}`;
         }
     </script>
+     </script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-<body onload="dataCorrente()">
+<body style="text-align: center"onload="dataCorrente()">
     <h1>Diferença entre datas</h1>
-    <label for="data">Mês / Dia / Ano</label><br>
+    <h3 for="data">Mês / Dia / Ano</h3>
     <input type="date" id="dataInicial" onchange="atualizaDiaDaSemana()"><br>
-    <label for="data">Mês / Dia / Ano</label><br>
+    <br><h3 for="data">Mês / Dia / Ano</h3>
     <input type="date" id="dataFinal" onchange="atualizaDiaDaSemana()"><br>
-    <button onclick="atualizaDiaDaSemana();">Obtenha diferenças entre dias</button><br>
-    <span style="color: blue; font-size: 20pt;" id="resultado"></span>
+    <br><button onclick="atualizaDiaDaSemana();" class="btn btn-primary btn-md">Obtenha diferenças entre dias</button><br>
+    <br><span style="color: #007bff; font-size: 20pt;" id="resultado"></span>
 </body>
 </html>
