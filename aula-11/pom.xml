@@ -775,6 +775,7 @@
                                 <configuration>
 <excludes>
         <exclude>**/Programa*.*</exclude>
+        <exclude>**/Application*.*</exclude>
     </excludes>
                                     <rules>
                                         <rule implementation="org.jacoco.maven.RuleConfiguration">
