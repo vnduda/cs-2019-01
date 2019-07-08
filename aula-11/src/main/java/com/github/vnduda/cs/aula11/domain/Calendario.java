@@ -110,7 +110,7 @@ public final class Calendario {
         final int ano = hoje.getYear();
         final int diaDaSemana = diaDaSemana(dia, mes, ano);
 
-        return String.format("Hoje é %s\n", semana[diaDaSemana]);
+        return String.format("Hoje é %s%n", semana[diaDaSemana]);
     }
 
 }
