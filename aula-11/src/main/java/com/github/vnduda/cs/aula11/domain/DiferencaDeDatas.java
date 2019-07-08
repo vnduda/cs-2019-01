@@ -4,17 +4,26 @@ import java.util.Date;
 import java.text.ParseException;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Classe que possui método que calcula diferença entre datas.
+ */
 public final class DiferencaDeDatas {
+
+    /**
+     * Construtor para evitar instanciação.
+     */
+    private DiferencaDeDatas() {
+    }
 
     /**
      * Método que calcula a diferença entre duas datas.
      * @param dataInicial data inicial
      * @param dataFinal data final
      * @return quantidade de dias de diferença entre datas
-     * @throws ParseException
+     * @throws ParseException exceção
      */
     public static int diferencaEntreDatas(final Date dataInicial, final Date dataFinal) throws ParseException {
         long diffInMillies = Math.abs(dataFinal.getTime() - dataInicial.getTime());
         return (int) TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
-    }   
+    }
 }

@@ -53,7 +53,7 @@ public final class Calendario {
      * seguido de terça-feira (índice 1) e assim sucessivamente, até
      * "domingo" (índice 6).
      */
-    public static String[] semana = {
+    public static final String[] semana = {
             "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira",
             "sexta-feira", "sábado", "domingo"
     };
@@ -72,8 +72,6 @@ public final class Calendario {
      *                                  ou o ano for menor que 1753.
      */
     public static int diaDaSemana(final int dia, final int mes, final int ano) {
-        int m = mes;
-        int a = ano;
 
         if (dia < 1 || dia > MAIOR_DIA) {
             throw new IllegalArgumentException("dia inválido");
@@ -86,13 +84,14 @@ public final class Calendario {
         if (ano < CALENDARIO_GREGORIANO) {
             throw new IllegalArgumentException("ano inválido");
         }
-
+        int m = mes;
+        int a = ano;
         if (mes == JANEIRO || mes == FEVEREIRO) {
             m = m + DEZEMBRO;
             a = a - 1;
         }
 
-        int s = dia + 2 * m + 3 * (m + 1) / 5 + a + a / 4 - a / 100 + a / 400;
+        final int s = dia + 2 * m + 3 * (m + 1) / 5 + a + a / 4 - a / 100 + a / 400;
 
         return s % DIAS_DA_SEMANA;
     }
@@ -106,12 +105,12 @@ public final class Calendario {
      */
     public static String diaDaSemanaParaHoje() {
         final LocalDate hoje = LocalDate.now();
-        int dia = hoje.getDayOfMonth();
-        int mes = hoje.getMonthValue();
-        int ano = hoje.getYear();
-        int diaDaSemana = diaDaSemana(dia, mes, ano);
+        final int dia = hoje.getDayOfMonth();
+        final int mes = hoje.getMonthValue();
+        final int ano = hoje.getYear();
+        final int diaDaSemana = diaDaSemana(dia, mes, ano);
 
         return String.format("Hoje é %s\n", semana[diaDaSemana]);
     }
-    
+
 }
