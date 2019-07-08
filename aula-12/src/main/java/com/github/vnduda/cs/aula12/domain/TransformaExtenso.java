@@ -1,5 +1,5 @@
 package com.github.vnduda.cs.aula12.domain;
-
+import javax.swing.JOptionPane;
 public class TransformaExtenso {
 
     private String unidade, dezena, centena, numeroUnico;
