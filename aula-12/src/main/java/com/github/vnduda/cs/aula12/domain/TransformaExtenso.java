@@ -16,7 +16,6 @@ public class TransformaExtenso {
             case 7: this.unidade = " sete"; break;
             case 8: this.unidade = " oito"; break;
             case 9: this.unidade = " nove"; break;
-            
         }
     }
     
