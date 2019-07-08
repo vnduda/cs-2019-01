@@ -10,6 +10,9 @@ import org.apache.logging.log4j.Logger;
  */
 public final class ProgramaCalendario {
 
+    /**
+     * Classe pra executar o log.
+     */
     private static final Logger logger =
             LogManager.getLogger(ProgramaCalendario.class);
 
@@ -28,7 +31,7 @@ public final class ProgramaCalendario {
     public static void main(final String[] args) {
 
         logger.info("iniciado");
-        System.out.println(Calendario.diaDaSemanaParaHoje());;
+        System.out.println(Calendario.diaDaSemanaParaHoje());
     }
 
 }

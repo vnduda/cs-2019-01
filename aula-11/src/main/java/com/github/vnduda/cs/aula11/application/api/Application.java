@@ -4,12 +4,23 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Classe para execução da aplicação
+ * Classe para execução da aplicação.
  */
 @SpringBootApplication
-public class Application {
+public final class Application {
 
-    public static void main(String[] args) {
+    /**
+     * Construtor para evitar instanciação.
+     */
+    private Application() {
+    }
+
+    /**
+     * Método que executa o programa de calcular diferença entre
+     * dia da semana.
+     * @param args argumento passado
+     */
+    public static void main(final String[] args) {
         SpringApplication.run(Application.class, args);
     }
 }
