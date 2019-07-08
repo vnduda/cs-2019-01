@@ -10,8 +10,11 @@ import java.util.Locale;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-import com.github.vnduda.cs.aula11.domain.DiferencaDeDatas;;
+import com.github.vnduda.cs.aula11.domain.DiferencaDeDatas;
 
+/**
+ * Classe que possui métodos para calcular diferença entre datas.
+ */
 @RestController
 public final class DiaDaSemanaController {
 

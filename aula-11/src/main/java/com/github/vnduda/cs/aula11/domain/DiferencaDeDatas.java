@@ -23,7 +23,7 @@ public final class DiferencaDeDatas {
      * @throws ParseException exceção
      */
     public static int diferencaEntreDatas(final Date dataInicial, final Date dataFinal) throws ParseException {
-        long diffInMillies = Math.abs(dataFinal.getTime() - dataInicial.getTime());
+        final long diffInMillies = Math.abs(dataFinal.getTime() - dataInicial.getTime());
         return (int) TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
     }
 }
