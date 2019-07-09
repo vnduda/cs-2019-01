@@ -29,9 +29,4 @@ public class DiaDaSemanaControllerTest {
         assertEquals(DiferencaDeDatas.diferencaEntreDatas(dataInicial, dataFinal), DiaDaSemanaController.diaDaSemana(dataInicialStr, dataFinalStr));
     }
 
-    @Test
-    public void coberturaCemPorCento() {
-        assertNotNull(new DiaDaSemanaController());
-    }
-
 }
