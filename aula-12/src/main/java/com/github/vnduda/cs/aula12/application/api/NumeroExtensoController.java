@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 import com.github.vnduda.cs.aula12.domain.TransformaExtenso;
 
 /**
- * Classe que possui métodos para calcular diferença entre datas.
+ * Classe que possui método que retorna um número por extenso.
  */
 @RestController
 public final class NumeroExtensoController {
@@ -23,13 +23,13 @@ public final class NumeroExtensoController {
      */
     private NumeroExtensoController() {
     }
-
     
     @CrossOrigin
     @RequestMapping("ds")
     public static int diaDaSemana(
         @RequestParam(value = "numero", defaultValue = "não fornecida") final String numeroExtensoStr) {
             final int numeroExtenso = Integer.parseInt(numeroExtensoStr);
-            return numeroExtenso;
+            //JOptionPane.showMessageDialog(TransformaExtenso.recuperaString(numeroExtenso));
+            return TransformaExtenso.recuperaString(numeroExtenso);
     }
 }

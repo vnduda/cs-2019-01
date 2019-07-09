@@ -18,8 +18,4 @@ public class DiferencaDeDatasTest {
         assertEquals(1, DiferencaDeDatas.diferencaEntreDatas(dataInicial, dataFinal));
     }
 
-    @Test
-    public void coberturaCemPorCento() {
-        assertNotNull(new DiferencaDeDatas());
-    }
 }

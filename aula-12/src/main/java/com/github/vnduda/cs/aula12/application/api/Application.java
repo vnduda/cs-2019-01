@@ -1,4 +1,4 @@
-package main.java.com.github.vnduda.cs.aula12.application.api;
+package com.github.vnduda.cs.aula12.application.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

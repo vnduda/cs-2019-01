@@ -1,6 +1,5 @@
-package main.java.com.github.vnduda.cs.aula12.application.console;
+package com.github.vnduda.cs.aula12.application.console;
 
-import com.github.vnduda.cs.aula11.domain.Calendario;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +13,7 @@ public final class ProgramaExtenso {
      * Classe pra executar o log.
      */
     private static final Logger logger =
-            LogManager.getLogger(ProgramaCalendario.class);
+            LogManager.getLogger(ProgramaExtenso.class);
 
     /**
      * Restringe criação de instância.
@@ -31,7 +30,7 @@ public final class ProgramaExtenso {
     public static void main(final String[] args) {
 
         logger.info("iniciado");
-        System.out.println(Numero.extenso());
+        System.out.println();
     }
 
 }

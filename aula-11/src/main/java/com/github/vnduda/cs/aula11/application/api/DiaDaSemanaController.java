@@ -13,7 +13,8 @@ import java.text.SimpleDateFormat;
 import com.github.vnduda.cs.aula11.domain.DiferencaDeDatas;
 
 /**
- * Classe que possui métodos para calcular diferença entre datas.
+ * Classe que possui métodos para converter uma string para date
+ * e calcular diferença entre duas datas.
  */
 @RestController
 public final class DiaDaSemanaController {
@@ -29,8 +30,8 @@ public final class DiaDaSemanaController {
      * onde será retornado a diferença em dias.
      * @param dataInicialStr data inicial em string
      * @param dataFinalStr data final em string
-     * @return a diferença entre datas em dias (date)
-     * @throws ParseException exceção
+     * @return a diferença entre datas em dias em formato date
+     * @throws ParseException exceção que sinaliza que um erro aconteceu durante a análise
      */
     @CrossOrigin
     @RequestMapping("ds")
@@ -44,10 +45,10 @@ public final class DiaDaSemanaController {
     }
 
     /**
-     * Método que converte String para Data.
-     * @param data data a ser convertida
-     * @return data em formato de date
-     * @throws ParseException exceção
+     * Método que converte uma data passada como String para Data.
+     * @param data data a ser convertida de String para Date
+     * @return data em formato de Date após a conversão
+     * @throws ParseException exceção que sinaliza que um erro aconteceu durante a análise
      */
     public static Date fromString(final String data) throws ParseException {
         final SimpleDateFormat stringParaDate = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);

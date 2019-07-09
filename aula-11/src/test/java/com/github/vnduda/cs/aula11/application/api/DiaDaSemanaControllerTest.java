@@ -1,8 +1,6 @@
 package com.github.vnduda.cs.aula11.application.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,11 +25,6 @@ public class DiaDaSemanaControllerTest {
         final Date dataInicial = stringParaDate.parse(dataInicialStr);
         final Date dataFinal = stringParaDate.parse(dataFinalStr);
         assertEquals(DiferencaDeDatas.diferencaEntreDatas(dataInicial, dataFinal), DiaDaSemanaController.diaDaSemana(dataInicialStr, dataFinalStr));
-    }
-
-    @Test
-    public void coberturaCemPorCento() {
-        assertNotNull(new DiaDaSemanaController());
     }
 
 }

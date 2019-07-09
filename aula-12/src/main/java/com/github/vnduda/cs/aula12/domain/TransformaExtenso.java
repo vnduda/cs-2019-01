@@ -1,5 +1,4 @@
 package com.github.vnduda.cs.aula12.domain;
-import javax.swing.JOptionPane;
 public class TransformaExtenso {
 
     private String unidade, dezena, centena, numeroUnico;
@@ -61,60 +60,63 @@ public class TransformaExtenso {
         }
     }
     
-    public void recuperaString(int a) {
+    public String recuperaString(int a) {
             if(a == 0) {
-                JOptionPane.showMessageDialog(null, "Zero.");
+                String quantificador = "Zero";
+                return quantificador;
             }
             else if(a < 10) {
                 escreveUnidade(a);
-                JOptionPane.showMessageDialog(null, "Número = " + unidade);
+                return unidade;
             }
             else if(a < 20) {
                 int num = a % 10;
                 escreveNumeroUnico(num);
-                JOptionPane.showMessageDialog(null, "Número = " + numeroUnico);
+                return numeroUnico;
             }
             else if (a < 100) {
                 int u = a % 10;
                 int d = a / 10;
-                String num;
+                String numeroStr;
                 if (d == 1) {
                     escreveNumeroUnico(u);
-                    num = this.numeroUnico;
+                    numeroStr = this.numeroUnico;
                 }
                 else{
                     escreveDezena(d);
                     escreveUnidade(u);
-                    num = this.dezena + this.unidade;
+                    numeroStr = this.dezena + this.unidade;
                 }
-                
-                JOptionPane.showMessageDialog(null, "Número = " + num);			
+                return numeroStr;		
             }
             else if(a < 1000) {
                 int u = a % 10;
                 int d = (a / 10) % 10;
                 int c = (a / 10) / 10;
-                String num;
+                String numeroStr;
                 if (d == 1) {
                     escreveCentena(c);
                     escreveNumeroUnico(u);
-                    num = this.centena + " e" + this.numeroUnico;
+                    numeroStr = this.centena + " e" + this.numeroUnico;
                 }
                 else if (d==0) {
                     escreveCentena(c);
-                    num = this.centena;
+                    numeroStr = this.centena;
                 }
                 else {
                     escreveCentena(c);
                     escreveDezena(d);
                     escreveUnidade(u);
-                    num = this.centena + " e" + this.dezena + this.unidade;
+                    numeroStr = this.centena + " e" + this.dezena + this.unidade;
                 }
                 
-                JOptionPane.showMessageDialog(null, "Número = " + num);
+                return numeroStr;
             }
             else if(a == 1000) {
-                JOptionPane.showMessageDialog(null, "Mil.");
+                String quantificador = "Mil";
+                return quantificador;
             }
+
+
     }
 }

@@ -97,8 +97,4 @@ public class CalendarioTest {
         assertTrue(hojeStr.contains(Calendario.semana[ajustado]));
     }
 
-    @Test
-    public void coberturaCemPorCento() {
-        assertNotNull(new Calendario());
-    }
 }
