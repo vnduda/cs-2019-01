@@ -61,18 +61,21 @@ public class TransformaExtenso {
         }
     }
     
-    public void recuperaString(int a) {
+    public String recuperaString(int a) {
             if(a == 0) {
-                JOptionPane.showMessageDialog(null, "Zero.");
+                return "Zero";
+                //JOptionPane.showMessageDialog(null, "Zero.");
             }
             else if(a < 10) {
                 escreveUnidade(a);
-                JOptionPane.showMessageDialog(null, "Número = " + unidade);
+                return unidade;
+                //JOptionPane.showMessageDialog(null, "Número = " + unidade);
             }
             else if(a < 20) {
                 int num = a % 10;
                 escreveNumeroUnico(num);
-                JOptionPane.showMessageDialog(null, "Número = " + numeroUnico);
+                return numeroUnico;
+                //JOptionPane.showMessageDialog(null, "Número = " + numeroUnico);
             }
             else if (a < 100) {
                 int u = a % 10;
@@ -87,8 +90,8 @@ public class TransformaExtenso {
                     escreveUnidade(u);
                     num = this.dezena + this.unidade;
                 }
-                
-                JOptionPane.showMessageDialog(null, "Número = " + num);			
+                return num;
+                //JOptionPane.showMessageDialog(null, "Número = " + num);			
             }
             else if(a < 1000) {
                 int u = a % 10;
@@ -111,10 +114,15 @@ public class TransformaExtenso {
                     num = this.centena + " e" + this.dezena + this.unidade;
                 }
                 
-                JOptionPane.showMessageDialog(null, "Número = " + num);
+                // JOptionPane.showMessageDialog(null, "Número = " + num);
+                return num;
             }
             else if(a == 1000) {
-                JOptionPane.showMessageDialog(null, "Mil.");
+                // JOptionPane.showMessageDialog(null, "Mil.");
+                return "Mil";
             }
+
+            //lembrar de ver se precisa colocar variavel e atribuir aos returns
+            //returns podem ser ruim
     }
 }
