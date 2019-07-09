@@ -5,33 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dia da Semana</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-        // Path para a requisição (URL)
-        const PATH = "http://localhost:9876/ds?numero=";
-
-        function atualizaNumeroExtenso() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    let dds = extraiNumeroExtensoResposta(xhttp.responseText);
-                    document.getElementById("resultado").innerHTML = `${dds}`;
-                }
-            };
-
-            let numero = document.getElementById("numero").value;
-            
-            xhttp.open("GET", PATH + numero, true);
-            xhttp.send();
-        }
-
-        // Funções para integração (satisfazer contrato do servidor)
-
-        function extraiNumeroExtensoResposta(resposta) {
-            return resposta;
-        }
-
-    </script>
-     </script>
+    <script src="index.js"></script>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
