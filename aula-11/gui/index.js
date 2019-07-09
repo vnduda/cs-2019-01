@@ -1,6 +1,10 @@
  // Path para a requisição (URL)
         const PATH = "http://localhost:9876/ds?inicio=";
 
+        /**
+         * Função que obtém a data inicial e final e retorna a diferença em dias para essas datas.
+         * Ela irá interagir com o servidor e exibir a diferença de dias na interface html para o usuário.
+         */
         function atualizaDiaDaSemana() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
@@ -18,6 +22,9 @@
             xhttp.send();
         }
 
+        /**
+         * Função que pega o elemento pelo id, ou seja, as datas inicial e final e as aloca em Date.
+         */
         function dataCorrente() {
             document.getElementById("dataInicial").valueAsDate = new Date();
             document.getElementById("dataFinal").valueAsDate = new Date();
