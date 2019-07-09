@@ -26,7 +26,7 @@ public final class NumeroExtensoController {
     
     @CrossOrigin
     @RequestMapping("ds")
-    public static int diaDaSemana(
+    public static String diaDaSemana(
         @RequestParam(value = "numero", defaultValue = "não fornecida") final String numeroExtensoStr) {
             final int numeroExtenso = Integer.parseInt(numeroExtensoStr);
             //JOptionPane.showMessageDialog(TransformaExtenso.recuperaString(numeroExtenso));
