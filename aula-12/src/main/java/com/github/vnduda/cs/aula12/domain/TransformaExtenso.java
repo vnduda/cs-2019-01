@@ -182,10 +182,6 @@ public class TransformaExtenso {
 		int d = (a / 10) % 10;
 		int c = (a / 100) % 10;
 		int m = (a / 1000) % 10;
-		System.out.println(u);
-		System.out.println(d);
-		System.out.println(c);
-		System.out.println(m);
 
 		escreveUnidade(u);
 
@@ -196,49 +192,52 @@ public class TransformaExtenso {
 		}
 
 		if (c == 1 && d == 0 && u == 0) {
-			this.centena = "cem";
+			this.centena = " cem";
 		} else {
 			escreveCentena(c);
 		}
 
 		escreveMilhar(m);
-		System.out.println(unidade);
-		System.out.println(dezena);
-		System.out.println(centena);
-		System.out.println(milhar);
 
-		String numeroStr = "";
+        String numeroStr = "";
+
 		if (a >= 1000) {
-			if (dezena == null) {
-				numeroStr = this.milhar + this.centena + " e"
-						+ this.numeroUnico;
-			} else if (c == 0 && d == 0 && u == 0) {
+			if (c == 0 && d == 0 && u == 0) {
 				numeroStr = this.milhar;
+            } else if (c == 0 && d == 0) {
+				numeroStr = this.milhar + " e" + this.unidade;
+			} else if (c == 0 && dezena == null) {
+				numeroStr = this.milhar + " e" + this.numeroUnico;
 			} else if (c == 0 && u == 0) {
-				numeroStr = this.milhar + this.dezena;
-
-			} else if (c == 0 && d == 0) {
-				numeroStr = this.milhar + this.unidade;
+                numeroStr = this.milhar + " e" + this.dezena;
 			} else if (d == 0 && u == 0) {
-				numeroStr = this.milhar + this.centena;
+				numeroStr = this.milhar + " e" + this.centena;
+            } else if (c == 0) {
+                numeroStr = this.milhar + " e" + this.dezena + " e"
+                + this.unidade;
 			} else if (d == 0) {
-				numeroStr = this.milhar + this.centena + this.unidade;
-			} else if (u == 0) {
-				numeroStr = this.milhar + this.centena + this.dezena;
-			} else {
+                numeroStr = this.milhar + this.centena + " e"
+                + this.unidade;
+			} else if (u == 0 && dezena != null) {
+                numeroStr = this.milhar + " e" + this.centena + " e"
+                + this.dezena;
+			} else if (dezena == null ) {
+                numeroStr = this.milhar + this.centena + " e"
+                        + this.numeroUnico;
+            } else {
 				numeroStr = this.milhar + this.centena + " e" + this.dezena
 						+ " e" + this.unidade;
 			}
 		} else if (a < 1000 && a > 99) {
-			if (dezena == null) {
-				numeroStr = this.centena + " e" + this.numeroUnico;
-			} else if (d == 0 && u == 0) {
+			if (d == 0 && u == 0) {
 				numeroStr = this.centena;
 			} else if (d == 0) {
-				numeroStr = this.centena + this.unidade;
-			} else if (u == 0) {
-				numeroStr = this.centena + this.dezena;
-			} else {
+				numeroStr = this.centena + " e" + this.unidade;
+			} else if (dezena == null ) {
+                numeroStr = this.centena + " e" + this.numeroUnico;
+            } else if (u == 0) {
+                numeroStr = this.centena + " e" + this.dezena;
+            } else {
 				numeroStr = this.centena + " e" + this.dezena + " e"
 						+ this.unidade;
 			}
@@ -266,34 +265,5 @@ public class TransformaExtenso {
 		}
 
 		return numeroStr;
-
-		/**
-		 * if (a < 10) { escreveUnidade(a); return unidade;
-		 * 
-		 * } else if (a < 20) { escreveNumeroUnico(u); return numeroUnico;
-		 * 
-		 * } else if (a < 100) { String numeroStr; if (d == 1) {
-		 * escreveNumeroUnico(u); numeroStr = this.numeroUnico; } else {
-		 * escreveDezena(d); escreveUnidade(u); numeroStr = this.dezena + " e" +
-		 * this.unidade; } return numeroStr;
-		 * 
-		 * } else if (a < 1000) { String numeroStr; if (d == 1) {
-		 * escreveCentena(c); escreveNumeroUnico(u); numeroStr = this.centena +
-		 * " e" + this.numeroUnico; } else if (d == 0) { escreveCentena(c);
-		 * numeroStr = this.centena; } else { escreveCentena(c);
-		 * escreveDezena(d); escreveUnidade(u); numeroStr = this.centena + " e"
-		 * + this.dezena + " e" + this.unidade; }
-		 * 
-		 * return numeroStr; } else if (a > 1000) { String numeroStr; if (c ==
-		 * 0) { escreveMilhar(m); numeroStr = this.milhar; } if (d == 1) {
-		 * escreveCentena(c); escreveNumeroUnico(u); escreveMilhar(m); numeroStr
-		 * = this.milhar + " mil" + this.centena + " e" + this.numeroUnico; }
-		 * else if (d == 0) { escreveCentena(c); numeroStr = this.milhar + "
-		 * mil" + this.centena; } else { escreveCentena(c); escreveDezena(d);
-		 * escreveUnidade(u); numeroStr = this.milhar + " mil" + this.centena +
-		 * " e" + this.dezena + " e" + this.unidade;X } return numeroStr; }
-		 * 
-		 * return "Zero";
-		 */
 	}
 }
