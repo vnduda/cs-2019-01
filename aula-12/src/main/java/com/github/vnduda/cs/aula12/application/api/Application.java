@@ -7,13 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Classe para execução da aplicação.
  */
 @SpringBootApplication
-public final class Application {
-
-    /**
-     * Construtor para evitar instanciação.
-     */
-    private Application() {
-    }
+public class Application {
 
     /**
      * Método que executa o programa de retornar número por extenso.
