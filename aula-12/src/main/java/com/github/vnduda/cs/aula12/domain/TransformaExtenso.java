@@ -102,7 +102,7 @@ public class TransformaExtenso {
 			this.numeroUnico = " dezesseis";
 			break;
 		case 7:
-			this.numeroUnico = " dezesete";
+			this.numeroUnico = " dezessete";
 			break;
 		case 8:
 			this.numeroUnico = " dezoito";
