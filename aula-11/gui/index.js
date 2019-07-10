@@ -1,5 +1,7 @@
- // Path para a requisição (URL)
-        const PATH = "http://localhost:9876/ds?inicio=";
+        /**
+         * Path para a requisição (URL)
+         */
+        const PATH = "http://localhost:1025/ds?inicio=";
 
         /**
          * Função que obtém a data inicial e final e retorna a diferença em dias para essas datas.
@@ -9,7 +11,7 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    let dds = extraiDiaDaSemanaDaResposta(xhttp.responseText);
+                    let dds = xhttp.responseText;
                     document.getElementById("resultado").innerHTML = `${dds} dia(s) de diferença entre as datas.`;
                 }
             };
@@ -18,8 +20,18 @@
             let dataInicial = formataData(dataAnoMesDia);
             let dataAnoMesDia2 = document.getElementById("dataFinal").value;
             let dataFinal = formataData(dataAnoMesDia2);
-            xhttp.open("GET", PATH + dataInicial + '&final=' + dataFinal, true);
+            xhttp.open("GET", montaURL(dataInicial, dataFinal) , true);
             xhttp.send();
+        }
+
+        /**
+         * Função que monta a URL concatenando o Path e a data inicial e final.
+         * @param {String} dataInicial data inicial a ser inserida pelo usuário
+         * @param {String} dataFinal data final a ser inserida pelo usuário
+         * @returns url concatenada
+         */
+        function montaURL(dataInicial, dataFinal) {
+            return PATH + dataInicial + '&final=' + dataFinal;
         }
 
         /**
@@ -30,23 +42,29 @@
             document.getElementById("dataFinal").valueAsDate = new Date();
         }
 
-        // Funções para integração (satisfazer contrato do servidor)
-
-        function extraiDiaDaSemanaDaResposta(resposta) {
-            return resposta;
-        }
-
-        // Dia ou mês deve possuir dois dígitos
+        /**
+         * Função que formata um dia ou mês para possuir apenas dois dígitos.
+         * @param {number} n dia ou ano a ser formatado
+         * @returns dia ou mês formatado para possuir dois dígitos
+         */
         function formataDiaOuMes(n) {
             return ("00" + n).substr(-2, 2);
         }
 
-        // Ano deve possuir quatro dígitos
+        /**
+         * Função que formata ano para ter apenas 4 dígitos.
+         * @param {number} n ano a ser formatado
+         * @returns ano contendo 4 dígitos
+         */
         function formataAno(n) {
             return ("0000" + n).substr(-4,4);
         }
 
-        // ENTRADA: ano-mes-dia SAIDA: dd-mm-yyyy
+        /**
+         * Função que formata a data recebendo: ano-mes-dia
+         * @param {String} data a ser formatada 
+         * @returns a data formatada em: dd-mm-yyyy
+         */
         function formataData(dataInicial) {
             let [a, m, d] = dataInicial.split("-");
 
