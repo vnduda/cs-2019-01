@@ -219,7 +219,7 @@ public class TransformaExtenso {
                 numeroStr = this.milhar + this.centena + " e"
                 + this.unidade;
 			} else if (u == 0 && dezena != null) {
-                numeroStr = this.milhar + " e" + this.centena + " e"
+                numeroStr = this.milhar + this.centena + " e"
                 + this.dezena;
 			} else if (dezena == null ) {
                 numeroStr = this.milhar + this.centena + " e"
