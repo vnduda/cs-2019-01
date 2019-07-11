@@ -282,10 +282,11 @@ public class TransformaExtenso {
 	}
 
 	/**
-	 * Método que recebe um número e retorna a dezenaStr correspondente.
+	 * Método que recebe um número e retorna a dezena correspondente.
 	 * 
 	 * @param unidade
-	 * @return
+	 *            unidade a ser recebida para retornar a dezena correspondente
+	 * @return a dezena por extenso correspondente
 	 */
 	private String obterDezena(int unidade) {
 		String numeroStr;
@@ -299,6 +300,16 @@ public class TransformaExtenso {
 		return numeroStr;
 	}
 
+	/**
+	 * Método que recebe uma unidade e dezena de um número e retorna a centena
+	 * correspondente.
+	 * 
+	 * @param unidade
+	 *            unidade correspondente do número
+	 * @param dezena
+	 *            dezena correspondente do número
+	 * @return a centena por extenso correspondente
+	 */
 	private String obterCentena(int unidade, int dezena) {
 		String numeroStr;
 		if (dezena == 0 && unidade == 0) {
@@ -316,6 +327,18 @@ public class TransformaExtenso {
 		return numeroStr;
 	}
 
+	/**
+	 * Método que recebe um número contendo unidade dezena e centena e retorna o
+	 * milhar por extenso.
+	 * 
+	 * @param unidade
+	 *            unidade correspondente do número
+	 * @param dezena
+	 *            dezena correspondente do número
+	 * @param centena
+	 *            centena correspondente do número
+	 * @return retorna o milhar do número escrito por extenso
+	 */
 	private String obterMilhar(int unidade, int dezena, int centena) {
 		String numeroStr;
 		if (centena == 0 && dezena == 0 && unidade == 0) {
