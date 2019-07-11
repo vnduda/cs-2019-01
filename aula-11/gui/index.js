@@ -4,15 +4,18 @@
         const PATH = "http://localhost:1025/ds?inicio=";
 
         /**
-         * Função que obtém a data inicial e final e retorna a diferença em dias para essas datas.
-         * Ela irá interagir com o servidor e exibir a diferença de dias na interface html para o usuário.
+         * Função que obtém a data inicial e final e retorna a diferença em
+         * dias para essas datas.
+         * Ela irá interagir com o servidor e exibir a diferença de dias na
+         * interface html para o usuário.
          */
         function atualizaDiaDaSemana() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     let dds = xhttp.responseText;
-                    document.getElementById("resultado").innerHTML = `${dds} dia(s) de diferença entre as datas.`;
+                    document.getElementById("resultado").innerHTML = 
+                        `${dds} dia(s) de diferença entre as datas.`;
                 }
             };
 
@@ -35,7 +38,8 @@
         }
 
         /**
-         * Função que pega o elemento pelo id, ou seja, as datas inicial e final e as aloca em Date.
+         * Função que pega o elemento pelo id, ou seja, as datas inicial e
+         * final e as aloca em Date.
          */
         function dataCorrente() {
             document.getElementById("dataInicial").valueAsDate = new Date();
@@ -74,3 +78,4 @@
 
             return `${d}-${m}-${a}`;
         }
+module.exports = index;
