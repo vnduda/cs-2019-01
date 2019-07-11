@@ -5,49 +5,56 @@ package com.github.vnduda.cs.aula12.domain;
  */
 public class TransformaExtenso {
 
-	private String unidade;
-	private String dezena;
-	private String centena;
+	/** String que representa a unidade em extenso de um número. */
+	private String unidadeStr;
+	/** String que representa a dezena em extenso de um número. */
+	private String dezenaStr;
+	/** String que representa a centena em extenso de um número. */
+	private String centenaStr;
+	/** String que representa um número unico em extenso de um dado número. */
 	private String numeroUnico;
-	private String milhar;
+	/** String que representa o milhar em extenso de um número. */
+	private String milharStr;
 
 	/**
 	 * Método que possui strings contendo o extenso do número (unidade) de
 	 * entrada.
-	 * @param unidade número int que representa a unidade, que será passado
-	 * para extenso
+	 * 
+	 * @param unidade
+	 *            número int que representa a unidade, que será passado para
+	 *            extenso
 	 */
-	public void escreveUnidade(final int unidade) {
-		switch (unidade) {
+	public void escreveUnidade(final int unidadeStr) {
+		switch (unidadeStr) {
 		case 0:
-			this.unidade = " zero";
+			this.unidadeStr = " zero";
 			break;
 		case 1:
-			this.unidade = " um";
+			this.unidadeStr = " um";
 			break;
 		case 2:
-			this.unidade = " dois";
+			this.unidadeStr = " dois";
 			break;
 		case 3:
-			this.unidade = " três";
+			this.unidadeStr = " três";
 			break;
 		case 4:
-			this.unidade = " quatro";
+			this.unidadeStr = " quatro";
 			break;
 		case 5:
-			this.unidade = " cinco";
+			this.unidadeStr = " cinco";
 			break;
 		case 6:
-			this.unidade = " seis";
+			this.unidadeStr = " seis";
 			break;
 		case 7:
-			this.unidade = " sete";
+			this.unidadeStr = " sete";
 			break;
 		case 8:
-			this.unidade = " oito";
+			this.unidadeStr = " oito";
 			break;
 		case 9:
-			this.unidade = " nove";
+			this.unidadeStr = " nove";
 			break;
 		default:
 			break;
@@ -57,40 +64,42 @@ public class TransformaExtenso {
 	/**
 	 * Método que possui strings contendo o extenso do número (milhar) de
 	 * entrada.
-	 * @param milhar número int que representa o milhar, que será passado
-	 * para extenso
+	 * 
+	 * @param milharStr
+	 *            número int que representa o milhar, que será passado para
+	 *            extenso
 	 */
-	public void escreveMilhar(final int milhar) {
-		switch (milhar) {
+	public void escreveMilhar(final int milharStr) {
+		switch (milharStr) {
 		case 0:
-			this.milhar = " ";
+			this.milharStr = " ";
 			break;
 		case 1:
-			this.milhar = " mil";
+			this.milharStr = " mil";
 			break;
 		case 2:
-			this.milhar = " dois mil";
+			this.milharStr = " dois mil";
 			break;
 		case 3:
-			this.milhar = " três mil";
+			this.milharStr = " três mil";
 			break;
 		case 4:
-			this.milhar = " quatro mil";
+			this.milharStr = " quatro mil";
 			break;
 		case 5:
-			this.milhar = " cinco mil";
+			this.milharStr = " cinco mil";
 			break;
 		case 6:
-			this.milhar = " seis mil";
+			this.milharStr = " seis mil";
 			break;
 		case 7:
-			this.milhar = " sete mil";
+			this.milharStr = " sete mil";
 			break;
 		case 8:
-			this.milhar = " oito mil";
+			this.milharStr = " oito mil";
 			break;
 		case 9:
-			this.milhar = " nove mil";
+			this.milharStr = " nove mil";
 			break;
 		default:
 			break;
@@ -99,10 +108,12 @@ public class TransformaExtenso {
 
 	/**
 	 * Método que possui strings contendo o extenso do número (numeroUnico) de
-	 * entrada.
-	 * Números únicos são aqueles que não são padrão quando escritos por extenso
-	 * @param numeroUnico número int que representa a unidade, que será passado
-	 * para extenso
+	 * entrada. Números únicos são aqueles que não são padrão quando escritos
+	 * por extenso
+	 * 
+	 * @param numeroUnico
+	 *            número int que representa a unidade, que será passado para
+	 *            extenso
 	 */
 	public void escreveNumeroUnico(final int numeroUnico) {
 		switch (numeroUnico) {
@@ -142,36 +153,38 @@ public class TransformaExtenso {
 	}
 
 	/**
-	 * Método que possui strings contendo o extenso do número (dezena) de
+	 * Método que possui strings contendo o extenso do número (dezenaStr) de
 	 * entrada.
-	 * @param dezena número int que representa a dezena, que será passado
-	 * para extenso
+	 * 
+	 * @param dezenaStr
+	 *            número int que representa a dezena, que será passado para
+	 *            extenso
 	 */
-	public void escreveDezena(final int dezena) {
-		switch (dezena) {
+	public void escreveDezena(final int dezenaStr) {
+		switch (dezenaStr) {
 		case 2:
-			this.dezena = " vinte";
+			this.dezenaStr = " vinte";
 			break;
 		case 3:
-			this.dezena = " trinta";
+			this.dezenaStr = " trinta";
 			break;
 		case 4:
-			this.dezena = " quarenta";
+			this.dezenaStr = " quarenta";
 			break;
 		case 5:
-			this.dezena = " cinquenta";
+			this.dezenaStr = " cinquenta";
 			break;
 		case 6:
-			this.dezena = " sessenta";
+			this.dezenaStr = " sessenta";
 			break;
 		case 7:
-			this.dezena = " setenta";
+			this.dezenaStr = " setenta";
 			break;
 		case 8:
-			this.dezena = " oitenta";
+			this.dezenaStr = " oitenta";
 			break;
 		case 9:
-			this.dezena = " noventa";
+			this.dezenaStr = " noventa";
 			break;
 		default:
 			break;
@@ -179,39 +192,41 @@ public class TransformaExtenso {
 	}
 
 	/**
-	 * Método que possui strings contendo o extenso do número (centena) de
+	 * Método que possui strings contendo o extenso do número (centenaStr) de
 	 * entrada.
-	 * @param centena número int que representa a centena, que será passado
-	 * para extenso
+	 * 
+	 * @param centenaStr
+	 *            número int que representa a centena, que será passado para
+	 *            extenso
 	 */
-	public void escreveCentena(final int centena) {
-		switch (centena) {
+	public void escreveCentena(final int centenaStr) {
+		switch (centenaStr) {
 		case 1:
-			this.centena = " cento";
+			this.centenaStr = " cento";
 			break;
 		case 2:
-			this.centena = " duzentos";
+			this.centenaStr = " duzentos";
 			break;
 		case 3:
-			this.centena = " trezentos";
+			this.centenaStr = " trezentos";
 			break;
 		case 4:
-			this.centena = " quatrocentos";
+			this.centenaStr = " quatrocentos";
 			break;
 		case 5:
-			this.centena = " quinhentos";
+			this.centenaStr = " quinhentos";
 			break;
 		case 6:
-			this.centena = " seissentos";
+			this.centenaStr = " seissentos";
 			break;
 		case 7:
-			this.centena = " setecentos";
+			this.centenaStr = " setecentos";
 			break;
 		case 8:
-			this.centena = " oitocentos";
+			this.centenaStr = " oitocentos";
 			break;
 		case 9:
-			this.centena = " novecentos";
+			this.centenaStr = " novecentos";
 			break;
 		default:
 			break;
@@ -219,93 +234,116 @@ public class TransformaExtenso {
 	}
 
 	/**
-	 * Método que recebe um número inteiro é dividido para obter milhar,
-	 * centena, dezena e unidade e passa pelas exceções dos ifs e
-	 * elses para retornar o número por extenso.
-	 * @param a número inteiro a ser passado para extenso
+	 * Método que recebe um número inteiro é dividido para obter milharStr,
+	 * centenaStr, dezenaStr e unidade e passa pelas exceções dos ifs e elses
+	 * para retornar o número por extenso.
+	 * 
+	 * @param a
+	 *            número inteiro a ser passado para extenso
 	 * @return uma string contendo o número por extenso
 	 */
-	public String recuperaString(int a) {
+	public String recuperaString(int numero) {
 
-		int u = a % 10;
-		int d = (a / 10) % 10;
-		int c = (a / 100) % 10;
-		int m = (a / 1000) % 10;
+		int unidade = numero % 10;
+		int dezena = (numero / 10) % 10;
+		int centena = (numero / 100) % 10;
+		int milhar = (numero / 1000) % 10;
 
-		escreveUnidade(u);
+		escreveUnidade(unidade);
 
-		if (d == 1) {
-			escreveNumeroUnico(u);
+		if (dezena == 1) {
+			escreveNumeroUnico(unidade);
 		} else {
-			escreveDezena(d);
+			escreveDezena(dezena);
 		}
 
-		if (c == 1 && d == 0 && u == 0) {
-			this.centena = " cem";
+		if (centena == 1 && dezena == 0 && unidade == 0) {
+			this.centenaStr = " cem";
 		} else {
-			escreveCentena(c);
+			escreveCentena(centena);
 		}
 
-		escreveMilhar(m);
+		escreveMilhar(milhar);
 
-        String numeroStr = "";
-		if (a >= 1000) {
-			if (c == 0 && d == 0 && u == 0) {
-				numeroStr = this.milhar;
-            } else if (c == 0 && d == 0) {
-				numeroStr = this.milhar + " e" + this.unidade;
-			} else if (c == 0 && dezena == null) {
-				numeroStr = this.milhar + " e" + this.numeroUnico;
-			} else if (c == 0 && u == 0) {
-                numeroStr = this.milhar + " e" + this.dezena;
-			} else if (d == 0 && u == 0) {
-				numeroStr = this.milhar + " e" + this.centena;
-            } else if (c == 0) {
-                numeroStr = this.milhar + " e" + this.dezena + " e"
-                + this.unidade;
-			} else if (d == 0) {
-                numeroStr = this.milhar + this.centena + " e"
-                + this.unidade;
-			} else if (u == 0 && dezena != null) {
-                numeroStr = this.milhar + this.centena + " e"
-                + this.dezena;
-			} else if (dezena == null ) {
-                numeroStr = this.milhar + this.centena + " e"
-                        + this.numeroUnico;
-            } else {
-				numeroStr = this.milhar + this.centena + " e" + this.dezena
-						+ " e" + this.unidade;
-			}
-		} else if (a < 1000 && a > 99) {
-			if (d == 0 && u == 0) {
-				numeroStr = this.centena;
-			} else if (d == 0) {
-				numeroStr = this.centena + " e" + this.unidade;
-			} else if (dezena == null ) {
-                numeroStr = this.centena + " e" + this.numeroUnico;
-            } else if (u == 0) {
-                numeroStr = this.centena + " e" + this.dezena;
-            } else {
-				numeroStr = this.centena + " e" + this.dezena + " e"
-						+ this.unidade;
-			}
-			// só a partir de centena
-		} else if (a < 100 && a > 9) {
-			if (dezena == null) {
-				numeroStr = this.numeroUnico;
-			} else if (u == 0) {
-				numeroStr = this.dezena;
-			} else {
-				numeroStr = this.dezena + " e" + this.unidade;
-			}
-			// só a partir de dezena
-		} else if (a < 10) {
-			numeroStr = this.unidade;
-			// só a partir de unidade
-		} else if (a == 0) {
-			numeroStr = "zero";
+		String numeroStr = "";
+		if (numero >= 1000) {
+			numeroStr = obterMilhar(unidade, dezena, centena);
+		} else if (numero < 1000 && numero > 99) {
+			numeroStr = obterCentena(unidade, dezena);
+		} else if (numero < 100 && numero > 9) {
+			numeroStr = obterDezena(unidade);
+		} else if (numero < 10) {
+			numeroStr = this.unidadeStr;
+		} else {
+			numeroStr = " zero";
 		}
 
+		return numeroStr;
+	}
+
+	/**
+	 * Método que recebe um número e retorna a dezenaStr correspondente.
+	 * 
+	 * @param unidade
+	 * @return
+	 */
+	private String obterDezena(int unidade) {
+		String numeroStr;
+		if (dezenaStr == null) {
+			numeroStr = this.numeroUnico;
+		} else if (unidade == 0) {
+			numeroStr = this.dezenaStr;
+		} else {
+			numeroStr = this.dezenaStr + " e" + this.unidadeStr;
+		}
+		return numeroStr;
+	}
+
+	private String obterCentena(int unidade, int dezena) {
+		String numeroStr;
+		if (dezena == 0 && unidade == 0) {
+			numeroStr = this.centenaStr;
+		} else if (dezena == 0) {
+			numeroStr = this.centenaStr + " e" + this.unidadeStr;
+		} else if (dezenaStr == null) {
+			numeroStr = this.centenaStr + " e" + this.numeroUnico;
+		} else if (unidade == 0) {
+			numeroStr = this.centenaStr + " e" + this.dezenaStr;
+		} else {
+			numeroStr = this.centenaStr + " e" + this.dezenaStr + " e"
+					+ this.unidadeStr;
+		}
+		return numeroStr;
+	}
+
+	private String obterMilhar(int unidade, int dezena, int centena) {
+		String numeroStr;
+		if (centena == 0 && dezena == 0 && unidade == 0) {
+			numeroStr = this.milharStr;
+		} else if (centena == 0 && dezena == 0) {
+			numeroStr = this.milharStr + " e" + this.unidadeStr;
+		} else if (centena == 0 && dezenaStr == null) {
+			numeroStr = this.milharStr + " e" + this.numeroUnico;
+		} else if (centena == 0 && unidade == 0) {
+			numeroStr = this.milharStr + " e" + this.dezenaStr;
+		} else if (dezena == 0 && unidade == 0) {
+			numeroStr = this.milharStr + " e" + this.centenaStr;
+		} else if (centena == 0) {
+			numeroStr = this.milharStr + " e" + this.dezenaStr + " e"
+					+ this.unidadeStr;
+		} else if (dezena == 0) {
+			numeroStr = this.milharStr + this.centenaStr + " e"
+					+ this.unidadeStr;
+		} else if (unidade == 0 && dezenaStr != null) {
+			numeroStr = this.milharStr + this.centenaStr + " e"
+					+ this.dezenaStr;
+		} else if (dezenaStr == null) {
+			numeroStr = this.milharStr + this.centenaStr + " e"
+					+ this.numeroUnico;
+		} else {
+			numeroStr = this.milharStr + this.centenaStr + " e" + this.dezenaStr
+					+ " e" + this.unidadeStr;
+		}
 		return numeroStr;
 	}
 }
