@@ -2,7 +2,6 @@ package com.github.vnduda.cs.aula12.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import org.junit.validator.PublicClassValidator;
 
 public class TransformaExtensoTest {
 
