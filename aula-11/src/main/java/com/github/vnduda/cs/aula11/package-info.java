@@ -7,6 +7,6 @@
  * relevante ({@link com.github.vnduda.cs.aula11.domain.DiferencaDeDatas}).
  *
  * @see com.github.vnduda.cs.aula11.domain.DiferencaDeDatas
- * @see com.github.vnduda.cs.aula11.application.console.DiaDaSemanaController
+ * @see com.github.vnduda.cs.aula11.application.api.DiaDaSemanaController
  */
 package com.github.vnduda.cs.aula11;
