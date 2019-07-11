@@ -218,6 +218,13 @@ public class TransformaExtenso {
 		}
 	}
 
+	/**
+	 * Método que recebe um número inteiro é dividido para obter milhar,
+	 * centena, dezena e unidade e passa pelas exceções dos ifs e
+	 * elses para retornar o número por extenso.
+	 * @param a número inteiro a ser passado para extenso
+	 * @return uma string contendo o número por extenso
+	 */
 	public String recuperaString(int a) {
 
 		int u = a % 10;
@@ -242,7 +249,6 @@ public class TransformaExtenso {
 		escreveMilhar(m);
 
         String numeroStr = "";
-
 		if (a >= 1000) {
 			if (c == 0 && d == 0 && u == 0) {
 				numeroStr = this.milhar;

@@ -21,6 +21,12 @@ public final class NumeroExtensoController {
 
 	@CrossOrigin
 	@RequestMapping("ds")
+	/**
+	 * Método que obtém o objeto que retorna o número por extenso.
+	 * @param numeroExtensoStr número dado pelo usuário na interface
+	 * @return o número escrito em extenso que é obtido pelo método recupera
+	 * String
+	 */
 	public static String diaDaSemana(
 			@RequestParam(value = "numero", defaultValue = "não fornecida") final String numeroExtensoStr) {
 		final int numeroExtenso = Integer.parseInt(numeroExtensoStr);

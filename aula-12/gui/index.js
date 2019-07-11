@@ -9,7 +9,7 @@ function atualizaNumeroExtenso() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            let dds = extraiNumeroExtensoResposta(xhttp.responseText);
+            let dds = xhttp.responseText;
             document.getElementById("resultado").innerHTML = `${dds}`;
         }
     };
@@ -18,10 +18,4 @@ function atualizaNumeroExtenso() {
     
     xhttp.open("GET", PATH + numero, true);
     xhttp.send();
-}
-
-// Funções para integração (satisfazer contrato do servidor)
-
-function extraiNumeroExtensoResposta(resposta) {
-    return resposta;
 }
