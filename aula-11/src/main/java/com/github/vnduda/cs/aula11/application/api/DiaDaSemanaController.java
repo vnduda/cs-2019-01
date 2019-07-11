@@ -37,8 +37,10 @@ public final class DiaDaSemanaController {
     @CrossOrigin
     @RequestMapping("ds")
     public static int diaDaSemana(
-        @RequestParam(value = "inicio", defaultValue = "não fornecida") final String dataInicialStr,
-        @RequestParam(value = "final", defaultValue = "não fornecida") final String dataFinalStr)
+        @RequestParam(value = "inicio", defaultValue = "não fornecida") final
+        String dataInicialStr,
+        @RequestParam(value = "final", defaultValue = "não fornecida") final
+        String dataFinalStr)
                     throws ParseException {
             final Date dataInicial = fromString(dataInicialStr);
             final Date dataFinal = fromString(dataFinalStr);
