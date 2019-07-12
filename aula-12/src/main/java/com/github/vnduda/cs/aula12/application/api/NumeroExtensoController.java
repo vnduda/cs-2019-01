@@ -25,7 +25,7 @@ public final class NumeroExtensoController {
 	@RequestMapping("ds")
 	/**
 	 * Método que obtém o objeto que retorna o número por extenso.
-	 * 
+	 *
 	 * @param numeroExtensoStr
 	 *            número dado pelo usuário na interface
 	 * @throws ParseException

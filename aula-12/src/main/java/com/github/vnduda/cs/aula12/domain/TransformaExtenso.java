@@ -19,8 +19,8 @@ public class TransformaExtenso {
 	/**
 	 * Método que possui strings contendo o extenso do número (unidade) de
 	 * entrada.
-	 * 
-	 * @param unidade
+	 *
+	 * @param unidadeStr
 	 *            número int que representa a unidade, que será passado para
 	 *            extenso
 	 */
@@ -64,7 +64,7 @@ public class TransformaExtenso {
 	/**
 	 * Método que possui strings contendo o extenso do número (milhar) de
 	 * entrada.
-	 * 
+	 *
 	 * @param milharStr
 	 *            número int que representa o milhar, que será passado para
 	 *            extenso
@@ -110,7 +110,7 @@ public class TransformaExtenso {
 	 * Método que possui strings contendo o extenso do número (numeroUnico) de
 	 * entrada. Números únicos são aqueles que não são padrão quando escritos
 	 * por extenso
-	 * 
+	 *
 	 * @param numeroUnico
 	 *            número int que representa a unidade, que será passado para
 	 *            extenso
@@ -155,7 +155,7 @@ public class TransformaExtenso {
 	/**
 	 * Método que possui strings contendo o extenso do número (dezenaStr) de
 	 * entrada.
-	 * 
+	 *
 	 * @param dezenaStr
 	 *            número int que representa a dezena, que será passado para
 	 *            extenso
@@ -194,7 +194,7 @@ public class TransformaExtenso {
 	/**
 	 * Método que possui strings contendo o extenso do número (centenaStr) de
 	 * entrada.
-	 * 
+	 *
 	 * @param centenaStr
 	 *            número int que representa a centena, que será passado para
 	 *            extenso
@@ -237,12 +237,12 @@ public class TransformaExtenso {
 	 * Método que recebe um número inteiro é dividido para obter milharStr,
 	 * centenaStr, dezenaStr e unidade e passa pelas exceções dos ifs e elses
 	 * para retornar o número por extenso.
-	 * 
-	 * @param a
+	 *
+	 * @param numero
 	 *            número inteiro a ser passado para extenso
 	 * @return uma string contendo o número por extenso
 	 */
-	public String recuperaString(int numero) {
+	public String recuperaString(final int numero) {
 
 		int unidade = numero % 10;
 		int dezena = (numero / 10) % 10;
@@ -283,12 +283,12 @@ public class TransformaExtenso {
 
 	/**
 	 * Método que recebe um número e retorna a dezena correspondente.
-	 * 
+	 *
 	 * @param unidade
 	 *            unidade a ser recebida para retornar a dezena correspondente
 	 * @return a dezena por extenso correspondente
 	 */
-	private String obterDezena(int unidade) {
+	private String obterDezena(final int unidade) {
 		String numeroStr;
 		if (dezenaStr == null) {
 			numeroStr = this.numeroUnico;
@@ -303,14 +303,14 @@ public class TransformaExtenso {
 	/**
 	 * Método que recebe uma unidade e dezena de um número e retorna a centena
 	 * correspondente.
-	 * 
+	 *
 	 * @param unidade
 	 *            unidade correspondente do número
 	 * @param dezena
 	 *            dezena correspondente do número
 	 * @return a centena por extenso correspondente
 	 */
-	private String obterCentena(int unidade, int dezena) {
+	private String obterCentena(final int unidade, final int dezena) {
 		String numeroStr;
 		if (dezena == 0 && unidade == 0) {
 			numeroStr = this.centenaStr;
@@ -330,7 +330,7 @@ public class TransformaExtenso {
 	/**
 	 * Método que recebe um número contendo unidade dezena e centena e retorna o
 	 * milhar por extenso.
-	 * 
+	 *
 	 * @param unidade
 	 *            unidade correspondente do número
 	 * @param dezena
@@ -339,7 +339,8 @@ public class TransformaExtenso {
 	 *            centena correspondente do número
 	 * @return retorna o milhar do número escrito por extenso
 	 */
-	private String obterMilhar(int unidade, int dezena, int centena) {
+	private String obterMilhar(final int unidade, final int dezena,
+			final int centena) {
 		String numeroStr;
 		if (centena == 0 && dezena == 0 && unidade == 0) {
 			numeroStr = this.milharStr;
