@@ -234,8 +234,8 @@ public class TransformaExtenso {
 	}
 
 	/**
-	 * Método que recebe um número inteiro é dividido para obter milharStr,
-	 * centenaStr, dezenaStr e unidade e passa pelas exceções dos ifs e elses
+	 * Método que recebe um número inteiro é dividido para obter milhar,
+	 * centena, dezena e unidade e passa pelas exceções dos ifs e elses
 	 * para retornar o número por extenso.
 	 *
 	 * @param numero
@@ -244,10 +244,10 @@ public class TransformaExtenso {
 	 */
 	public String recuperaString(final int numero) {
 
-		int unidade = numero % 10;
-		int dezena = (numero / 10) % 10;
-		int centena = (numero / 100) % 10;
-		int milhar = (numero / 1000) % 10;
+		final int unidade = numero % 10;
+		final int dezena = (numero / 10) % 10;
+		final int centena = (numero / 100) % 10;
+		final int milhar = (numero / 1000) % 10;
 
 		escreveUnidade(unidade);
 
