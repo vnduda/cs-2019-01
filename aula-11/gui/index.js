@@ -47,35 +47,21 @@
         }
 
         /**
-         * Função que formata um dia ou mês para possuir apenas dois dígitos.
-         * @param {number} n dia ou ano a ser formatado
-         * @returns dia ou mês formatado para possuir dois dígitos
-         */
-        function formataDiaOuMes(n) {
-            return ("00" + n).substr(-2, 2);
-        }
-
-        /**
-         * Função que formata ano para ter apenas 4 dígitos.
-         * @param {number} n ano a ser formatado
-         * @returns ano contendo 4 dígitos
-         */
-        function formataAno(n) {
-            return ("0000" + n).substr(-4,4);
-        }
-
-        /**
          * Função que formata a data recebendo: ano-mes-dia
          * @param {String} data a ser formatada 
          * @returns a data formatada em: dd-mm-yyyy
          */
-        function formataData(dataInicial) {
-            let [a, m, d] = dataInicial.split("-");
+        function formataData(data) {
+            let [a, m, d] = data.split("-");
 
-            let dia = formataDiaOuMes(d);
-            let mes = formataDiaOuMes(m);
-            let ano = formataAno(a);
+            let dia = ("00" + d).substr(-2, 2);
+            let mes = ("00" + m).substr(-2, 2);
+            let ano = ("0000" + a).substr(-4, 4);
+
 
             return `${d}-${m}-${a}`;
         }
-module.exports = index;
+module.exports = {
+    formataData,
+    montaURL
+};
