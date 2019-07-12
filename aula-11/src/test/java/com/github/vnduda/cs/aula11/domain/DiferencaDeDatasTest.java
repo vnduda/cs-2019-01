@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DiferencaDeDatasTest {
     @Test
-    public void CasoClassicoDeDiferença() throws ParseException {
+    public void casoClassicoDeDiferenca() throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         Date dataInicial = format.parse("05-07-2019");
-        Date dataFinal = format.parse("06-07-2019");    
+        Date dataFinal = format.parse("06-07-2019");
         assertEquals(1, DiferencaDeDatas.diferencaEntreDatas(dataInicial, dataFinal));
     }
 

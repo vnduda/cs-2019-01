@@ -20,10 +20,14 @@ public final class DiferencaDeDatas {
      * @param dataInicial data inicial a ser calculada
      * @param dataFinal data final a ser calculada
      * @return quantidade de dias de diferença entre datas inseridas
-     * @throws ParseException exceção que sinaliza que um erro aconteceu durante a análise
+     * @throws ParseException exceção que sinaliza que um erro aconteceu
+     *  durante a análise
      */
-    public static int diferencaEntreDatas(final Date dataInicial, final Date dataFinal) throws ParseException {
-        final long diffInMillies = Math.abs(dataFinal.getTime() - dataInicial.getTime());
-        return (int) TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+    public static int diferencaEntreDatas(final Date dataInicial,
+        final Date dataFinal) throws ParseException {
+        final long diffInMillies = Math.abs(dataFinal.getTime()
+        - dataInicial.getTime());
+        return (int) TimeUnit.DAYS.convert(
+            diffInMillies, TimeUnit.MILLISECONDS);
     }
 }
